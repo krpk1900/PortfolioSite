@@ -1,26 +1,33 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12">
-      <div class="title">
+      <nuxt-link v-scroll-to="'#title'" to>Top</nuxt-link>
+      <nuxt-link v-scroll-to="'#profile'" to>Profile</nuxt-link>
+      <nuxt-link v-scroll-to="'#works'" to>Works</nuxt-link>
+      <nuxt-link v-scroll-to="'#skill'" to>Skill</nuxt-link>
+      <nuxt-link v-scroll-to="'#history'" to>History</nuxt-link>
+
+      <div class="title" id="title">
         <img class="code-img" src="code5.jpg" alt="">
         <p>Terai Shogo's Portfolio</p>
       </div>
 
-      <div class="profile">
+      <div class="profile" id="profile">
         <h2>Profile</h2>
       </div>
 
-      <div class="works">
+      <div class="works" id="works">
         <h2>Works</h2>
       </div>
 
-      <div class="skill">
+      <div class="skill" id="skill">
         <h2>Skill</h2>
       </div>
 
-      <div class="history">
+      <div class="history" id="history">
         <h2>History</h2>
       </div>
+
     </v-col>
   </v-row>
 </template>
