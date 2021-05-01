@@ -12,6 +12,8 @@
         <p>Terai Shogo's Portfolio</p>
       </div>
 
+      <h1 class="animate__animated animate__fadeInUp">An animated element</h1>
+
       <div class="profile" id="profile">
         <h2>Profile</h2>
       </div>
@@ -62,8 +64,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    white-space: nowrap;
   }
   img {
     vertical-align:top;
