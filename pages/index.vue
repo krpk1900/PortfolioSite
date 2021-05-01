@@ -12,6 +12,8 @@
         <p>Terai Shogo's Portfolio</p>
       </div>
 
+      <h1 class="animate__animated animate__fadeInUp">An animated element</h1>
+
       <div class="profile" id="profile">
         <h2>Profile</h2>
       </div>
@@ -26,6 +28,17 @@
 
       <div class="history" id="history">
         <h2>History</h2>
+
+        <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
+          <v-timeline-item v-for="(item, i) in items" :key="i" :color="item.color" :icon="item.icon" fill-dot>
+            <v-card :color="item.color" dark :class="[{right: i%2==0}, {left: i%2==1}]">
+              <v-card-title class="title">Lorem Ipsum Dolor</v-card-title>
+              <v-card-text class="white text--primary">
+                <p>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</p>
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
+        </v-timeline>
       </div>
 
     </v-col>
@@ -51,8 +64,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    white-space: nowrap;
   }
   img {
     vertical-align:top;
@@ -73,11 +85,35 @@
     height: 100vh;
     background-color: #75c9b7;
   }
+  .right {
+    margin-right: 10em;
+  }
+  .left {
+    margin-left: 10em;
+  }
 </style>
 
 <script>
 export default {
-  components: {
+    data: () => ({
+      items: [
+        {
+          color: 'red lighten-2',
+          icon: 'mdi-star',
+        },
+        {
+          color: 'purple darken-1',
+          icon: 'mdi-book-variant',
+        },
+        {
+          color: 'green lighten-1',
+          icon: 'mdi-airballoon',
+        },
+        {
+          color: 'indigo',
+          icon: 'mdi-buffer',
+        },
+      ],
+    }),
   }
-}
 </script>
