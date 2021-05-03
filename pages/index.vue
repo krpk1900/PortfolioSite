@@ -14,7 +14,7 @@
 
       <div class="title" id="title">
         <img class="code-img" src="code5.jpg" alt="">
-        <p>Terai Shogo's Portfolio</p>
+        <vue-typer class="typing" text="Terai Shogo's Portfolio" repeat='0' pre-type-delay="100" type-delay="80"></vue-typer>
       </div>
 
       <div class="profile" id="profile">
@@ -63,10 +63,12 @@
   .title {
     position: relative;
   }
-  .title p {
+  .vue-typer .custom.char {
+    color: white;
+  }
+  .title .typing {
     position: absolute;
     font-size: 4em;
-    color: white;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
