@@ -12,7 +12,7 @@
         <p>Terai Shogo's Portfolio</p>
       </div>
 
-      <h1 class="animate__animated" :class="{animate__fadeInUp: isFadeInUp1}">An animated element</h1>
+      <h1 v-show="isFadeInUp1" class="animate__animated" :class="{animate__fadeInUp: isFadeInUp1}">An animated element</h1>
       <p>{{ scrollY }}</p>
 
       <div class="profile" id="profile">
@@ -29,10 +29,11 @@
 
       <div class="history" id="history">
         <h2>History</h2>
+        <p>{{ scrollY }}</p>
 
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item v-for="(item, i) in items" :key="i" :color="item.color" :icon="item.icon" fill-dot>
-            <v-card :color="item.color" dark :class="[{right: i%2==0}, {left: i%2==1}]">
+            <v-card :color="item.color" dark :class="[{right: i%2==0}, {left: i%2==1}, {animate__fadeInUp: isFadeInUp2}]" class="animate__animated">
               <v-card-title class="title">Lorem Ipsum Dolor</v-card-title>
               <v-card-text class="white text--primary">
                 <p>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</p>
@@ -119,6 +120,9 @@ export default {
         },
       ],
       isFadeInUp1: false,
+      isFadeInUp2: false,
+      isFadeInUp3: false,
+      isFadeInUp4: false,
       scrollY: 0,
     }),
     created() {
@@ -138,9 +142,10 @@ export default {
         this.scrollY = window.scrollY;
         if (!this.isFadeInUp1) {
           this.isFadeInUp1 = window.scrollY > 400;
-        }// else if (window.scrollY < 90) {
-          //this.isFadeInUp1 = !this.isFadeInUp1;
-        //}
+        }
+        if (!this.isFadeInUp2) {
+          this.isFadeInUp2 = window.scrollY > 3000;
+        }
       },
     }
   }
