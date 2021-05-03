@@ -1,35 +1,36 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12">
-      <nuxt-link v-scroll-to="'#title'" to>Top</nuxt-link>
-      <nuxt-link v-scroll-to="'#profile'" to>Profile</nuxt-link>
-      <nuxt-link v-scroll-to="'#works'" to>Works</nuxt-link>
-      <nuxt-link v-scroll-to="'#skill'" to>Skill</nuxt-link>
-      <nuxt-link v-scroll-to="'#history'" to>History</nuxt-link>
+      <v-system-bar color="#fffaf0" app height="50vh">
+        <p>{{ scrollY }}</p>
+        <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to>Top</nuxt-link>
+        <nuxt-link class="link" v-scroll-to="'#profile'" to>Profile</nuxt-link>
+        <nuxt-link class="link" v-scroll-to="'#works'" to>Works</nuxt-link>
+        <nuxt-link class="link" v-scroll-to="'#skill'" to>Skill</nuxt-link>
+        <nuxt-link class="link rightmost-link" v-scroll-to="'#history'" to>History</nuxt-link>
+      </v-system-bar>
+
+
 
       <div class="title" id="title">
         <img class="code-img" src="code5.jpg" alt="">
         <p>Terai Shogo's Portfolio</p>
       </div>
 
-      <h1 v-show="isFadeInUp1" class="animate__animated" :class="{animate__fadeInUp: isFadeInUp1}">An animated element</h1>
-      <p>{{ scrollY }}</p>
-
       <div class="profile" id="profile">
-        <h2>Profile</h2>
+        <h2 v-show="isCreated" class="animate__animated" :class="{animate__fadeInUp: isCreated}">Profile</h2>
       </div>
 
       <div class="works" id="works">
-        <h2>Works</h2>
+        <h2 v-show="isFadeInUp1" class="animate__animated" :class="{animate__fadeInUp: isFadeInUp1}">Works</h2>
       </div>
 
       <div class="skill" id="skill">
-        <h2>Skill</h2>
+        <h2 v-show="isFadeInUp2" class="animate__animated" :class="{animate__fadeInUp: isFadeInUp2}">Skill</h2>
       </div>
 
       <div class="history" id="history">
-        <h2>History</h2>
-        <p>{{ scrollY }}</p>
+        <h2 v-show="isFadeInUp3" class="animate__animated" :class="{animate__fadeInUp: isFadeInUp3}">History</h2>
 
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item v-for="(item, i) in items" :key="i" :color="item.color" :icon="item.icon" fill-dot>
@@ -57,7 +58,7 @@
   }
   .code-img {
     width: 100%;
-    height: 100%;
+    height: 90vh;
   }
   .title {
     position: relative;
@@ -96,6 +97,17 @@
   .left {
     margin-left: 10em;
   }
+  .link {
+    font-size: 1.4em;
+    text-decoration: none;
+    margin-left: 1em;
+  }
+  .leftmost-link {
+    margin-left: auto;
+  }
+  .rightmost-link {
+    margin-right: 1em;
+  }
 </style>
 
 <script>
@@ -119,6 +131,7 @@ export default {
           icon: 'mdi-buffer',
         },
       ],
+      isCreated: false,
       isFadeInUp1: false,
       isFadeInUp2: false,
       isFadeInUp3: false,
@@ -129,23 +142,19 @@ export default {
       if (process.browser) {
         window.addEventListener("scroll", this.handleScroll);
       }
-      //window.addEventListener("scroll", this.handleScroll);
+      this.isCreated = true;
     },
     destroyed() {
       if (process.browser) {
         window.removeEventListener("scroll", this.handleScroll);
       }
-      //window.removeEventListener("scroll", this.handleScroll);
     },
     methods: {
       handleScroll() {
         this.scrollY = window.scrollY;
-        if (!this.isFadeInUp1) {
-          this.isFadeInUp1 = window.scrollY > 400;
-        }
-        if (!this.isFadeInUp2) {
-          this.isFadeInUp2 = window.scrollY > 3000;
-        }
+        this.isFadeInUp1 = window.scrollY > 930;
+        this.isFadeInUp2 = window.scrollY > 1880;
+        this.isFadeInUp3 = window.scrollY > 2830;
       },
     }
   }
