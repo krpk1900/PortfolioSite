@@ -12,7 +12,8 @@
         <p>Terai Shogo's Portfolio</p>
       </div>
 
-      <h1 class="animate__animated animate__fadeInUp">An animated element</h1>
+      <h1 class="animate__animated" :class="{animate__fadeInUp: isFadeInUp1}">An animated element</h1>
+      <p>{{ scrollY }}</p>
 
       <div class="profile" id="profile">
         <h2>Profile</h2>
@@ -46,6 +47,9 @@
 </template>
 
 <style>
+  :root {
+    --animate-duration: 2000ms;
+  }
   h2 {
     font-size: 4em;
     text-align: center;
@@ -114,6 +118,30 @@ export default {
           icon: 'mdi-buffer',
         },
       ],
+      isFadeInUp1: false,
+      scrollY: 0,
     }),
+    created() {
+      if (process.browser) {
+        window.addEventListener("scroll", this.handleScroll);
+      }
+      //window.addEventListener("scroll", this.handleScroll);
+    },
+    destroyed() {
+      if (process.browser) {
+        window.removeEventListener("scroll", this.handleScroll);
+      }
+      //window.removeEventListener("scroll", this.handleScroll);
+    },
+    methods: {
+      handleScroll() {
+        this.scrollY = window.scrollY;
+        if (!this.isFadeInUp1) {
+          this.isFadeInUp1 = window.scrollY > 400;
+        }// else if (window.scrollY < 90) {
+          //this.isFadeInUp1 = !this.isFadeInUp1;
+        //}
+      },
+    }
   }
 </script>
