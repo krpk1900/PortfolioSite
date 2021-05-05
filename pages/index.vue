@@ -66,6 +66,9 @@
   .vue-typer .custom.char {
     color: white;
   }
+  .vue-typer .custom.caret {
+    width: 0px;
+  }
   .title .typing {
     position: absolute;
     font-size: 4em;
