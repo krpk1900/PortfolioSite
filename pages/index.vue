@@ -6,7 +6,7 @@
         <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to>Top</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#profile'" to>Profile</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#works'" to>Works</nuxt-link>
-        <nuxt-link class="link" v-scroll-to="'#skill'" to>Skill</nuxt-link>
+        <nuxt-link class="link" v-scroll-to="'#skills'" to>Skills</nuxt-link>
         <nuxt-link class="link rightmost-link" v-scroll-to="'#history'" to>History</nuxt-link>
       </v-system-bar>
 
@@ -14,23 +14,41 @@
 
       <div class="title" id="title">
         <img class="code-img" src="code5.jpg" alt="">
-        <vue-typer class="typing" text="Terai Shogo's Portfolio" repeat="0" pre-type-delay="100" type-delay="80"></vue-typer>
+        <vue-typer class="typing" text="Terai Shogo's Portfolio" :repeat="0" :pre-type-delay="100" :type-delay="80"></vue-typer>
       </div>
 
       <div class="profile" id="profile">
-        <h2 v-show="isFadeInUp1" class="animate__animated" :class="{animate__fadeInUp: isFadeInUp1}">Profile</h2>
+        <h2 v-show="isFadeInUp1" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp1}">Profile</h2>
+        <v-row>
+          <v-col cols="6">
+            <img src="/zoomup.jpg" class="profile-img" width="300px" height="300px">
+          </v-col>
+          <v-col cols="6">
+            <v-card class="profile-card" elevation="4" width="80%" rounded>
+              <v-card-text class="text-body-1">
+                1995年生まれ富山県出身。<br>
+                大阪大学で情報科学を学んだ後、公立中学校で教諭となる。<br>
+                現在はWeb開発を学習中。<br>
+                趣味はバドミントン・サッカー・将棋・料理など。
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+
+
+
       </div>
 
       <div class="works" id="works">
-        <h2 v-show="isFadeInUp2" class="animate__animated" :class="{animate__fadeInUp: isFadeInUp2}">Works</h2>
+        <h2 v-show="isFadeInUp2" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp2}">Works</h2>
       </div>
 
-      <div class="skill" id="skill">
-        <h2 v-show="isFadeInUp3" class="animate__animated" :class="{animate__fadeInUp: isFadeInUp3}">Skill</h2>
+      <div class="skills" id="skills">
+        <h2 v-show="isFadeInUp3" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp3}">Skills</h2>
       </div>
 
       <div class="history" id="history">
-        <h2 v-show="isFadeInUp4" class="animate__animated" :class="{animate__fadeInUp: isFadeInUp4}">History</h2>
+        <h2 v-show="isFadeInUp4" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp4}">History</h2>
 
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item v-for="(item, i) in items" :key="i" :color="item.color" :icon="item.icon" fill-dot>
@@ -88,13 +106,16 @@
     height: 100vh;
     background-color: #75c9b7;
   }
-  .skill {
+  .skills {
     height: 100vh;
     background-color: #a1d4c9;
   }
   .history {
     height: 100vh;
     background-color: #75c9b7;
+  }
+  .div-title {
+    padding: 1% 0 0 0 ;
   }
   .right {
     margin-right: 10em;
@@ -112,6 +133,16 @@
   }
   .rightmost-link {
     margin-right: 1em;
+  }
+  .profile-img {
+    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+    border: 9px solid #a9a9a9; /* 枠線を付加 */
+    display: block;
+    margin: 25% 0 25% 50%;
+  }
+  .profile-card {
+    display: block;
+    margin: 25% 0 25% 0;
   }
 </style>
 
@@ -157,7 +188,6 @@ export default {
     methods: {
       handleScroll() {
         this.innnerHeight = window.innerHeight;
-        console.log(window.innerHeight);
         this.scrollY = window.scrollY;
         this.isFadeInUp1 = window.scrollY > 80;
         this.isFadeInUp2 = window.scrollY > window.innerHeight + 80;
