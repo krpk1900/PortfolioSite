@@ -18,9 +18,9 @@
       </div>
 
       <div class="profile" id="profile">
-        <h2 v-if="isFadeInUp1" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp1}">Profile</h2>
-        <div v-else class="else-margin"></div>
+        <h2 class="animate__animated div-title" :class="{animate__fadeInUp: true}">Profile</h2>
         <img src="/zoomup.jpg" class="profile-img" width="300px" height="300px">
+        <p class="text-center name">Terai Shogo</p>
         <v-card class="profile-card" elevation="4" width="40%" rounded>
           <v-card-text class="text-body-1" style="padding-left: 13%;">
             1995年生まれ富山県出身。<br>
@@ -96,8 +96,22 @@
     height: 90vh;
   }
   .profile {
-    height: 90vh;
+    height: 95vh;
     background-color: #f8f8ff;
+  }
+  .name {
+    font-size: 3em;
+    font-weight: 600;
+  }
+  .profile-img {
+    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+    border: 9px solid #a9a9a9; /* 枠線を付加 */
+    display: block;
+    margin: 1% auto 0.5% auto;
+  }
+  .profile-card {
+    display: block;
+    margin: 1% auto;
   }
   .works {
     height: 100vh;
@@ -135,16 +149,6 @@
   }
   .rightmost-link {
     margin-right: 1em;
-  }
-  .profile-img {
-    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
-    border: 9px solid #a9a9a9; /* 枠線を付加 */
-    display: block;
-    margin: 2% auto;
-  }
-  .profile-card {
-    display: block;
-    margin: 2% auto;
   }
   .fixed-background-img {
     background-image: url("/code5.jpg");
