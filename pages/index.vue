@@ -12,34 +12,26 @@
 
 
 
-      <div class="title" id="title">
-        <img class="code-img" src="code5.jpg" alt="">
+      <div class="title fixed-background-img" id="title">
+        <!--img class="code-img" src="code5.jpg" alt=""-->
         <vue-typer class="typing" text="Terai Shogo's Portfolio" :repeat="0" :pre-type-delay="100" :type-delay="80"></vue-typer>
       </div>
 
       <div class="profile" id="profile">
-        <h2 v-show="isFadeInUp1" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp1}">Profile</h2>
-        <v-row>
-          <v-col cols="6">
-            <img src="/zoomup.jpg" class="profile-img" width="300px" height="300px">
-          </v-col>
-          <v-col cols="6">
-            <v-card class="profile-card" elevation="4" width="80%" rounded>
-              <v-card-text class="text-body-1">
-                1995年生まれ富山県出身。<br>
-                大阪大学で情報科学を学んだ後、公立中学校で教諭となる。<br>
-                現在はWeb開発を学習中。<br>
-                趣味はバドミントン・サッカー・将棋・料理など。
-              </v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
-
-
-
+        <h2 v-if="isFadeInUp1" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp1}">Profile</h2>
+        <div v-else class="else-margin"></div>
+        <img src="/zoomup.jpg" class="profile-img" width="300px" height="300px">
+        <v-card class="profile-card" elevation="4" width="40%" rounded>
+          <v-card-text class="text-body-1" style="padding-left: 13%;">
+            1995年生まれ富山県出身。<br>
+            大阪大学で情報科学を学んだ後、公立中学校で教諭となる。<br>
+            現在はWeb開発を学習中。<br>
+            趣味はバドミントン・サッカー・将棋・料理など。
+          </v-card-text>
+        </v-card>
       </div>
 
-      <div class="works" id="works">
+      <div class="works fixed-background-img" id="works">
         <h2 v-show="isFadeInUp2" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp2}">Works</h2>
       </div>
 
@@ -53,7 +45,7 @@
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item v-for="(item, i) in items" :key="i" :color="item.color" :icon="item.icon" fill-dot>
             <v-card :color="item.color" dark :class="[{right: i%2==0}, {left: i%2==1}, {animate__fadeInUp: isFadeInUp4}]" class="animate__animated">
-              <v-card-title class="title">Lorem Ipsum Dolor</v-card-title>
+              <v-card-title class="card-title">Lorem Ipsum Dolor</v-card-title>
               <v-card-text class="white text--primary">
                 <p>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</p>
               </v-card-text>
@@ -82,7 +74,9 @@
     position: relative;
   }
   .vue-typer .custom.char {
-    color: white;
+    color: #6cd0ff;
+    font-weight: 700;
+    font-size: 1.1em;
   }
   .vue-typer .custom.caret {
     width: 0px;
@@ -98,13 +92,15 @@
   img {
     vertical-align:top;
   }
+  .title {
+    height: 90vh;
+  }
   .profile {
-    height: 100vh;
-    background-color: #a1d4c9;
+    height: 90vh;
+    background-color: #f8f8ff;
   }
   .works {
     height: 100vh;
-    background-color: #75c9b7;
   }
   .skills {
     height: 100vh;
@@ -116,6 +112,12 @@
   }
   .div-title {
     padding: 1% 0 0 0 ;
+    color: #6cd0ff;
+    font-weight: 700;
+    font-size: 5em;
+  }
+  .else-margin {
+    margin: 10%;
   }
   .right {
     margin-right: 10em;
@@ -138,11 +140,17 @@
     border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
     border: 9px solid #a9a9a9; /* 枠線を付加 */
     display: block;
-    margin: 25% 0 25% 50%;
+    margin: 2% auto;
   }
   .profile-card {
     display: block;
-    margin: 25% 0 25% 0;
+    margin: 2% auto;
+  }
+  .fixed-background-img {
+    background-image: url("/code5.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
   }
 </style>
 
