@@ -33,6 +33,7 @@
 
       <div class="works fixed-background-img" id="works">
         <h2 v-show="isFadeInUp2" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp2}">Works</h2>
+        <a href="https://sekigae.jp/" target="_blank"><img class="sekigaemaker" src="/sekigae2.png" width="30%"></a>
       </div>
 
       <div class="skills" id="skills">
@@ -115,6 +116,9 @@
   }
   .works {
     height: 100vh;
+  }
+  .sekigaemaker {
+    border-radius: 20px;
   }
   .skills {
     height: 100vh;
