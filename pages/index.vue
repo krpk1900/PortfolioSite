@@ -32,8 +32,9 @@
       </div>
 
       <div class="works fixed-background-img" id="works">
-        <h2 v-show="isFadeInUp2" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp2}">Works</h2>
-        <a href="https://sekigae.jp/" target="_blank"><img class="sekigaemaker" src="/sekigae2.png" width="30%"></a>
+        <h2 v-if="isFadeInUp2" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp2}">Works</h2>
+        <div v-else class="else-padding"></div>
+        <a href="https://sekigae.jp/" target="_blank"><img class="sekigaemaker-img work-items" src="/sekigae2.png" width="30%"></a>
       </div>
 
       <div class="skills" id="skills">
@@ -117,8 +118,17 @@
   .works {
     height: 100vh;
   }
-  .sekigaemaker {
+  .work-items {
+    margin:0 auto;
+  }
+  .sekigaemaker-img {
     border-radius: 20px;
+    display: block;
+    transition-duration: 0.2s;
+  }
+  .sekigaemaker-img:hover {
+    transform: scale(1.03,1.03);
+    transition-duration: 0.2s;
   }
   .skills {
     height: 100vh;
@@ -134,8 +144,8 @@
     font-weight: 700;
     font-size: 5em;
   }
-  .else-margin {
-    margin: 10%;
+  .else-padding {
+    padding: 4.1em;
   }
   .right {
     margin-right: 10em;
