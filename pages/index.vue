@@ -19,9 +19,12 @@
 
       <div class="profile" id="profile">
         <h2 class="animate__animated div-title" :class="{animate__fadeInUp: true}">Profile</h2>
-        <img src="/zoomup.jpg" class="profile-img" width="300px" height="300px">
-        <p class="text-center name">Terai Shogo</p>
-        <v-card class="profile-card" elevation="4" width="40%" rounded>
+        <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300px" height="300px">
+        <div v-else style="padding: 10em;"></div>
+        <p v-if="isFadeInUpProfile1" class="animate__animated text-center name" :class="{animate__fadeInUp: isFadeInUpProfile1}">Terai Shogo</p>
+        <div v-else style="padding: 10em;"></div>
+
+        <v-card v-if="isFadeInUpProfile2" class="animate__animated profile-card" :class="{animate__fadeInUp: isFadeInUpProfile2}" elevation="4" width="40%" rounded>
           <v-card-text class="text-body-1" style="padding-left: 13%;">
             1995年生まれ富山県出身。<br>
             大阪大学で情報科学を学んだ後、公立中学校で教諭となる。<br>
@@ -29,10 +32,11 @@
             趣味はバドミントン・サッカー・将棋・料理など。
           </v-card-text>
         </v-card>
+        <div v-else style="padding: 5em;"></div>
       </div>
 
       <div class="works fixed-background-img" id="works">
-        <h2 v-if="isFadeInUp2" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp2}">Works</h2>
+        <h2 v-if="isFadeInUpWorks1" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUpWorks1}">Works</h2>
         <div v-else class="else-padding"></div>
         <a href="https://sekigae.jp/" target="_blank"><img class="sekigaemaker-img work-items" src="/sekigae2.png" width="30%"></a>
       </div>
@@ -62,7 +66,7 @@
 
 <style>
   :root {
-    --animate-duration: 2000ms;
+    --animate-duration: 1000ms;
   }
   h2 {
     font-size: 4em;
@@ -194,11 +198,14 @@ export default {
         },
       ],
       isCreated: false,
+      isFadeInUpProfile1: false,
+      isFadeInUpProfile2: false,
       isFadeInUp1: false,
       isFadeInUp2: false,
       isFadeInUp3: false,
       isFadeInUp4: false,
       scrollY: 0,
+      innnerHeight: 0,
     }),
     created() {
       if (process.browser) {
@@ -215,6 +222,11 @@ export default {
       handleScroll() {
         this.innnerHeight = window.innerHeight;
         this.scrollY = window.scrollY;
+        this.isFadeInUpProfile1 = window.scrollY > 140;
+        this.isFadeInUpProfile2 = window.scrollY > 520;
+        this.isFadeInUpWorks1 = window.scrollY > 700;
+        this.isFadeInUpWorks2 = window.scrollY > 860;
+
         this.isFadeInUp1 = window.scrollY > 80;
         this.isFadeInUp2 = window.scrollY > window.innerHeight + 80;
         this.isFadeInUp3 = window.scrollY > window.innerHeight*2 + 80;
