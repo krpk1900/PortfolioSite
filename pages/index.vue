@@ -37,15 +37,9 @@
       </div>
 
       <!-- Works -->
-      <div class="works" id="works">
-        <h2 v-if="isFadeInUpWorks1" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUpWorks1}">Works</h2>
-        <div v-else class="else-padding"></div>
-        <v-card v-if="isFadeInUpWorks2" class="animate__animated works-card" :class="{animate__fadeInUp: isFadeInUpWorks2}" href="https://sekigae.jp/" target="_blank" elevation="4" width="30%" rounded>
-          <img  class="sekigaemaker-img work-items" src="/sekigae2.png" width="100%" style="padding: 2em;">
-
-
-        </v-card>
-
+      <div class="works fixed-background-img" id="works">
+        <h2 v-show="isFadeInUpWorks1" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUpWorks1}">Works</h2>
+        <a href="https://sekigae.jp/" target="_blank"><img class="sekigaemaker-img works-item" src="/sekigae2.png" width="30%"></a>
       </div>
 
       <!-- Skills -->
@@ -132,7 +126,8 @@
     height: 100vh;
     background-color: #f8f8ff;
   }
-  .work-items {
+  .works-item {
+    display: block;
     margin:0 auto;
   }
   .works-card {
