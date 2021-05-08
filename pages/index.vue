@@ -1,7 +1,7 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12">
-      <v-system-bar color="#fffaf0" app height="50vh">
+      <v-system-bar color="#fffaf0" app height="50vh" style="opacity: 0.95;">
         <p>scrollY = {{ scrollY }} </p>
         <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to>Top</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#profile'" to>Profile</nuxt-link>
@@ -11,12 +11,13 @@
       </v-system-bar>
 
 
-
+      <!-- タイトル -->
       <div class="title fixed-background-img" id="title">
         <!--img class="code-img" src="code5.jpg" alt=""-->
         <vue-typer class="typing" text="Terai Shogo's Portfolio" :repeat="0" :pre-type-delay="100" :type-delay="80"></vue-typer>
       </div>
 
+      <!-- Profile -->
       <div class="profile" id="profile">
         <h2 class="animate__animated div-title" :class="{animate__fadeInUp: true}">Profile</h2>
         <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300px" height="300px">
@@ -35,16 +36,24 @@
         <div v-else style="padding: 5em;"></div>
       </div>
 
-      <div class="works fixed-background-img" id="works">
+      <!-- Works -->
+      <div class="works" id="works">
         <h2 v-if="isFadeInUpWorks1" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUpWorks1}">Works</h2>
         <div v-else class="else-padding"></div>
-        <a href="https://sekigae.jp/" target="_blank"><img class="sekigaemaker-img work-items" src="/sekigae2.png" width="30%"></a>
+        <v-card v-if="isFadeInUpWorks2" class="animate__animated works-card" :class="{animate__fadeInUp: isFadeInUpWorks2}" href="https://sekigae.jp/" target="_blank" elevation="4" width="30%" rounded>
+          <img  class="sekigaemaker-img work-items" src="/sekigae2.png" width="100%" style="padding: 2em;">
+
+
+        </v-card>
+
       </div>
 
+      <!-- Skills -->
       <div class="skills" id="skills">
         <h2 v-show="isFadeInUp3" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp3}">Skills</h2>
       </div>
 
+      <!-- History -->
       <div class="history" id="history">
         <h2 v-show="isFadeInUp4" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp4}">History</h2>
 
@@ -80,7 +89,7 @@
     position: relative;
   }
   .vue-typer .custom.char {
-    color: #6cd0ff;
+    color:  #71e9e9; /*#6cd0ff*/;
     font-weight: 700;
     font-size: 1.1em;
   }
@@ -103,15 +112,15 @@
   }
   .profile {
     height: 95vh;
-    background-color: #f8f8ff;
+    background-color: #eaeaf3fb;
   }
   .name {
     font-size: 3em;
     font-weight: 600;
   }
   .profile-img {
-    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
-    border: 9px solid #a9a9a9; /* 枠線を付加 */
+    border-radius: 50%;
+    border: 9px solid #1d7777;
     display: block;
     margin: 1% auto 0.5% auto;
   }
@@ -121,9 +130,14 @@
   }
   .works {
     height: 100vh;
+    background-color: #f8f8ff;
   }
   .work-items {
     margin:0 auto;
+  }
+  .works-card {
+    display: block;
+    margin: 1% auto;
   }
   .sekigaemaker-img {
     border-radius: 20px;
@@ -144,7 +158,7 @@
   }
   .div-title {
     padding: 1% 0 0 0 ;
-    color: #6cd0ff;
+    color: #23bdbd;
     font-weight: 700;
     font-size: 5em;
   }
