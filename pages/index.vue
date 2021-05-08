@@ -38,8 +38,10 @@
 
       <!-- Works -->
       <div class="works fixed-background-img" id="works">
-        <h2 v-show="isFadeInUpWorks1" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUpWorks1}">Works</h2>
-        <a href="https://sekigae.jp/" target="_blank"><img class="sekigaemaker-img works-item" src="/sekigae2.png" width="30%"></a>
+        <h2 class="div-title">Works</h2>
+        <a href="https://sekigae.jp/" target="_blank">
+          <img v-if="isFadeInUpWorks1" class="animate__animated sekigaemaker-img works-item" :class="{animate__fadeInUp: isFadeInUpWorks1}" src="/sekigae2.png" width="30%">
+        </a>
       </div>
 
       <!-- Skills -->
