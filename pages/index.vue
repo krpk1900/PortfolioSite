@@ -1,45 +1,69 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12">
-      <v-system-bar color="#fffaf0" app height="50vh">
+      <v-system-bar color="#fffaf0" app height="50vh" style="opacity: 0.95;">
         <p>scrollY = {{ scrollY }} </p>
-        <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to>Top</nuxt-link>
-        <nuxt-link class="link" v-scroll-to="'#profile'" to>Profile</nuxt-link>
-        <nuxt-link class="link" v-scroll-to="'#works'" to>Works</nuxt-link>
-        <nuxt-link class="link" v-scroll-to="'#skills'" to>Skills</nuxt-link>
-        <nuxt-link class="link rightmost-link" v-scroll-to="'#history'" to>History</nuxt-link>
+        <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to style="color: #099e9e;">Top</nuxt-link>
+        <nuxt-link class="link" v-scroll-to="'#profile'" to style="color: #099e9e;">Profile</nuxt-link>
+        <nuxt-link class="link" v-scroll-to="'#works'" to style="color: #099e9e;">Works</nuxt-link>
+        <nuxt-link class="link" v-scroll-to="'#skills'" to style="color: #099e9e;">Skills</nuxt-link>
+        <nuxt-link class="link rightmost-link" v-scroll-to="'#history'" to style="color: #099e9e;">History</nuxt-link>
       </v-system-bar>
 
 
-
+      <!-- タイトル -->
       <div class="title fixed-background-img" id="title">
         <!--img class="code-img" src="code5.jpg" alt=""-->
         <vue-typer class="typing" text="Terai Shogo's Portfolio" :repeat="0" :pre-type-delay="100" :type-delay="80"></vue-typer>
       </div>
 
+      <!-- Profile -->
       <div class="profile" id="profile">
-        <h2 class="animate__animated div-title" :class="{animate__fadeInUp: true}">Profile</h2>
-        <img src="/zoomup.jpg" class="profile-img" width="300px" height="300px">
-        <p class="text-center name">Terai Shogo</p>
-        <v-card class="profile-card" elevation="4" width="40%" rounded>
-          <v-card-text class="text-body-1" style="padding-left: 13%;">
+        <h2 class="div-title">Profile</h2>
+        <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300px" height="300px">
+        <div v-else style="padding: 10em;"></div>
+        <p v-if="isFadeInUpProfile1" class="animate__animated text-center name" :class="{animate__fadeInUp: isFadeInUpProfile1}">Terai Shogo</p>
+        <div v-else style="padding: 10em;"></div>
+
+        <v-card v-if="isFadeInUpProfile2" class="animate__animated profile-card" :class="{animate__fadeInUp: isFadeInUpProfile2}" elevation="4" width="35%" rounded>
+          <v-card-text class="text-body-1" style="padding-left: 7%;">
             1995年生まれ富山県出身。<br>
             大阪大学で情報科学を学んだ後、公立中学校で教諭となる。<br>
             現在はWeb開発を学習中。<br>
             趣味はバドミントン・サッカー・将棋・料理など。
           </v-card-text>
         </v-card>
+        <div v-else style="padding: 5em;"></div>
       </div>
 
-      <div class="works fixed-background-img" id="works">
-        <h2 v-show="isFadeInUp2" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp2}">Works</h2>
-        <a href="https://sekigae.jp/" target="_blank"><img class="sekigaemaker" src="/sekigae2.png" width="30%"></a>
+      <!-- Works -->
+      <div class="works" id="works">
+        <h2 class="div-title">Works</h2>
+        <div class="works-item">
+          <a href="https://sekigae.jp/" target="_blank">
+            <img class="sekigaemaker-img" src="/sekigae2.png" width="30%">
+          </a>
+          <a href="https://sekigae.jp/" target="_blank">
+            <div class="text-center sekigaemaker-title">席替えメーカー</div>
+          </a>
+          <!--div class="text-center sekigaemaker-description">
+            生徒名と条件を入力するだけで座席の配置案を瞬時に出してくれるサービス。
+            ユーザー数は7,000人を突破。
+          </div-->
+
+          <!--v-card class="works-card" width="31%">
+            <v-card-title>席替えメーカー</v-card-title>
+            <v-card-text>生徒名と条件を入力するだけで、座席の配置案を瞬時に出してくれるサービス。ユーザー数は7,000人超。</v-card-text>
+          </v-card-->
+        </div>
       </div>
 
+      <!-- Skills -->
       <div class="skills" id="skills">
         <h2 v-show="isFadeInUp3" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp3}">Skills</h2>
       </div>
 
+      <!-- History -->
       <div class="history" id="history">
         <h2 v-show="isFadeInUp4" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp4}">History</h2>
 
@@ -61,11 +85,32 @@
 
 <style>
   :root {
-    --animate-duration: 2000ms;
+    --animate-duration: 1000ms;
   }
   h2 {
     font-size: 4em;
     text-align: center;
+  }
+  a {
+    text-decoration: none;
+  }
+  .right {
+    margin-right: 10em;
+  }
+  .left {
+    margin-left: 10em;
+  }
+  .link {
+    font-size: 1.4em;
+    text-decoration: none;
+    margin-left: 1em;
+    color: #099e9e;
+  }
+  .leftmost-link {
+    margin-left: auto;
+  }
+  .rightmost-link {
+    margin-right: 1em;
   }
   .code-img {
     width: 100%;
@@ -73,9 +118,10 @@
   }
   .title {
     position: relative;
+    height: 90vh;
   }
   .vue-typer .custom.char {
-    color: #6cd0ff;
+    color:  #71e9e9; /*#6cd0ff*/;
     font-weight: 700;
     font-size: 1.1em;
   }
@@ -93,20 +139,18 @@
   img {
     vertical-align:top;
   }
-  .title {
-    height: 90vh;
-  }
   .profile {
     height: 95vh;
-    background-color: #f8f8ff;
+    background-color: #eaeaf3fb;
   }
   .name {
     font-size: 3em;
     font-weight: 600;
+    color: #696464;
   }
   .profile-img {
-    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
-    border: 9px solid #a9a9a9; /* 枠線を付加 */
+    border-radius: 50%;
+    border: 9px solid #1d7777;
     display: block;
     margin: 1% auto 0.5% auto;
   }
@@ -115,44 +159,56 @@
     margin: 1% auto;
   }
   .works {
-    height: 100vh;
+    height: 85vh;
+    background-color: #f8f8ff;
   }
-  .sekigaemaker {
+  .works-item {
+    /*display: inline-block;*/
+    /*margin:0 auto;*/
+    text-align: center;
+  }
+  .works-card {
+    display: block;
+    margin: 1% auto;
+  }
+  .sekigaemaker-img {
     border-radius: 20px;
+    transition-duration: 0.2s;
+  }
+  .sekigaemaker-img:hover {
+    transform: scale(1.03,1.03);
+    transition-duration: 0.2s;
+  }
+  .sekigaemaker-title {
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #696464;
+    margin-top: 1%;
+  }
+  .sekigaemaker-description {
+    font-size: 1em;
+    font-weight: 550;
+    color: #696464;
+    margin: 0% auto;
+    width: 30%;
+
   }
   .skills {
     height: 100vh;
-    background-color: #a1d4c9;
+    background-color: #eaeaf3fb;
   }
   .history {
     height: 100vh;
-    background-color: #75c9b7;
+    background-color: #f8f8ff;
   }
   .div-title {
     padding: 1% 0 0 0 ;
-    color: #6cd0ff;
+    color: #23bdbd;
     font-weight: 700;
     font-size: 5em;
   }
-  .else-margin {
-    margin: 10%;
-  }
-  .right {
-    margin-right: 10em;
-  }
-  .left {
-    margin-left: 10em;
-  }
-  .link {
-    font-size: 1.4em;
-    text-decoration: none;
-    margin-left: 1em;
-  }
-  .leftmost-link {
-    margin-left: auto;
-  }
-  .rightmost-link {
-    margin-right: 1em;
+  .else-padding {
+    padding: 4.1em;
   }
   .fixed-background-img {
     background-image: url("/code5.jpg");
@@ -184,11 +240,14 @@ export default {
         },
       ],
       isCreated: false,
+      isFadeInUpProfile1: false,
+      isFadeInUpProfile2: false,
       isFadeInUp1: false,
       isFadeInUp2: false,
       isFadeInUp3: false,
       isFadeInUp4: false,
       scrollY: 0,
+      innnerHeight: 0,
     }),
     created() {
       if (process.browser) {
@@ -205,6 +264,11 @@ export default {
       handleScroll() {
         this.innnerHeight = window.innerHeight;
         this.scrollY = window.scrollY;
+        this.isFadeInUpProfile1 = window.scrollY > 140;
+        this.isFadeInUpProfile2 = window.scrollY > 520;
+        this.isFadeInUpWorks1 = window.scrollY > 840;
+
+
         this.isFadeInUp1 = window.scrollY > 80;
         this.isFadeInUp2 = window.scrollY > window.innerHeight + 80;
         this.isFadeInUp3 = window.scrollY > window.innerHeight*2 + 80;
