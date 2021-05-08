@@ -41,8 +41,19 @@
         <h2 class="div-title">Works</h2>
         <div class="works-item">
           <a href="https://sekigae.jp/" target="_blank">
-          <img class="sekigaemaker-img" src="/sekigae2.png" width="30%">
-        </a>
+            <img class="sekigaemaker-img" src="/sekigae2.png" width="30%">
+          </a>
+          <div class="text-center sekigaemaker-title">席替えメーカー</div>
+          <!--div class="text-center sekigaemaker-description">
+            生徒名と条件を入力するだけで座席の配置案を瞬時に出してくれるサービス。
+            ユーザー数は7,000人を突破。
+          </div-->
+
+
+          <!--v-card class="works-card" width="31%">
+            <v-card-title>席替えメーカー</v-card-title>
+            <v-card-text>生徒名と条件を入力するだけで、座席の配置案を瞬時に出してくれるサービス。ユーザー数は7,000人超。</v-card-text>
+          </v-card-->
         </div>
       </div>
 
@@ -115,6 +126,7 @@
   .name {
     font-size: 3em;
     font-weight: 600;
+    color: #696464;
   }
   .profile-img {
     border-radius: 50%;
@@ -135,6 +147,10 @@
     /*margin:0 auto;*/
     text-align: center;
   }
+  .works-card {
+    display: block;
+    margin: 1% auto;
+  }
   .sekigaemaker-img {
     border-radius: 20px;
     transition-duration: 0.2s;
@@ -142,6 +158,20 @@
   .sekigaemaker-img:hover {
     transform: scale(1.03,1.03);
     transition-duration: 0.2s;
+  }
+  .sekigaemaker-title {
+    font-size: 2em;
+    font-weight: 600;
+    color: #696464;
+    margin-top: 1%;
+  }
+  .sekigaemaker-description {
+    font-size: 1em;
+    font-weight: 550;
+    color: #696464;
+    margin: 0% auto;
+    width: 30%;
+
   }
   .skills {
     height: 100vh;
