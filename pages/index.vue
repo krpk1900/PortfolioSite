@@ -65,17 +65,69 @@
 
       <!-- History -->
       <div class="history" id="history">
-        <h2 v-show="isFadeInUp4" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp4}">History</h2>
-
+        <h2 class="div-title">History</h2>
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
-          <v-timeline-item v-for="(item, i) in items" :key="i" :color="item.color" :icon="item.icon" fill-dot>
-            <v-card :color="item.color" dark :class="[{right: i%2==0}, {left: i%2==1}, {animate__fadeInUp: isFadeInUp4}]" class="animate__animated">
-              <v-card-title class="card-title">Lorem Ipsum Dolor</v-card-title>
+
+          <v-timeline-item :color="'red lighten-2'" :icon="'mdi-school'" fill-dot>
+            <v-card :color="'red lighten-2'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUp4}">
+              <v-card-title class="card-title">RUNTEQでWeb開発を学習</v-card-title>
               <v-card-text class="white text--primary">
-                <p>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</p>
+                <p>Web開発を学習する。</p>
               </v-card-text>
             </v-card>
           </v-timeline-item>
+
+          <v-timeline-item :color="'purple darken-1'" :icon="'mdi-city'" fill-dot>
+            <v-card :color="'purple darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUp4}">
+              <v-card-title class="card-title">席替えメーカーを個人開発</v-card-title>
+              <v-card-text class="white text--primary">
+                <p>あああ</p>
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item :color="'red lighten-2'" :icon="'mdi-school'" fill-dot>
+            <v-card :color="'red lighten-2'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUp4}">
+              <v-card-title class="card-title">RUNTEQでWeb開発を学習</v-card-title>
+              <v-card-text class="white text--primary">
+                <p>Web開発を学習する。</p>
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item :color="'purple darken-1'" :icon="'mdi-city'" fill-dot>
+            <v-card :color="'purple darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUp4}">
+              <v-card-title class="card-title">公立中学校教諭に赴任</v-card-title>
+              <v-card-text class="white text--primary">
+                <p>あああ</p>
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item :color="'green lighten-1'" :icon="'mdi-account'" fill-dot>
+            <template v-slot:opposite>
+              <div>aaa</div>
+            </template>
+            <v-card :color="'green lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUp4}">
+              <v-card-title class="card-title">富山県で生まれる</v-card-title>
+              <v-card-text class="white text--primary">
+                <p>Web開発を学習する。</p>
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item :color="'purple darken-1'" :icon="'mdi-city'" fill-dot>
+            <template v-slot:opposite>
+              <div class="opposite">aaa</div>
+            </template>
+            <v-card :color="'purple darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUp4}">
+              <v-card-title class="card-title">席替えメーカーを個人開発</v-card-title>
+              <v-card-text class="white text--primary">
+                <p>あああ</p>
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
+
         </v-timeline>
       </div>
 
@@ -201,6 +253,10 @@
     height: 100vh;
     background-color: #f8f8ff;
   }
+  .opposite {
+    position: absolute;
+    bottom: 12%;
+  }
   .div-title {
     padding: 1% 0 0 0 ;
     color: #23bdbd;
@@ -272,7 +328,7 @@ export default {
         this.isFadeInUp1 = window.scrollY > 80;
         this.isFadeInUp2 = window.scrollY > window.innerHeight + 80;
         this.isFadeInUp3 = window.scrollY > window.innerHeight*2 + 80;
-        this.isFadeInUp4 = window.scrollY > window.innerHeight*3 + 80;
+        this.isFadeInUp4 = window.scrollY > 3200;
       },
     },
   }
