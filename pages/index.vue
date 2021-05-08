@@ -25,8 +25,8 @@
         <p v-if="isFadeInUpProfile1" class="animate__animated text-center name" :class="{animate__fadeInUp: isFadeInUpProfile1}">Terai Shogo</p>
         <div v-else style="padding: 10em;"></div>
 
-        <v-card v-if="isFadeInUpProfile2" class="animate__animated profile-card" :class="{animate__fadeInUp: isFadeInUpProfile2}" elevation="4" width="40%" rounded>
-          <v-card-text class="text-body-1" style="padding-left: 13%;">
+        <v-card v-if="isFadeInUpProfile2" class="animate__animated profile-card" :class="{animate__fadeInUp: isFadeInUpProfile2}" elevation="4" width="35%" rounded>
+          <v-card-text class="text-body-1" style="padding-left: 7%;">
             1995年生まれ富山県出身。<br>
             大阪大学で情報科学を学んだ後、公立中学校で教諭となる。<br>
             現在はWeb開発を学習中。<br>
@@ -159,7 +159,7 @@
     margin: 1% auto;
   }
   .works {
-    height: 100vh;
+    height: 85vh;
     background-color: #f8f8ff;
   }
   .works-item {
@@ -195,11 +195,11 @@
   }
   .skills {
     height: 100vh;
-    background-color: #a1d4c9;
+    background-color: #eaeaf3fb;
   }
   .history {
     height: 100vh;
-    background-color: #75c9b7;
+    background-color: #f8f8ff;
   }
   .div-title {
     padding: 1% 0 0 0 ;
