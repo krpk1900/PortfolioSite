@@ -3,11 +3,11 @@
     <v-col cols="12">
       <v-system-bar color="#fffaf0" app height="50vh" style="opacity: 0.95;">
         <p>scrollY = {{ scrollY }} </p>
-        <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to>Top</nuxt-link>
-        <nuxt-link class="link" v-scroll-to="'#profile'" to>Profile</nuxt-link>
-        <nuxt-link class="link" v-scroll-to="'#works'" to>Works</nuxt-link>
-        <nuxt-link class="link" v-scroll-to="'#skills'" to>Skills</nuxt-link>
-        <nuxt-link class="link rightmost-link" v-scroll-to="'#history'" to>History</nuxt-link>
+        <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to style="color: #099e9e;">Top</nuxt-link>
+        <nuxt-link class="link" v-scroll-to="'#profile'" to style="color: #099e9e;">Profile</nuxt-link>
+        <nuxt-link class="link" v-scroll-to="'#works'" to style="color: #099e9e;">Works</nuxt-link>
+        <nuxt-link class="link" v-scroll-to="'#skills'" to style="color: #099e9e;">Skills</nuxt-link>
+        <nuxt-link class="link rightmost-link" v-scroll-to="'#history'" to style="color: #099e9e;">History</nuxt-link>
       </v-system-bar>
 
 
@@ -94,12 +94,31 @@
   a {
     text-decoration: none;
   }
+  .right {
+    margin-right: 10em;
+  }
+  .left {
+    margin-left: 10em;
+  }
+  .link {
+    font-size: 1.4em;
+    text-decoration: none;
+    margin-left: 1em;
+    color: #099e9e;
+  }
+  .leftmost-link {
+    margin-left: auto;
+  }
+  .rightmost-link {
+    margin-right: 1em;
+  }
   .code-img {
     width: 100%;
     height: 100vh;
   }
   .title {
     position: relative;
+    height: 90vh;
   }
   .vue-typer .custom.char {
     color:  #71e9e9; /*#6cd0ff*/;
@@ -119,9 +138,6 @@
   }
   img {
     vertical-align:top;
-  }
-  .title {
-    height: 90vh;
   }
   .profile {
     height: 95vh;
@@ -193,23 +209,6 @@
   }
   .else-padding {
     padding: 4.1em;
-  }
-  .right {
-    margin-right: 10em;
-  }
-  .left {
-    margin-left: 10em;
-  }
-  .link {
-    font-size: 1.4em;
-    text-decoration: none;
-    margin-left: 1em;
-  }
-  .leftmost-link {
-    margin-left: auto;
-  }
-  .rightmost-link {
-    margin-right: 1em;
   }
   .fixed-background-img {
     background-image: url("/code5.jpg");
