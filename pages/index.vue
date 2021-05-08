@@ -43,12 +43,13 @@
           <a href="https://sekigae.jp/" target="_blank">
             <img class="sekigaemaker-img" src="/sekigae2.png" width="30%">
           </a>
-          <div class="text-center sekigaemaker-title">席替えメーカー</div>
+          <a href="https://sekigae.jp/" target="_blank">
+            <div class="text-center sekigaemaker-title">席替えメーカー</div>
+          </a>
           <!--div class="text-center sekigaemaker-description">
             生徒名と条件を入力するだけで座席の配置案を瞬時に出してくれるサービス。
             ユーザー数は7,000人を突破。
           </div-->
-
 
           <!--v-card class="works-card" width="31%">
             <v-card-title>席替えメーカー</v-card-title>
@@ -89,6 +90,9 @@
   h2 {
     font-size: 4em;
     text-align: center;
+  }
+  a {
+    text-decoration: none;
   }
   .code-img {
     width: 100%;
@@ -160,7 +164,7 @@
     transition-duration: 0.2s;
   }
   .sekigaemaker-title {
-    font-size: 2em;
+    font-size: 1.7em;
     font-weight: 600;
     color: #696464;
     margin-top: 1%;
