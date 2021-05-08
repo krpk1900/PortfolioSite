@@ -19,7 +19,7 @@
 
       <!-- Profile -->
       <div class="profile" id="profile">
-        <h2 class="animate__animated div-title" :class="{animate__fadeInUp: true}">Profile</h2>
+        <h2 class="div-title">Profile</h2>
         <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300px" height="300px">
         <div v-else style="padding: 10em;"></div>
         <p v-if="isFadeInUpProfile1" class="animate__animated text-center name" :class="{animate__fadeInUp: isFadeInUpProfile1}">Terai Shogo</p>
@@ -37,11 +37,13 @@
       </div>
 
       <!-- Works -->
-      <div class="works fixed-background-img" id="works">
+      <div class="works" id="works">
         <h2 class="div-title">Works</h2>
-        <a href="https://sekigae.jp/" target="_blank">
-          <img v-if="isFadeInUpWorks1" class="animate__animated sekigaemaker-img works-item" :class="{animate__fadeInUp: isFadeInUpWorks1}" src="/sekigae2.png" width="30%">
+        <div class="works-item">
+          <a href="https://sekigae.jp/" target="_blank">
+          <img class="sekigaemaker-img" src="/sekigae2.png" width="30%">
         </a>
+        </div>
       </div>
 
       <!-- Skills -->
@@ -129,16 +131,12 @@
     background-color: #f8f8ff;
   }
   .works-item {
-    display: block;
-    margin:0 auto;
-  }
-  .works-card {
-    display: block;
-    margin: 1% auto;
+    /*display: inline-block;*/
+    /*margin:0 auto;*/
+    text-align: center;
   }
   .sekigaemaker-img {
     border-radius: 20px;
-    display: block;
     transition-duration: 0.2s;
   }
   .sekigaemaker-img:hover {
@@ -235,8 +233,8 @@ export default {
         this.scrollY = window.scrollY;
         this.isFadeInUpProfile1 = window.scrollY > 140;
         this.isFadeInUpProfile2 = window.scrollY > 520;
-        this.isFadeInUpWorks1 = window.scrollY > 700;
-        this.isFadeInUpWorks2 = window.scrollY > 860;
+        this.isFadeInUpWorks1 = window.scrollY > 840;
+
 
         this.isFadeInUp1 = window.scrollY > 80;
         this.isFadeInUp2 = window.scrollY > window.innerHeight + 80;
