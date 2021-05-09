@@ -15,6 +15,32 @@
       <div class="title fixed-background-img" id="title">
         <!--img class="code-img" src="code5.jpg" alt=""-->
         <vue-typer class="typing" text="Terai Shogo's Portfolio" :repeat="0" :pre-type-delay="100" :type-delay="80"></vue-typer>
+
+        <div class="sns-links">
+          <a href="https://twitter.com/krpk1900_dev" target="_blank">
+            <img class="sns-img" src="/twitter.png" width="4%">
+          </a>
+          <a href="https://qiita.com/krpk1900" target="_blank">
+            <img class="sns-img" src="/qiita.png" width="4%">
+          </a>
+          <a href="https://github.com/krpk1900" target="_blank">
+            <img class="sns-img" src="/github.png" width="4%">
+          </a>
+          <a href="https://note.com/krpk1900" target="_blank">
+            <img class="sns-img" src="/note.png" width="4%">
+          </a>
+          <a href="https://www.wantedly.com/id/krpk1900" target="_blank">
+            <img class="sns-img" src="/wantedly.png" width="4%">
+          </a>
+          <a href="https://www.facebook.com/krpk1900" target="_blank">
+            <img class="sns-img" src="/facebook.png" width="4%">
+          </a>
+          <a href="https://connpass.com/user/krpk1900/" target="_blank">
+            <img class="sns-img" src="/connpass.png" width="4%">
+          </a>
+
+        </div>
+
       </div>
 
       <!-- Profile -->
@@ -283,8 +309,13 @@
   .link {
     font-size: 1.4em;
     text-decoration: none;
-    margin-left: 1em;
     color: #099e9e;
+    /*background-color: red; デバッグ用*/
+    padding: 0.75%;
+    transition: all  0.3s ease;
+  }
+  .link:hover {
+    background-color: #e2d8d8;
   }
   .leftmost-link {
     margin-left: auto;
@@ -318,6 +349,19 @@
   }
   img {
     vertical-align:top;
+  }
+  .sns-links {
+    text-align: center;
+  }
+  .sns-img {
+    /*position: absolute;*/
+    margin: 41% 2px 0 2px;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+  }
+  .sns-img:hover {
+    transform: scale(1.1,1.1);
+    transition-duration: 0.2s;
   }
   .profile {
     height: 95vh;
