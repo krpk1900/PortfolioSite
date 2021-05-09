@@ -61,48 +61,48 @@
       <!-- Skills -->
       <div class="skills" id="skills">
         <h2 class="div-title">Skills</h2>
-        <v-card v-if="isFadeInUpSkills1" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="40%" elevation="4" rounded>
+        <v-card v-if="isFadeInUpSkills1" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="50%" elevation="4" rounded>
           <v-card-title class="skills-card-title justify-center">今後学習したい</v-card-title>
           <div class="skills-item">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/TypeScript.png" alt="TypeScript" width="7%" style="margin: 0 1%;">
+                <img v-bind="attrs" v-on="on" class="skill-img" src="/TypeScript.png" alt="TypeScript" width="9%" style="margin: 0 1%;">
               </template>
               <span>TypeScript</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/React.png" alt="React" width="7%" style="margin: 0 1%;">
+                <img v-bind="attrs" v-on="on" class="skill-img" src="/React.png" alt="React" width="9%" style="margin: 0 1%;">
               </template>
               <span>React</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/nextjs.png" alt="Next.js" width="9%" style="margin: 0.5%; 1% 0 1%">
+                <img v-bind="attrs" v-on="on" class="skill-img" src="/nextjs.png" alt="Next.js" width="11%" style="margin: 0.5%; 1% 0 1%">
               </template>
               <span>Next.js</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/sql.png" alt="SQL" width="7%" style="margin: 0 1%;">
+                <img v-bind="attrs" v-on="on" class="skill-img" src="/sql.png" alt="SQL" width="9%" style="margin: 0 1%;">
               </template>
               <span>SQL</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/aws.png" alt="AWS" width="10%" style="margin: 1% 1% 0 1%;">
+                <img v-bind="attrs" v-on="on" class="skill-img" src="/aws.png" alt="AWS" width="12%" style="margin: 1% 1% 0 1%;">
               </template>
               <span>AWS</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/webpack.png" alt="webpack" width="7%" style="margin: 0 1%;">
+                <img v-bind="attrs" v-on="on" class="skill-img" src="/webpack.png" alt="webpack" width="9%" style="margin: 0 1%;">
               </template>
               <span>webpack</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/nodejs.png" alt="Node.js" width="9%" style="margin: 1% 1% 0 1%;">
+                <img v-bind="attrs" v-on="on" class="skill-img" src="/nodejs.png" alt="Node.js" width="11%" style="margin: 1% 1% 0 1%;">
               </template>
               <span>Node.js</span>
             </v-tooltip>
@@ -120,43 +120,43 @@
           <div class="skills-item">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/ruby.png" alt="Ruby" width="7%" style="margin: 0 1%;">
+                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/ruby.png" alt="Ruby" width="9%" style="margin: 0 1%;">
               </template>
               <span>Ruby</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/rails.png" alt="Ruby on Rails" width="7%" style="margin: 0 2%;">
+                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/rails.png" alt="Ruby on Rails" width="9%" style="margin: 0 2%;">
               </template>
               <span>Ruby on Rails</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/javascript.svg" alt="JavaScript" width="6%" style="margin: 0 2%;">
+                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/javascript.svg" alt="JavaScript" width="8%" style="margin: 0 2%;">
               </template>
               <span>JavaScript</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/vue.png" alt="Vue.js" width="7%" style="margin: 0 1%;">
+                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/vue.png" alt="Vue.js" width="9%" style="margin: 0 1%;">
               </template>
               <span>Vue.js</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/nuxtjs.svg" alt="Nuxt.js" width="9%" style="margin: 0 1% 0 0 ;">
+                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/nuxtjs.svg" alt="Nuxt.js" width="11%" style="margin: 0 1% 0 1%;">
               </template>
               <span>Nuxt.js</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/html.png" alt="HTML" width="6.8%" style="margin: 0 2%;">
+                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/html.png" alt="HTML" width="9%" style="margin: 0 2%;">
               </template>
               <span>HTML</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/css.png" alt="CSS" width="6%" style="margin: 0 5% 0 1%;">
+                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/css.png" alt="CSS" width="8%" style="margin: 0 5% 0 1%;">
               </template>
               <span>CSS</span>
             </v-tooltip>
