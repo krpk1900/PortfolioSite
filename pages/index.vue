@@ -309,8 +309,13 @@
   .link {
     font-size: 1.4em;
     text-decoration: none;
-    margin-left: 1em;
     color: #099e9e;
+    /*background-color: red; デバッグ用*/
+    padding: 0.75%;
+    transition: all  0.3s ease;
+  }
+  .link:hover {
+    background-color: #e2d8d8;
   }
   .leftmost-link {
     margin-left: auto;
