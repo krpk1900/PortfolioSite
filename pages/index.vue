@@ -61,7 +61,7 @@
       <!-- Skills -->
       <div class="skills" id="skills">
         <h2 class="div-title">Skills</h2>
-        <v-card class="skills-card" width="50%" elevation="4" rounded>
+        <v-card v-if="isFadeInUpSkills1" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="40%" elevation="4" rounded>
           <v-card-title class="skills-card-title justify-center">今後学習したい</v-card-title>
           <div class="skills-item">
             <v-tooltip bottom>
@@ -443,6 +443,8 @@ export default {
       isCreated: false,
       isFadeInUpProfile1: false,
       isFadeInUpProfile2: false,
+      isFadeInUpSkills1 : false,
+
       isFadeInUp1: false,
       isFadeInUp2: false,
       isFadeInUp3: false,
@@ -468,6 +470,7 @@ export default {
         this.isFadeInUpProfile1 = window.scrollY > 140;
         this.isFadeInUpProfile2 = window.scrollY > 520;
         this.isFadeInUpWorks1 = window.scrollY > 840;
+        this.isFadeInUpSkills1 = window.scrollY > 1480;
 
 
         this.isFadeInUp1 = window.scrollY > 80;
