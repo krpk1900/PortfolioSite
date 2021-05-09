@@ -62,7 +62,7 @@
       <div class="skills" id="skills">
         <h2 class="div-title">Skills</h2>
         <v-card width="50%">
-          <v-card-title>今後学習したい</v-card-title>
+          <v-card-title class="skills-card-title">今後学習したい</v-card-title>
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <img v-bind="attrs" v-on="on" class="skill-img" src="/TypeScript.png" alt="TypeScript" width="7%">
@@ -81,11 +81,41 @@
             </template>
             <span>Next.js</span>
           </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/sql.png" alt="SQL" width="6%">
+            </template>
+            <span>SQL</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/aws.png" alt="AWS" width="10%" style="margin-top: 1%;">
+            </template>
+            <span>AWS</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/webpack.png" alt="webpack" width="7%">
+            </template>
+            <span>webpack</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/nodejs.png" alt="Node.js" width="9%" style="margin-top: 1%;">
+            </template>
+            <span>Node.js</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/docker.png" alt="docker" width="9%">
+            </template>
+            <span>docker</span>
+          </v-tooltip>
         </v-card>
 
 
         <v-card width="50%">
-          <v-card-title>最近よく使う</v-card-title>
+          <v-card-title class="skills-card-title">最近よく使う</v-card-title>
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <img v-bind="attrs" v-on="on" class="skill-img" src="/ruby.png" alt="Ruby" width="7%">
@@ -131,7 +161,7 @@
         </v-card>
 
         <v-card width="50%">
-          <v-card-title>過去使っていた</v-card-title>
+          <v-card-title class="skills-card-title">過去使っていた</v-card-title>
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <img v-bind="attrs" v-on="on" class="skill-img" src="/python.png" alt="Python" width="7.5%">
