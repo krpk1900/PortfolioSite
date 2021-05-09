@@ -60,7 +60,33 @@
 
       <!-- Skills -->
       <div class="skills" id="skills">
-        <h2 v-show="isFadeInUp3" class="animate__animated div-title" :class="{animate__fadeInUp: isFadeInUp3}">Skills</h2>
+        <h2 class="div-title">Skills</h2>
+        <v-card width="50%">
+          <v-card-title>今後学習したい</v-card-title>
+
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/TypeScript.png" alt="TypeScript" width="5%">
+            </template>
+            <span>TypeScript</span>
+          </v-tooltip>
+
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/React.png" alt="React" width="5%">
+            </template>
+            <span>React</span>
+          </v-tooltip>
+
+
+
+
+        </v-card>
+
+
+        <v-card>
+          最近よく使う</v-card>
+        <v-card>過去使っていた</v-card>
       </div>
 
       <!-- History -->
@@ -248,6 +274,9 @@
   .skills {
     height: 100vh;
     background-color: #eaeaf3fb;
+  }
+  .skill-img {
+    border-radius: 2px;
   }
   .history {
     height: 100vh;
