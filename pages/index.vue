@@ -116,9 +116,41 @@
             </template>
             <span>Nuxt.js</span>
           </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/html.png" alt="HTML" width="6.8%">
+            </template>
+            <span>HTML</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/css.png" alt="CSS" width="6%">
+            </template>
+            <span>CSS</span>
+          </v-tooltip>
         </v-card>
 
-        <v-card>過去使っていた</v-card>
+        <v-card width="50%">
+          <v-card-title>過去使っていた</v-card-title>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/python.png" alt="Python" width="7.5%">
+            </template>
+            <span>Python</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/java.png" alt="Java" width="7%">
+            </template>
+            <span>Java</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/c.png" alt="C言語" width="8%">
+            </template>
+            <span>C言語</span>
+          </v-tooltip>
+        </v-card>
       </div>
 
       <!-- History -->
