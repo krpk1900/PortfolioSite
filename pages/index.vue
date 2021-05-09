@@ -61,7 +61,7 @@
       <!-- Skills -->
       <div class="skills" id="skills">
         <h2 class="div-title">Skills</h2>
-        <v-card v-if="isFadeInUpSkills1" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="50%" elevation="4" rounded>
+        <v-card v-if="isFadeInUpSkills1" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills1}" width="50%" elevation="4" rounded>
           <v-card-title class="skills-card-title justify-center">今後学習したい</v-card-title>
           <div class="skills-item">
             <v-tooltip bottom>
@@ -114,8 +114,9 @@
             </v-tooltip-->
           </div>
         </v-card>
+        <div v-else style="padding: 5em;"></div>
 
-        <v-card class="skills-card" width="50%" elevation="4" rounded>
+        <v-card v-if="isFadeInUpSkills2" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills2}" width="50%" elevation="4" rounded>
           <v-card-title class="skills-card-title justify-center">最近よく使う</v-card-title>
           <div class="skills-item">
             <v-tooltip bottom>
@@ -162,8 +163,9 @@
             </v-tooltip>
           </div>
         </v-card>
+        <div v-else style="padding: 5em;"></div>
 
-        <v-card class="skills-card" width="50%" elevation="4" rounded>
+        <v-card v-if="isFadeInUpSkills3" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills3}" width="50%" elevation="4" rounded>
           <v-card-title class="skills-card-title justify-center">過去使っていた</v-card-title>
           <div class="skills-item">
             <v-tooltip bottom>
@@ -186,6 +188,7 @@
             </v-tooltip>
           </div>
         </v-card>
+        <div v-else style="padding: 5em;"></div>
       </div>
 
       <!-- History -->
@@ -445,6 +448,8 @@ export default {
       isFadeInUpProfile1: false,
       isFadeInUpProfile2: false,
       isFadeInUpSkills1 : false,
+      isFadeInUpSkills2 : false,
+      isFadeInUpSkills3 : false,
 
       isFadeInUp1: false,
       isFadeInUp2: false,
@@ -472,7 +477,8 @@ export default {
         this.isFadeInUpProfile2 = window.scrollY > 520;
         this.isFadeInUpWorks1 = window.scrollY > 840;
         this.isFadeInUpSkills1 = window.scrollY > 1480;
-
+        this.isFadeInUpSkills2 = window.scrollY > 1650;
+        this.isFadeInUpSkills3 = window.scrollY > 1800;
 
         this.isFadeInUp1 = window.scrollY > 80;
         this.isFadeInUp2 = window.scrollY > window.innerHeight + 80;
