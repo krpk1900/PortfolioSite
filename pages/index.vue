@@ -245,11 +245,11 @@
             </v-card>
           </v-timeline-item>
 
-          <v-timeline-item :color="'green lighten-1'" :icon="'mdi-account'" fill-dot>
+          <v-timeline-item :color="'pink lighten-2'" :icon="'mdi-school'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite green--text" style="margin-bottom: 23%;">2011</div>
+              <div class="opposite pink--text" style="margin-bottom: 23%;">2011</div>
             </template>
-            <v-card v-if="isFadeInUpHistory3" :color="'green lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory3}">
+            <v-card v-if="isFadeInUpHistory3" :color="'pink lighten-2'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory3}">
               <v-card-title class="history-card-title">富山県立富山東高等学校に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text">
                 <p style="padding-top: 3%;">
@@ -464,10 +464,12 @@
   .history-card-title {
     font-size: 1.5em;
     font-weight: 550;
+    margin-left: 2%;
   }
   .history-card-text {
     font-size: 1em;
     font-weight: 500;
+    padding-left: 4%;
   }
   .div-title {
     padding: 1% 0 0 0 ;
