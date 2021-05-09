@@ -225,7 +225,7 @@
             <template v-slot:opposite>
               <div class="opposite green--text" style="margin-bottom: 14%;">1995</div>
             </template>
-            <v-card :color="'green lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory1}">
+            <v-card v-if="isFadeInUpHistory1" :color="'green lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory1}">
               <v-card-title class="history-card-title">富山県で生まれる</v-card-title>
               <v-card-text class="white text--primary history-card-text">
                 <p style="padding-top: 3%;">自然豊かな場所で育ちました。</p>
@@ -237,7 +237,7 @@
             <template v-slot:opposite>
               <div class="opposite blue--text" style="margin-bottom: 16%;">2008</div>
             </template>
-            <v-card :color="'blue lighten-2'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory2}">
+            <v-card v-if="isFadeInUpHistory2" :color="'blue lighten-2'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory2}">
               <v-card-title class="history-card-title">上市町立上市中学校に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text">
                 <p style="padding-top: 3%;">自分の生きる姿勢を通して、心に一生残り続けるような良い影響を人に与えたいと考えて、教師を目指すようになりました。</p>
@@ -245,11 +245,17 @@
             </v-card>
           </v-timeline-item>
 
-          <v-timeline-item :color="'red lighten-2'" :icon="'mdi-school'" fill-dot>
-            <v-card :color="'red lighten-2'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUp4}">
-              <v-card-title class="history-card-title">RUNTEQでWeb開発を学習</v-card-title>
-              <v-card-text class="white text--primary">
-                <p>Web開発を学習する。</p>
+          <v-timeline-item :color="'green lighten-1'" :icon="'mdi-account'" fill-dot>
+            <template v-slot:opposite>
+              <div class="opposite green--text" style="margin-bottom: 23%;">2011</div>
+            </template>
+            <v-card v-if="isFadeInUpHistory3" :color="'green lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory3}">
+              <v-card-title class="history-card-title">富山県立富山東高等学校に入学</v-card-title>
+              <v-card-text class="white text--primary history-card-text">
+                <p style="padding-top: 3%;">
+                  これまで関心があった教育に加えて、学習に対してもより興味を持つようになりました。
+                  何かを学習するときには一体どのような過程をたどるのか、学習の効率を上げるためにはどのような方法があるのかなどを探求していました。
+                </p>
               </v-card-text>
             </v-card>
           </v-timeline-item>
@@ -263,12 +269,9 @@
             </v-card>
           </v-timeline-item>
 
-          <v-timeline-item :color="'green lighten-1'" :icon="'mdi-account'" fill-dot>
-            <template v-slot:opposite>
-              <div>aaa</div>
-            </template>
-            <v-card :color="'green lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUp4}">
-              <v-card-title class="history-card-title">富山県で生まれる</v-card-title>
+          <v-timeline-item :color="'red lighten-2'" :icon="'mdi-school'" fill-dot>
+            <v-card :color="'red lighten-2'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUp4}">
+              <v-card-title class="history-card-title">RUNTEQでWeb開発を学習</v-card-title>
               <v-card-text class="white text--primary">
                 <p>Web開発を学習する。</p>
               </v-card-text>
@@ -546,7 +549,7 @@ export default {
         this.isFadeInUpSkills3 = window.scrollY > 1800;
         this.isFadeInUpHistory1 = window.scrollY > 2170;
         this.isFadeInUpHistory2 = window.scrollY > 2300;
-        this.isFadeInUpHistory3 = window.scrollY > 2170;
+        this.isFadeInUpHistory3 = window.scrollY > 2520;
         this.isFadeInUpHistory4 = window.scrollY > 2170;
 
         this.isFadeInUp1 = window.scrollY > 80;
