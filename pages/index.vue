@@ -63,29 +63,61 @@
         <h2 class="div-title">Skills</h2>
         <v-card width="50%">
           <v-card-title>今後学習したい</v-card-title>
-
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
-              <img v-bind="attrs" v-on="on" class="skill-img" src="/TypeScript.png" alt="TypeScript" width="5%">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/TypeScript.png" alt="TypeScript" width="7%">
             </template>
             <span>TypeScript</span>
           </v-tooltip>
-
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
-              <img v-bind="attrs" v-on="on" class="skill-img" src="/React.png" alt="React" width="5%">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/React.png" alt="React" width="7%">
             </template>
             <span>React</span>
           </v-tooltip>
-
-
-
-
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/nextjs.png" alt="Next.js" width="9%" style="margin-top: 0.5%;">
+            </template>
+            <span>Next.js</span>
+          </v-tooltip>
         </v-card>
 
 
-        <v-card>
-          最近よく使う</v-card>
+        <v-card width="50%">
+          <v-card-title>最近よく使う</v-card-title>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/ruby.png" alt="Ruby" width="7%">
+            </template>
+            <span>Ruby</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/rails.png" alt="Ruby on Rails" width="7%">
+            </template>
+            <span>Ruby on Rails</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/javascript.svg" alt="JavaScript" width="6%">
+            </template>
+            <span>JavaScript</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/vue.png" alt="Vue.js" width="7%">
+            </template>
+            <span>Vue.js</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <img v-bind="attrs" v-on="on" class="skill-img" src="/nuxtjs.svg" alt="Nuxt.js" width="9%">
+            </template>
+            <span>Nuxt.js</span>
+          </v-tooltip>
+        </v-card>
+
         <v-card>過去使っていた</v-card>
       </div>
 
