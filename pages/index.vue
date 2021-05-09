@@ -221,10 +221,33 @@
       <div class="history" id="history">
         <h2 class="div-title">History</h2>
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
+          <v-timeline-item :color="'green lighten-1'" :icon="'mdi-account'" fill-dot>
+            <template v-slot:opposite>
+              <div class="opposite green--text" style="margin-bottom: 14%;">1995</div>
+            </template>
+            <v-card :color="'green lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory1}">
+              <v-card-title class="history-card-title">富山県で生まれる</v-card-title>
+              <v-card-text class="white text--primary history-card-text">
+                <p style="padding-top: 3%;">自然豊かな場所で育ちました。</p>
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item :color="'blue lighten-2'" :icon="'mdi-school'" fill-dot>
+            <template v-slot:opposite>
+              <div class="opposite blue--text" style="margin-bottom: 16%;">2008</div>
+            </template>
+            <v-card :color="'blue lighten-2'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory2}">
+              <v-card-title class="history-card-title">上市町立上市中学校に入学</v-card-title>
+              <v-card-text class="white text--primary history-card-text">
+                <p style="padding-top: 3%;">自分の生きる姿勢を通して、心に一生残り続けるような良い影響を人に与えたいと考えて、教師を目指すようになりました。</p>
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
 
           <v-timeline-item :color="'red lighten-2'" :icon="'mdi-school'" fill-dot>
             <v-card :color="'red lighten-2'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUp4}">
-              <v-card-title class="card-title">RUNTEQでWeb開発を学習</v-card-title>
+              <v-card-title class="history-card-title">RUNTEQでWeb開発を学習</v-card-title>
               <v-card-text class="white text--primary">
                 <p>Web開発を学習する。</p>
               </v-card-text>
@@ -233,25 +256,7 @@
 
           <v-timeline-item :color="'purple darken-1'" :icon="'mdi-city'" fill-dot>
             <v-card :color="'purple darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUp4}">
-              <v-card-title class="card-title">席替えメーカーを個人開発</v-card-title>
-              <v-card-text class="white text--primary">
-                <p>あああ</p>
-              </v-card-text>
-            </v-card>
-          </v-timeline-item>
-
-          <v-timeline-item :color="'red lighten-2'" :icon="'mdi-school'" fill-dot>
-            <v-card :color="'red lighten-2'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUp4}">
-              <v-card-title class="card-title">RUNTEQでWeb開発を学習</v-card-title>
-              <v-card-text class="white text--primary">
-                <p>Web開発を学習する。</p>
-              </v-card-text>
-            </v-card>
-          </v-timeline-item>
-
-          <v-timeline-item :color="'purple darken-1'" :icon="'mdi-city'" fill-dot>
-            <v-card :color="'purple darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUp4}">
-              <v-card-title class="card-title">公立中学校教諭に赴任</v-card-title>
+              <v-card-title class="history-card-title">公立中学校教諭に赴任</v-card-title>
               <v-card-text class="white text--primary">
                 <p>あああ</p>
               </v-card-text>
@@ -263,7 +268,7 @@
               <div>aaa</div>
             </template>
             <v-card :color="'green lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUp4}">
-              <v-card-title class="card-title">富山県で生まれる</v-card-title>
+              <v-card-title class="history-card-title">富山県で生まれる</v-card-title>
               <v-card-text class="white text--primary">
                 <p>Web開発を学習する。</p>
               </v-card-text>
@@ -275,7 +280,7 @@
               <div class="opposite">aaa</div>
             </template>
             <v-card :color="'purple darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUp4}">
-              <v-card-title class="card-title">席替えメーカーを個人開発</v-card-title>
+              <v-card-title class="history-card-title">席替えメーカーを個人開発</v-card-title>
               <v-card-text class="white text--primary">
                 <p>あああ</p>
               </v-card-text>
@@ -447,8 +452,19 @@
     background-color: #f8f8ff;
   }
   .opposite {
-    position: absolute;
-    bottom: 12%;
+    /*position: absolute;*/
+    /*bottom: 12%;*/
+    /*margin-bottom: 15%;*/
+    font-size: 1.5em;
+    font-weight: 550;
+  }
+  .history-card-title {
+    font-size: 1.5em;
+    font-weight: 550;
+  }
+  .history-card-text {
+    font-size: 1em;
+    font-weight: 500;
   }
   .div-title {
     padding: 1% 0 0 0 ;
@@ -494,6 +510,11 @@ export default {
       isFadeInUpSkills1 : false,
       isFadeInUpSkills2 : false,
       isFadeInUpSkills3 : false,
+      isFadeInUpHistory1: false,
+      isFadeInUpHistory2: false,
+      isFadeInUpHistory3: false,
+      isFadeInUpHistory4: false,
+      isFadeInUpHistory5: false,
 
       isFadeInUp1: false,
       isFadeInUp2: false,
@@ -523,6 +544,10 @@ export default {
         this.isFadeInUpSkills1 = window.scrollY > 1480;
         this.isFadeInUpSkills2 = window.scrollY > 1650;
         this.isFadeInUpSkills3 = window.scrollY > 1800;
+        this.isFadeInUpHistory1 = window.scrollY > 2170;
+        this.isFadeInUpHistory2 = window.scrollY > 2300;
+        this.isFadeInUpHistory3 = window.scrollY > 2170;
+        this.isFadeInUpHistory4 = window.scrollY > 2170;
 
         this.isFadeInUp1 = window.scrollY > 80;
         this.isFadeInUp2 = window.scrollY > window.innerHeight + 80;
