@@ -168,19 +168,19 @@
           <div class="skills-item">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/python.png" alt="Python" width="7.5%" style="margin: 0 1%;">
+                <img v-bind="attrs" v-on="on" class="skill-img" src="/python.png" alt="Python" width="9.5%" style="margin: 0 1%;">
               </template>
               <span>Python</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/java.png" alt="Java" width="7%" style="margin: 0 1%;">
+                <img v-bind="attrs" v-on="on" class="skill-img" src="/java.png" alt="Java" width="9%" style="margin: 0 1%;">
               </template>
               <span>Java</span>
             </v-tooltip>
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/c.png" alt="C言語" width="8%" style="margin: 0 1%">
+                <img v-bind="attrs" v-on="on" class="skill-img" src="/c.png" alt="C言語" width="10%" style="margin: 0 2% 0 1%">
               </template>
               <span>C言語</span>
             </v-tooltip>
@@ -383,6 +383,7 @@
   .skills-card {
     display: block;
     margin: 1% auto;
+    padding-bottom: 1%;
   }
   .skills-card-title {
     font-size: 1.7em;
