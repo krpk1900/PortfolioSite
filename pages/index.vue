@@ -374,7 +374,7 @@
 
   }
   .skills {
-    height: 100vh;
+    height: 90vh;
     background-color: #eaeaf3fb;
   }
   /*.skill-img {
