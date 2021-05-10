@@ -604,51 +604,117 @@ export default {
         window.removeEventListener("scroll", this.handleScroll);
       }
     },
+    mounted() {
+      console.log(this.$vuetify.breakpoint)
+    },
     methods: {
       handleScroll() {
         this.innnerHeight = window.innerHeight;
         this.scrollY = window.scrollY;
+
+        let fadeInUpProfile1Height
+        let fadeInUpProfile2Height
+        let fadeInUpWorks1Height
+        let fadeInUpSkills1Height
+        let fadeInUpSkills2Height
+        let fadeInUpSkills3Height
+        let fadeInUpHistory1Height
+        let fadeInUpHistory2Height
+        let fadeInUpHistory3Height
+        let fadeInUpHistory4Height
+        let fadeInUpHistory5Height
+        let fadeInUpHistory6Height
+        let fadeInUpHistory7Height
+        let fadeInUpHistory8Height
+
+        if(this.$vuetify.breakpoint.lgOnly) {
+          fadeInUpProfile1Height = 140;
+          fadeInUpProfile2Height = 520;
+          fadeInUpWorks1Height = 840;
+          fadeInUpSkills1Height = 1480;
+          fadeInUpSkills2Height = 1650;
+          fadeInUpSkills3Height = 1800;
+          fadeInUpHistory1Height = 2170;
+          fadeInUpHistory2Height = 2300;
+          fadeInUpHistory3Height = 2520;
+          fadeInUpHistory4Height = 2730;
+          fadeInUpHistory5Height = 3070;
+          fadeInUpHistory6Height = 3350;
+          fadeInUpHistory7Height = 3630;
+          fadeInUpHistory8Height = 3850;
+        } else if(this.$vuetify.breakpoint.xlOnly) {
+          fadeInUpProfile1Height = 100;
+          fadeInUpProfile2Height = 480;
+          fadeInUpWorks1Height = 970;
+          fadeInUpSkills1Height = 1780;
+          fadeInUpSkills2Height = 1980;
+          fadeInUpSkills3Height = 2180;
+          fadeInUpHistory1Height = 2630;
+          fadeInUpHistory2Height = 2830;
+          fadeInUpHistory3Height = 3040;
+          fadeInUpHistory4Height = 3330;
+          fadeInUpHistory5Height = 3740;
+          fadeInUpHistory6Height = 4100;
+          fadeInUpHistory7Height = 4470;
+          fadeInUpHistory8Height = 4730;
+        } else {
+          fadeInUpProfile1Height = 140;
+          fadeInUpProfile2Height = 520;
+          fadeInUpWorks1Height = 840;
+          fadeInUpSkills1Height = 1480;
+          fadeInUpSkills2Height = 1650;
+          fadeInUpSkills3Height = 1800;
+          fadeInUpHistory1Height = 2170;
+          fadeInUpHistory2Height = 2300;
+          fadeInUpHistory3Height = 2520;
+          fadeInUpHistory4Height = 2730;
+          fadeInUpHistory5Height = 3070;
+          fadeInUpHistory6Height = 3350;
+          fadeInUpHistory7Height = 3630;
+          fadeInUpHistory8Height = 3850;
+        }
+
         if(!this.isFadeInUpProfile1) {
-          this.isFadeInUpProfile1 = window.scrollY > 140;
+          this.isFadeInUpProfile1 = window.scrollY > fadeInUpProfile1Height;
         }
         if(!this.isFadeInUpProfile2) {
-          this.isFadeInUpProfile2 = window.scrollY > 520;
+          this.isFadeInUpProfile2 = window.scrollY > fadeInUpProfile2Height;
         }
         if(!this.isFadeInUpWorks1) {
-          this.isFadeInUpWorks1 = window.scrollY > 840;
+          this.isFadeInUpWorks1 = window.scrollY > fadeInUpWorks1Height;
         }
         if(!this.isFadeInUpSkills1) {
-          this.isFadeInUpSkills1 = window.scrollY > 1480;
+          this.isFadeInUpSkills1 = window.scrollY > fadeInUpSkills1Height;
         }
         if(!this.isFadeInUpSkills2) {
-          this.isFadeInUpSkills2 = window.scrollY > 1650;
+          this.isFadeInUpSkills2 = window.scrollY > fadeInUpSkills2Height;
         }
         if(!this.isFadeInUpSkills3) {
-          this.isFadeInUpSkills3 = window.scrollY > 1800;
+          this.isFadeInUpSkills3 = window.scrollY > fadeInUpSkills3Height;
         }
         if(!this.isFadeInUpHistory1) {
-          this.isFadeInUpHistory1 = window.scrollY > 2170;
+          this.isFadeInUpHistory1 = window.scrollY > fadeInUpHistory1Height;
         }
         if(!this.isFadeInUpHistory2) {
-          this.isFadeInUpHistory2 = window.scrollY > 2300;
+          this.isFadeInUpHistory2 = window.scrollY > fadeInUpHistory2Height;
         }
         if(!this.isFadeInUpHistory3) {
-          this.isFadeInUpHistory3 = window.scrollY > 2520;
+          this.isFadeInUpHistory3 = window.scrollY > fadeInUpHistory3Height;
         }
         if(!this.isFadeInUpHistory4) {
-          this.isFadeInUpHistory4 = window.scrollY > 2730;
+          this.isFadeInUpHistory4 = window.scrollY > fadeInUpHistory4Height;
         }
         if(!this.isFadeInUpHistory5) {
-          this.isFadeInUpHistory5 = window.scrollY > 3070;
+          this.isFadeInUpHistory5 = window.scrollY > fadeInUpHistory5Height;
         }
         if(!this.isFadeInUpHistory6) {
-          this.isFadeInUpHistory6 = window.scrollY > 3350;
+          this.isFadeInUpHistory6 = window.scrollY > fadeInUpHistory6Height;
         }
         if(!this.isFadeInUpHistory7) {
-          this.isFadeInUpHistory7 = window.scrollY > 3630;
+          this.isFadeInUpHistory7 = window.scrollY > fadeInUpHistory7Height;
         }
         if(!this.isFadeInUpHistory8) {
-          this.isFadeInUpHistory8 = window.scrollY > 3850;
+          this.isFadeInUpHistory8 = window.scrollY > fadeInUpHistory8Height;
         }
 
 
