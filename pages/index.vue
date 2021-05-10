@@ -594,20 +594,48 @@ export default {
       handleScroll() {
         this.innnerHeight = window.innerHeight;
         this.scrollY = window.scrollY;
-        this.isFadeInUpProfile1 = window.scrollY > 140;
-        this.isFadeInUpProfile2 = window.scrollY > 520;
-        this.isFadeInUpWorks1 = window.scrollY > 840;
-        this.isFadeInUpSkills1 = window.scrollY > 1480;
-        this.isFadeInUpSkills2 = window.scrollY > 1650;
-        this.isFadeInUpSkills3 = window.scrollY > 1800;
-        this.isFadeInUpHistory1 = window.scrollY > 2170;
-        this.isFadeInUpHistory2 = window.scrollY > 2300;
-        this.isFadeInUpHistory3 = window.scrollY > 2520;
-        this.isFadeInUpHistory4 = window.scrollY > 2730;
-        this.isFadeInUpHistory5 = window.scrollY > 3070;
-        this.isFadeInUpHistory6 = window.scrollY > 3350;
-        this.isFadeInUpHistory7 = window.scrollY > 3630;
-        this.isFadeInUpHistory8 = window.scrollY > 3850;
+        if(!this.isFadeInUpProfile1) {
+          this.isFadeInUpProfile1 = window.scrollY > 140;
+        }
+        if(!this.isFadeInUpProfile2) {
+          this.isFadeInUpProfile2 = window.scrollY > 520;
+        }
+        if(!this.isFadeInUpWorks1) {
+          this.isFadeInUpWorks1 = window.scrollY > 840;
+        }
+        if(!this.isFadeInUpSkills1) {
+          this.isFadeInUpSkills1 = window.scrollY > 1480;
+        }
+        if(!this.isFadeInUpSkills2) {
+          this.isFadeInUpSkills2 = window.scrollY > 1650;
+        }
+        if(!this.isFadeInUpSkills3) {
+          this.isFadeInUpSkills3 = window.scrollY > 1800;
+        }
+        if(!this.isFadeInUpHistory1) {
+          this.isFadeInUpHistory1 = window.scrollY > 2170;
+        }
+        if(!this.isFadeInUpHistory2) {
+          this.isFadeInUpHistory2 = window.scrollY > 2300;
+        }
+        if(!this.isFadeInUpHistory3) {
+          this.isFadeInUpHistory3 = window.scrollY > 2520;
+        }
+        if(!this.isFadeInUpHistory4) {
+          this.isFadeInUpHistory4 = window.scrollY > 2730;
+        }
+        if(!this.isFadeInUpHistory5) {
+          this.isFadeInUpHistory5 = window.scrollY > 3070;
+        }
+        if(!this.isFadeInUpHistory6) {
+          this.isFadeInUpHistory6 = window.scrollY > 3350;
+        }
+        if(!this.isFadeInUpHistory7) {
+          this.isFadeInUpHistory7 = window.scrollY > 3630;
+        }
+        if(!this.isFadeInUpHistory8) {
+          this.isFadeInUpHistory8 = window.scrollY > 3850;
+        }
 
 
         this.isFadeInUp1 = window.scrollY > 80;
