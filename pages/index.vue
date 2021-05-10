@@ -66,9 +66,12 @@
       <div class="works" id="works">
         <h2 class="div-title">Works</h2>
         <div class="works-item">
-          <a href="https://sekigae.jp/" target="_blank">
-            <img class="sekigaemaker-img" src="/sekigae2.png" width="30%">
-          </a>
+          <div v-if="isFadeInUpWorks1" class="animate__animated" :class="{animate__fadeInUp: isFadeInUpWorks1}">
+            <a href="https://sekigae.jp/" target="_blank">
+              <img class="sekigaemaker-img" src="/sekigae2.png" width="30%">
+            </a>
+          </div>
+          <div v-else style="margin: 30%;"></div>
           <a href="https://sekigae.jp/" target="_blank">
             <div class="text-center sekigaemaker-title">席替えメーカー</div>
           </a>
@@ -560,6 +563,7 @@ export default {
       isCreated: false,
       isFadeInUpProfile1: false,
       isFadeInUpProfile2: false,
+      isFadeInUpWorks1: false,
       isFadeInUpSkills1 : false,
       isFadeInUpSkills2 : false,
       isFadeInUpSkills3 : false,
@@ -571,10 +575,6 @@ export default {
       isFadeInUpHistory6: false,
       isFadeInUpHistory7: false,
       isFadeInUpHistory8: false,
-
-
-
-
 
       scrollY: 0,
       innnerHeight: 0,
