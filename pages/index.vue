@@ -504,7 +504,7 @@
     /*margin:0 auto;*/
   }
   .history {
-    height: 300vh;
+    height: 275vh;
     background-color: #f8f8ff;
   }
   .opposite {
