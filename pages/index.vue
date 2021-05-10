@@ -270,7 +270,7 @@
                 <p style="padding-top: 3%;">
                   将棋でコンピュータがプロ棋士を超え始めたことを知り、<b>コンピュータが自らで学習</b>していることに衝撃を受けました。
                   そもそもコンピュータが学習するとは一体どういうことなのか、コンピュータはどのような仕組みで学習しているのかなどを詳しく学びたいと思うようになりました。<br><br>
-                  また、<b>コンピュータの学習</b>を学ぶことで、将来教師になったときに人間の学習に活かせることがあるのではないかと考えていました。
+                  また、コンピュータの学習を学ぶことで、将来教師になったときに<b>人の学習に活かせる</b>ことがあるのではないかと考えていました。
                 </p>
               </v-card-text>
             </v-card>
@@ -286,7 +286,7 @@
                 <p style="padding-top: 3%;">
                   情報科学を学んだ後、教育工学分野における研究を行いました。
                   機械学習を用いて学習者の状態推定を行い、<b>コンピュータの学習によって人間の学習を支援する</b>手法を研究していました。<br><br>
-                  また、夜間に履修していた教職課程を通して、同年代とは思えないようなビジョンを持つ多くの人たちと出会うことができました。
+                  また、夜間に履修していた教職課程を通して、同年代とは考えられないようなビジョンを持つ多くの人たちと出会うことができました。
                 </p>
               </v-card-text>
             </v-card>
@@ -316,8 +316,8 @@
               <v-card-title class="history-card-title">Web開発の学習を始める</v-card-title>
               <v-card-text class="white text--primary history-card-text">
                 <p style="padding-top: 3%;">
-                  bbb
-                  何かを学習するときには一体どのような過程をたどるのか、学習の効率を上げるためにはどのような方法があるのかなどを探求していました。
+                  サービスを開発して多くの人に届けることによって、<b>自分が直接出会うことができないような規模の人たちにも価値を提供できる点</b>に魅力を感じ、
+                  これまで学んだ経験がなかった分野であるWeb開発を学習し始めました。
                 </p>
               </v-card-text>
             </v-card>
@@ -605,9 +605,9 @@ export default {
         this.isFadeInUpHistory3 = window.scrollY > 2520;
         this.isFadeInUpHistory4 = window.scrollY > 2730;
         this.isFadeInUpHistory5 = window.scrollY > 3070;
-        this.isFadeInUpHistory6 = window.scrollY > 3340;
-        this.isFadeInUpHistory7 = window.scrollY > 2730;
-        this.isFadeInUpHistory8 = window.scrollY > 2730;
+        this.isFadeInUpHistory6 = window.scrollY > 3350;
+        this.isFadeInUpHistory7 = window.scrollY > 3630;
+        this.isFadeInUpHistory8 = window.scrollY > 3850;
 
 
         this.isFadeInUp1 = window.scrollY > 80;
