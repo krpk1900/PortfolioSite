@@ -228,17 +228,17 @@
             <v-card v-if="isFadeInUpHistory1" :color="'orange lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory1}">
               <v-card-title class="history-card-title">富山県で生まれる</v-card-title>
               <v-card-text class="white text--primary history-card-text">
-                <p style="padding-top: 3%;">自然豊かな場所で育ちました。</p>
+                <p style="padding-top: 3%;">自然豊かな場所で生まれました。</p>
               </v-card-text>
             </v-card>
           </v-timeline-item>
 
           <v-timeline-item :color="'blue lighten-2'" :icon="'mdi-school'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite blue--text" style="margin-bottom: 16%;">2008</div>
+              <div class="opposite blue--text" style="margin-bottom: 17%;">2008</div>
             </template>
             <v-card v-if="isFadeInUpHistory2" :color="'blue lighten-2'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory2}">
-              <v-card-title class="history-card-title">上市中学校に入学</v-card-title>
+              <v-card-title class="history-card-title">中学校に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text">
                 <p style="padding-top: 3%;">自分の生きる姿勢を通して、心に一生残り続けるような<b>良い影響を人に与えたい</b>と考えて、教師を目指すようになりました。</p>
               </v-card-text>
@@ -254,7 +254,7 @@
               <v-card-text class="white text--primary history-card-text">
                 <p style="padding-top: 3%;">
                   これまで関心があった教育に加えて、<b>学習</b>に対しても興味を持つようになりました。
-                  何かを学習するときには一体どのような過程をたどるのか、学習の効率を上げるためにはどのような方法があるのかなどを探求していました。
+                  人が何かを学習するとは一体どのような仕組みなのか、学習の効率を最大化するためにはどのような方法があるのかなどを探求していました。
                 </p>
               </v-card-text>
             </v-card>
@@ -262,14 +262,15 @@
 
           <v-timeline-item :color="'green lighten-1'" :icon="'mdi-lightbulb-on'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite green--text" style="margin-bottom: 27%;">2015</div>
+              <div class="opposite green--text" style="margin-bottom: 39%;">2015</div>
             </template>
             <v-card v-if="isFadeInUpHistory4" :color="'green lighten-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory4}">
               <v-card-title class="history-card-title">将棋がきっかけで人工知能に関心を持つ</v-card-title>
               <v-card-text class="white text--primary history-card-text">
                 <p style="padding-top: 3%;">
-                  将棋でプロ棋士を超え始めたコンピュータが学習していることを知り、コンピュータが学習するとはどういうことなのか興味を持ちました。
-                  <b>コンピュータの学習</b>を学ぶことで、将来教師になったときに人間の学習に活かせることがあるのではないかと感じていました。
+                  将棋でコンピュータがプロ棋士を超え始めたことを知り、<b>コンピュータが自らで学習</b>していることに衝撃を受けました。
+                  そもそもコンピュータが学習するとは一体どういうことなのか、コンピュータはどのような仕組みで学習しているのかなどを詳しく学びたいと思うようになりました。<br><br>
+                  また、<b>コンピュータの学習</b>を学ぶことで、将来教師になったときに人間の学習に活かせることがあるのではないかと考えていました。
                 </p>
               </v-card-text>
             </v-card>
@@ -277,15 +278,15 @@
 
           <v-timeline-item :color="'indigo darken-1'" :icon="'mdi-school'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite indigo--text" style="margin-bottom: 26%;">2016</div>
+              <div class="opposite indigo--text" style="margin-bottom: 33%;">2016</div>
             </template>
             <v-card v-if="isFadeInUpHistory5" :color="'indigo darken-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory5}">
               <v-card-title class="history-card-title">大阪大学に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text">
                 <p style="padding-top: 3%;">
                   情報科学を学んだ後、教育工学分野における研究を行いました。
-                  機械学習を用いて学習者の状態推定を行い、<b>コンピュータの学習によって人間の学習を支援する</b>手法を研究しました。<br>
-                  また、夜間に履修していた教職課程を通して、本当に素敵な考え方を持った多くの人たちと出会うことができました。
+                  機械学習を用いて学習者の状態推定を行い、<b>コンピュータの学習によって人間の学習を支援する</b>手法を研究していました。<br><br>
+                  また、夜間に履修していた教職課程を通して、同年代とは思えないようなビジョンを持つ多くの人たちと出会うことができました。
                 </p>
               </v-card-text>
             </v-card>
@@ -293,12 +294,16 @@
 
           <v-timeline-item :color="'purple darken-1'" :icon="'mdi-city'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite purple--text" style="margin-bottom: 16%;">2020</div>
+              <div class="opposite purple--text" style="margin-bottom: 33%;">2020</div>
             </template>
             <v-card v-if="isFadeInUpHistory6" :color="'purple darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory6}">
               <v-card-title class="history-card-title">公立中学校教諭に赴任</v-card-title>
               <v-card-text class="white text--primary history-card-text">
-                <p style="padding-top: 3%;">aaa</p>
+                <p style="padding-top: 3%;">
+                  心から尊敬できる教師の方々に囲まれながら働くことができました。
+                  しかし、そんな素敵な人たちが様々なものを犠牲にしている現実を知り、<b>「この人たちは絶対にこんなに苦しむべき人ではない」</b>と強く感じました。<br><br>
+                  既存の仕組みを改善することや、新たな仕組みを作ることによって課題を解決したいと考えるようになりました。
+                </p>
               </v-card-text>
             </v-card>
           </v-timeline-item>
@@ -491,7 +496,7 @@
     /*margin:0 auto;*/
   }
   .history {
-    height: 100vh;
+    height: 300vh;
     background-color: #f8f8ff;
   }
   .opposite {
@@ -599,8 +604,8 @@ export default {
         this.isFadeInUpHistory2 = window.scrollY > 2300;
         this.isFadeInUpHistory3 = window.scrollY > 2520;
         this.isFadeInUpHistory4 = window.scrollY > 2730;
-        this.isFadeInUpHistory5 = window.scrollY > 2980;
-        this.isFadeInUpHistory6 = window.scrollY > 3220;
+        this.isFadeInUpHistory5 = window.scrollY > 3070;
+        this.isFadeInUpHistory6 = window.scrollY > 3340;
         this.isFadeInUpHistory7 = window.scrollY > 2730;
         this.isFadeInUpHistory8 = window.scrollY > 2730;
 
