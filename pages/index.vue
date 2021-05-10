@@ -325,12 +325,15 @@
 
           <v-timeline-item :color="'cyan darken-1'" :icon="'mdi-lightbulb-on'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite cyan--text" style="margin-bottom: 16%;">2020</div>
+              <div class="opposite cyan--text" style="margin-bottom: 23%;">2020</div>
             </template>
             <v-card v-if="isFadeInUpHistory8" :color="'cyan darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory8}">
               <v-card-title class="history-card-title">席替えメーカーを個人開発</v-card-title>
               <v-card-text class="white text--primary history-card-text">
-                <p style="padding-top: 3%;">aaa</p>
+                <p style="padding-top: 3%;">
+                  <b>業務を改善することで教師の方の力になりたい</b>と考え、席替えサービスを個人開発しました。
+                  ユーザー数は8,000人を超え、実際に現場で働いておられる数多くの教員の方にも使っていただいています。
+                </p>
               </v-card-text>
             </v-card>
           </v-timeline-item>
@@ -572,10 +575,7 @@ export default {
 
 
 
-      isFadeInUp1: false,
-      isFadeInUp2: false,
-      isFadeInUp3: false,
-      isFadeInUp4: false,
+
       scrollY: 0,
       innnerHeight: 0,
     }),
@@ -638,10 +638,6 @@ export default {
         }
 
 
-        this.isFadeInUp1 = window.scrollY > 80;
-        this.isFadeInUp2 = window.scrollY > window.innerHeight + 80;
-        this.isFadeInUp3 = window.scrollY > window.innerHeight*2 + 80;
-        this.isFadeInUp4 = window.scrollY > 3200;
       },
     },
   }
