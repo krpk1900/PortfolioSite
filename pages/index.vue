@@ -1,16 +1,19 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12">
+  <v-container fluid>
+  <!--v-row justify="center" align="center"-->
+    <!--v-col cols="12"-->
+    <v-row justify="center" align="center">
       <v-system-bar color="#fffaf0" app height="50vh" style="opacity: 0.95;">
-        <p>scrollY = {{ scrollY }} </p>
-        <p>{{ $vuetify.breakpoint.lgOnly }}</p>
+        <p>xs={{ $vuetify.breakpoint.xsOnly }}  sm={{ $vuetify.breakpoint.smOnly }}  md={{ $vuetify.breakpoint.mdOnly }}  lg={{ $vuetify.breakpoint.lgOnly }}  xl={{ $vuetify.breakpoint.xlOnly }}
+          scrollY={{ scrollY }}
+        </p>
         <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to style="color: #099e9e;">Top</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#profile'" to style="color: #099e9e;">Profile</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#works'" to style="color: #099e9e;">Works</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#skills'" to style="color: #099e9e;">Skills</nuxt-link>
         <nuxt-link class="link rightmost-link" v-scroll-to="'#history'" to style="color: #099e9e;">History</nuxt-link>
       </v-system-bar>
-
+    </v-row>
 
       <!-- タイトル -->
       <div class="title fixed-background-img" id="title">
@@ -363,8 +366,11 @@
       <v-footer color="#fffaf0" height="50vh">
         <div class="footer-item">© 2021 Terai Shogo</div>
       </v-footer>
-    </v-col>
-  </v-row>
+    <!--/v-col-->
+  <!--/v-row-->
+
+
+  </v-container>
 </template>
 
 <style>
