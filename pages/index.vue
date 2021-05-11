@@ -19,6 +19,7 @@
       <div class="title fixed-background-img" id="title">
         <!--img class="code-img" src="code5.jpg" alt=""-->
         <vue-typer class="typing" text="Terai Shogo's Portfolio" :repeat="0" :pre-type-delay="100" :type-delay="80"></vue-typer>
+        <!--vue-typer class="typing" :text="typingWords" :repeat="0" :pre-type-delay="100" :type-delay="80"></vue-typer-->
 
         <div class="sns-links">
           <a href="https://twitter.com/krpk1900_dev" target="_blank">
@@ -432,6 +433,19 @@
       font-weight: 700;
       font-size: 3em;
     }
+    .title .typing {
+      position: absolute;
+      font-size: 10em !important;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+    .vue-typer .custom.char {
+      color:  #71e9e9; /*#6cd0ff*/;
+      font-weight: 700;
+      font-size: 0.18em;/*1.1em;*/
+    }
     .sns-img {
       /*position: absolute;*/
       margin: 78vh 2px 0 2px;
@@ -497,6 +511,19 @@
       color: #23bdbd;
       font-weight: 700;
       font-size: 5.5em;
+    }
+    .title .typing {
+      position: absolute;
+      font-size: 4em;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+    .vue-typer .custom.char {
+      color:  #71e9e9; /*#6cd0ff*/;
+      font-weight: 700;
+      font-size: 1.1em;/*1.1em;*/
     }
     .sns-img {
       /*position: absolute;*/
@@ -586,21 +613,8 @@
   .vue-typer {
     white-space: pre;
   }
-  .vue-typer .custom.char {
-    color:  #71e9e9; /*#6cd0ff*/;
-    font-weight: 700;
-    font-size: 6.5vw;/*1.1em;*/
-  }
   .vue-typer .custom.caret {
     width: 0px;
-  }
-  .title .typing {
-    position: absolute;
-    font-size: 4em;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
   }
   img {
     vertical-align:top;
@@ -815,7 +829,7 @@ export default {
 
       scrollY: 0,
       innnerHeight: 0,
-      typingWords: "Terai Shogo's Portfolio",
+      typingWords: "Terai Shogo's \nPortfolio",
     }),
     created() {
       if (process.browser) {
