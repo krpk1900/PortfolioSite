@@ -467,7 +467,7 @@
       width: 35px;
     }
     .profile {
-      height: 66vh;
+      height: 68vh;
       background-color: #eaeaf3fb;
     }
     .profile-img {
@@ -484,7 +484,7 @@
       color: #696464;
     }
     .works {
-      height: 60vh;
+      height: 56vh;
       background-color: #f8f8ff;
     }
     .sekigaemaker-img {
@@ -499,7 +499,7 @@
       margin-top: 1%;
     }
     .skills {
-      height: 88vh;
+      height: 55vh;
       background-color: #eaeaf3fb;
     }
     .skills-card-title {
@@ -566,7 +566,7 @@
       width: 55px;
     }
     .profile {
-      height: 95vh;
+      height: 98vh;
       background-color: #eaeaf3fb;
     }
     .profile-img {
@@ -923,7 +923,38 @@ export default {
         let fadeInUpHistory7Height
         let fadeInUpHistory8Height
 
-        if(this.$vuetify.breakpoint.mdOnly) {
+
+        if(this.$vuetify.breakpoint.xsOnly) {
+          fadeInUpProfile1Height = 0;
+          fadeInUpProfile2Height = 0;
+          fadeInUpWorks1Height = 320;
+          fadeInUpSkills1Height = 820;
+          fadeInUpSkills2Height = 930;
+          fadeInUpSkills3Height = 1030;
+          fadeInUpHistory1Height = 1340;
+          fadeInUpHistory2Height = 1490;
+          fadeInUpHistory3Height = 1700;
+          fadeInUpHistory4Height = 1990;
+          fadeInUpHistory5Height = 2440;
+          fadeInUpHistory6Height = 2780;
+          fadeInUpHistory7Height = 3130;
+          fadeInUpHistory8Height = 3390;
+        } else if(this.$vuetify.breakpoint.smOnly) {
+          fadeInUpProfile1Height = 0;
+          fadeInUpProfile2Height = 0;
+          fadeInUpWorks1Height = 320;
+          fadeInUpSkills1Height = 820;
+          fadeInUpSkills2Height = 930;
+          fadeInUpSkills3Height = 1030;
+          fadeInUpHistory1Height = 1340;
+          fadeInUpHistory2Height = 1490;
+          fadeInUpHistory3Height = 1700;
+          fadeInUpHistory4Height = 1990;
+          fadeInUpHistory5Height = 2440;
+          fadeInUpHistory6Height = 2780;
+          fadeInUpHistory7Height = 3130;
+          fadeInUpHistory8Height = 3390;
+        } else if(this.$vuetify.breakpoint.mdOnly) {
           fadeInUpProfile1Height = 50;
           fadeInUpProfile2Height = 430;
           fadeInUpWorks1Height = 660;
