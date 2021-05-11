@@ -424,9 +424,9 @@
 
 <style>
   @media screen and (max-width: 960px) {
-    /* SP */
+    /* xs, sm */
     .div-title {
-      padding: 1% 0 1% 0 ;
+      padding: 5% 0 2% 0 ;
       color: #23bdbd;
       font-weight: 700;
       font-size: 3em;
@@ -441,6 +441,10 @@
     }
     .rightmost-link {
       margin-right: auto;
+    }
+    .title {
+      position: relative;
+      height: 50vh;
     }
     .title .typing {
       position: absolute;
@@ -457,13 +461,13 @@
     }
     .sns-img {
       /*position: absolute;*/
-      margin: 78vh 2px 0 2px;
+      margin: 42vh 2px 0 2px;
       border-radius: 10px;
       transition-duration: 0.2s;
       width: 35px;
     }
     .profile {
-      height: 98vh;
+      height: 66vh;
       background-color: #eaeaf3fb;
     }
     .profile-img {
@@ -480,7 +484,7 @@
       color: #696464;
     }
     .works {
-      height: 87vh;
+      height: 60vh;
       background-color: #f8f8ff;
     }
     .sekigaemaker-img {
@@ -536,6 +540,10 @@
     }
     .rightmost-link {
       margin-right: 3%;
+    }
+    .title {
+      position: relative;
+      height: 90vh;
     }
     .title .typing {
       position: absolute;
@@ -631,6 +639,10 @@
     }
     .rightmost-link {
       margin-right: 3%;
+    }
+    .title {
+      position: relative;
+      height: 90vh;
     }
     .title .typing {
       position: absolute;
@@ -730,10 +742,6 @@
   .code-img {
     width: 100%;
     height: 100vh;
-  }
-  .title {
-    position: relative;
-    height: 90vh;
   }
   .vue-typer {
     white-space: pre;
@@ -948,18 +956,18 @@ export default {
         } else if(this.$vuetify.breakpoint.xlOnly) {
           fadeInUpProfile1Height = 80;
           fadeInUpProfile2Height = 470;
-          fadeInUpWorks1Height = 900;
-          fadeInUpSkills1Height = 1750;
-          fadeInUpSkills2Height = 1950;
-          fadeInUpSkills3Height = 2130;
-          fadeInUpHistory1Height = 2610;
-          fadeInUpHistory2Height = 2780;
-          fadeInUpHistory3Height = 2960;
-          fadeInUpHistory4Height = 3180;
-          fadeInUpHistory5Height = 3430;
-          fadeInUpHistory6Height = 3700;
-          fadeInUpHistory7Height = 3960;
-          fadeInUpHistory8Height = 4190;
+          fadeInUpWorks1Height = 840;
+          fadeInUpSkills1Height = 1540;
+          fadeInUpSkills2Height = 1720;
+          fadeInUpSkills3Height = 1890;
+          fadeInUpHistory1Height = 2350;
+          fadeInUpHistory2Height = 2510;
+          fadeInUpHistory3Height = 2700;
+          fadeInUpHistory4Height = 2910;
+          fadeInUpHistory5Height = 3200;
+          fadeInUpHistory6Height = 3480;
+          fadeInUpHistory7Height = 3750;
+          fadeInUpHistory8Height = 3960;
         } else {
           fadeInUpProfile1Height = 140;
           fadeInUpProfile2Height = 520;
