@@ -49,7 +49,7 @@
 
       <!-- Profile -->
       <div :class="[{profileLg: $vuetify.breakpoint.lgOnly}, {profileXl: $vuetify.breakpoint.xlOnly}]">
-        <h2 class="div-title">Profile</h2>
+        <h2 class="div-title" id="profile">Profile</h2>
         <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300vh" height="300vh">
         <div v-else style="padding: 10em;"></div>
         <p v-if="isFadeInUpProfile1" class="animate__animated text-center name" :class="{animate__fadeInUp: isFadeInUpProfile1}">Terai Shogo</p>
@@ -225,7 +225,7 @@
       </div>
 
       <!-- History -->
-      <div :class="[{historyLg: $vuetify.breakpoint.lgOnly}, {historyXl: $vuetify.breakpoint.xlOnly}]">
+      <div :class="[{historyLg: $vuetify.breakpoint.lgOnly}, {historyXl: $vuetify.breakpoint.xlOnly}]" id="history">
         <h2 class="div-title">History</h2>
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item :color="'orange lighten-1'" :icon="' mdi-baby-face'" fill-dot>
@@ -523,7 +523,7 @@
   .skills-card-title {
     font-size: 1.7em;
     font-weight: 550;
-    color: #696464;
+    color: red/*#696464;*/
   }
   .skills-item {
     text-align: center;
