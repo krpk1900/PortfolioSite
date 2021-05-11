@@ -164,7 +164,7 @@
         </v-row>
 
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="12" sm="12" md="8" lg="6" xl="6">
+          <v-col cols="12" xs="12" sm="12" md="8" lg="6" xl="6" style="padding: 0;">
             <v-card v-if="isFadeInUpSkills2" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills2}" elevation="4" width="85%" rounded>
               <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">最近よく使う</v-card-title>
               <div class="skills-item">
@@ -217,7 +217,7 @@
         </v-row>
 
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="12" sm="12" md="8" lg="6" xl="6">
+          <v-col cols="12" xs="12" sm="12" md="8" lg="6" xl="6" style="padding: 0;">
             <v-card v-if="isFadeInUpSkills3" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills3}" elevation="4" width="85%" rounded>
               <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">過去使っていた</v-card-title>
               <div class="skills-item">
