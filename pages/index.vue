@@ -377,6 +377,9 @@
   :root {
     --animate-duration: 1000ms;
   }
+  .container {
+    padding: 0;
+  }
   h2 {
     font-size: 4em;
     text-align: center;
@@ -559,13 +562,13 @@
     margin-top: -10%;
   }
   .history1xl {
-    margin-top: -7%;
+    margin-top: -8%;
   }
   .history2lg {
-    margin-top: -12%;
+    margin-top: -11%;
   }
   .history2xl {
-    margin-top: -8%;
+    margin-top: -9%;
   }
   .history3lg {
     margin-top: -15%;
@@ -577,31 +580,31 @@
     margin-top: -23%;
   }
   .history4xl {
-    margin-top: -13%;
+    margin-top: -14%;
   }
   .history5lg {
-    margin-top: -22%;
+    margin-top: -20%;
   }
   .history5xl {
-    margin-top: -12%;
+    margin-top: -13%;
   }
   .history6lg {
     margin-top: -20%;
   }
   .history6xl {
-    margin-top: -13%;
+    margin-top: -14%;
   }
   .history7lg {
     margin-top: -15%;
   }
   .history7xl {
-    margin-top: -10%;
+    margin-top: -11%;
   }
   .history8lg {
     margin-top: -15%;
   }
   .history8xl {
-    margin-top: -10%;
+    margin-top: -11%;
   }
   .footer-item {
     margin: 0 5% 0 auto;
