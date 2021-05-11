@@ -256,7 +256,8 @@
                 1995.9
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory1" :color="'orange lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory1}">
+            <v-card v-if="isFadeInUpHistory1" :color="'orange lighten-1'" dark class="animate__animated history-card-right"
+              :class="[{animate__fadeInRight: isFadeInUpHistory1}, {historyCardRightMd: $vuetify.breakpoint.mdOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">富山県で生まれる</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">自然豊かな場所で生まれました。</p>
@@ -270,7 +271,8 @@
                 2008.4
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory2" :color="'blue lighten-2'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory2}">
+            <v-card v-if="isFadeInUpHistory2" :color="'blue lighten-2'" dark class="animate__animated history-card-left"
+              :class="[{animate__fadeInLeft: isFadeInUpHistory2}, {historyCardLeftMd: $vuetify.breakpoint.mdOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">中学校に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">自分の生きる姿勢を通して、心に一生残り続けるような<b>良い影響を人に与えたい</b>と考えて、教師を目指すようになりました。</p>
@@ -284,7 +286,8 @@
                 2011.4
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory3" :color="'pink lighten-2'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory3}">
+            <v-card v-if="isFadeInUpHistory3" :color="'pink lighten-2'" dark class="animate__animated history-card-right"
+              :class="[{animate__fadeInRight: isFadeInUpHistory3}, {historyCardRightMd: $vuetify.breakpoint.mdOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">富山東高等学校に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -301,7 +304,8 @@
                 2015.3
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory4" :color="'green lighten-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory4}">
+            <v-card v-if="isFadeInUpHistory4" :color="'green lighten-1'" dark class="animate__animated history-card-left"
+              :class="[{animate__fadeInLeft: isFadeInUpHistory4}, {historyCardLeftMd: $vuetify.breakpoint.mdOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">将棋がきっかけで人工知能に関心を持つ</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -319,7 +323,8 @@
                 2016.4
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory5" :color="'indigo darken-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory5}">
+            <v-card v-if="isFadeInUpHistory5" :color="'indigo darken-1'" dark class="animate__animated history-card-right"
+              :class="[{animate__fadeInRight: isFadeInUpHistory5}, {historyCardRightMd: $vuetify.breakpoint.mdOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">大阪大学に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -337,7 +342,8 @@
                 2020.4
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory6" :color="'purple darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory6}">
+            <v-card v-if="isFadeInUpHistory6" :color="'purple darken-1'" dark class="animate__animated history-card-left"
+              :class="[{animate__fadeInLeft: isFadeInUpHistory6}, {historyCardLeftMd: $vuetify.breakpoint.mdOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">公立中学校教諭に赴任</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -355,7 +361,8 @@
                 2020.9
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory7" :color="'deep-orange lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory7}">
+            <v-card v-if="isFadeInUpHistory7" :color="'deep-orange lighten-1'" dark class="animate__animated history-card-right"
+            :class="[{animate__fadeInRight: isFadeInUpHistory7}, {historyCardRightMd: $vuetify.breakpoint.mdOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">Web開発の学習を始める</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -372,7 +379,8 @@
                 2021.3
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory8" :color="'cyan darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory8}">
+            <v-card v-if="isFadeInUpHistory8" :color="'cyan darken-1'" dark class="animate__animated history-card-left"
+              :class="[{animate__fadeInLeft: isFadeInUpHistory8}, {historyCardRightMd: $vuetify.breakpoint.mdOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">席替えメーカーを個人開発</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -408,12 +416,6 @@
   }
   a {
     text-decoration: none;
-  }
-  .right {
-    margin-right: 10em;
-  }
-  .left {
-    margin-left: 10em;
   }
   .link {
     font-size: 1.4em;
@@ -627,6 +629,18 @@
   }
   .history8xl {
     margin-top: -11%;
+  }
+  .history-card-right {
+    margin-right: 10vw;
+  }
+  .history-card-left {
+    margin-left: 10vw;
+  }
+  .historyCardRightMd {
+    margin-right: 3vw;
+  }
+  .historyCardLeftMd {
+    margin-left: 3vw;
   }
   .footer-item {
     margin: 0 5% 0 auto;
