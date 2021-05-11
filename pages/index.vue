@@ -72,7 +72,7 @@
         <div class="works-item">
           <div v-if="isFadeInUpWorks1" class="animate__animated" :class="{animate__fadeInUp: isFadeInUpWorks1}">
             <a href="https://sekigae.jp/" target="_blank">
-              <img class="sekigaemaker-img" src="/sekigae2.png" width="30%">
+              <img class="sekigaemaker-img" src="/sekigae2.png" width="420vw">
             </a>
           </div>
           <div v-else style="margin: 30%;"></div>
@@ -418,7 +418,7 @@
   .vue-typer .custom.char {
     color:  #71e9e9; /*#6cd0ff*/;
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: 6.5vw;/*1.1em;*/
   }
   .vue-typer .custom.caret {
     width: 0px;
@@ -456,7 +456,7 @@
     background-color: #eaeaf3fb;
   }
   .name {
-    font-size: 3em;
+    font-size: 3vw;
     font-weight: 600;
     color: #696464;
   }
@@ -492,7 +492,7 @@
     transition-duration: 0.2s;
   }
   .sekigaemaker-title {
-    font-size: 1.7em;
+    font-size: 2vw;
     font-weight: 600;
     color: #696464;
     margin-top: 1%;
@@ -521,7 +521,7 @@
     padding-bottom: 1%;
   }
   .skills-card-title {
-    font-size: 1.7em;
+    font-size: 1.7vw;
     font-weight: 550;
     color: #696464;
   }
@@ -531,7 +531,7 @@
     /*margin:0 auto;*/
   }
   .historyLg {
-    height: 275vh;
+    height: 280vh;
     background-color: #f8f8ff;
   }
   .historyXl {
@@ -542,63 +542,63 @@
     /*position: absolute;*/
     /*bottom: 12%;*/
     /*margin-bottom: 15%;*/
-    font-size: 1.5em;
+    font-size: 1.8vw;
     font-weight: 550;
   }
   .history-card-title {
-    font-size: 1.5em;
+    font-size: 1.5vw;
     font-weight: 550;
     margin-left: 2%;
   }
   .history-card-text {
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 500;
     padding-left: 4%;
   }
   .history1lg {
-    margin-top: -9%;
+    margin-top: -10%;
   }
   .history1xl {
     margin-top: -7%;
   }
   .history2lg {
-    margin-top: -11%;
+    margin-top: -12%;
   }
   .history2xl {
     margin-top: -8%;
   }
   .history3lg {
-    margin-top: -14%;
+    margin-top: -15%;
   }
   .history3xl {
     margin-top: -10%;
   }
   .history4lg {
-    margin-top: -20%;
+    margin-top: -23%;
   }
   .history4xl {
     margin-top: -13%;
   }
   .history5lg {
-    margin-top: -19%;
+    margin-top: -22%;
   }
   .history5xl {
     margin-top: -12%;
   }
   .history6lg {
-    margin-top: -19%;
+    margin-top: -20%;
   }
   .history6xl {
     margin-top: -13%;
   }
   .history7lg {
-    margin-top: -14%;
+    margin-top: -15%;
   }
   .history7xl {
     margin-top: -10%;
   }
   .history8lg {
-    margin-top: -14%;
+    margin-top: -15%;
   }
   .history8xl {
     margin-top: -10%;
@@ -611,7 +611,7 @@
     padding: 1% 0 1% 0 ;
     color: #23bdbd;
     font-weight: 700;
-    font-size: 5em;
+    font-size: 6vw;
   }
   .else-padding {
     padding: 4.1em;
