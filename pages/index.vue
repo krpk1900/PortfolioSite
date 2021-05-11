@@ -61,7 +61,7 @@
 
 
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="12" sm="12" md="7" lg="5" xl="4">
+          <v-col cols="12" xs="12" sm="12" md="7" lg="5" xl="4" style="padding: 0;">
             <v-card v-if="isFadeInUpProfile2" class="animate__animated profile-card" :class="{animate__fadeInUp: isFadeInUpProfile2}" elevation="4" width="85%" rounded>
               <v-card-text class="text-body-1" style="padding-left: 7%;">
                 1995年生まれ富山県出身。<br>
@@ -105,7 +105,7 @@
         <h2 class="div-title">Skills</h2>
 
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="3" sm="12" md="8" lg="6" xl="6">
+          <v-col cols="12" xs="3" sm="12" md="8" lg="6" xl="6" style="padding: 0;">
             <v-card v-if="isFadeInUpSkills1" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills1}" elevation="4" width="85%" rounded>
               <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">今後学習したい</v-card-title>
               <div class="skills-item">
