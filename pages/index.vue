@@ -3,6 +3,7 @@
     <v-col cols="12">
       <v-system-bar color="#fffaf0" app height="50vh" style="opacity: 0.95;">
         <p>scrollY = {{ scrollY }} </p>
+        <p>{{ $vuetify.breakpoint.lgOnly }}</p>
         <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to style="color: #099e9e;">Top</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#profile'" to style="color: #099e9e;">Profile</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#works'" to style="color: #099e9e;">Works</nuxt-link>
@@ -44,9 +45,9 @@
       </div>
 
       <!-- Profile -->
-      <div class="profile" id="profile">
+      <div :class="[{profileLg: $vuetify.breakpoint.lgOnly}, {profileXl: $vuetify.breakpoint.xlOnly}]">
         <h2 class="div-title">Profile</h2>
-        <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300px" height="300px">
+        <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300vh" height="300vh">
         <div v-else style="padding: 10em;"></div>
         <p v-if="isFadeInUpProfile1" class="animate__animated text-center name" :class="{animate__fadeInUp: isFadeInUpProfile1}">Terai Shogo</p>
         <div v-else style="padding: 10em;"></div>
@@ -221,12 +222,14 @@
       </div>
 
       <!-- History -->
-      <div class="history" id="history">
+      <div :class="[{historyLg: $vuetify.breakpoint.lgOnly}, {historyXl: $vuetify.breakpoint.xlOnly}]">
         <h2 class="div-title">History</h2>
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item :color="'orange lighten-1'" :icon="' mdi-baby-face'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite orange--text" style="margin-bottom: 14%;">1995.9</div>
+              <div class="opposite orange--text" :class="[{history1lg: $vuetify.breakpoint.lgOnly}, {history1xl: $vuetify.breakpoint.xlOnly}]">
+                1995.9
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory1" :color="'orange lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory1}">
               <v-card-title class="history-card-title">富山県で生まれる</v-card-title>
@@ -238,7 +241,9 @@
 
           <v-timeline-item :color="'blue lighten-2'" :icon="'mdi-school'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite blue--text" style="margin-bottom: 17%;">2008.4</div>
+              <div class="opposite blue--text" :class="[{history2lg: $vuetify.breakpoint.lgOnly}, {history2xl: $vuetify.breakpoint.xlOnly}]">
+                2008.4
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory2" :color="'blue lighten-2'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory2}">
               <v-card-title class="history-card-title">中学校に入学</v-card-title>
@@ -250,7 +255,9 @@
 
           <v-timeline-item :color="'pink lighten-2'" :icon="'mdi-school'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite pink--text" style="margin-bottom: 23%;">2011.4</div>
+              <div class="opposite pink--text" :class="[{history3lg: $vuetify.breakpoint.lgOnly}, {history3xl: $vuetify.breakpoint.xlOnly}]">
+                2011.4
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory3" :color="'pink lighten-2'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory3}">
               <v-card-title class="history-card-title">富山東高等学校に入学</v-card-title>
@@ -265,7 +272,9 @@
 
           <v-timeline-item :color="'green lighten-1'" :icon="'mdi-lightbulb-on'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite green--text" style="margin-bottom: 39%;">2015.3</div>
+              <div class="opposite green--text" :class="[{history4lg: $vuetify.breakpoint.lgOnly}, {history4xl: $vuetify.breakpoint.xlOnly}]">
+                2015.3
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory4" :color="'green lighten-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory4}">
               <v-card-title class="history-card-title">将棋がきっかけで人工知能に関心を持つ</v-card-title>
@@ -281,7 +290,9 @@
 
           <v-timeline-item :color="'indigo darken-1'" :icon="'mdi-school'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite indigo--text" style="margin-bottom: 33%;">2016.4</div>
+              <div class="opposite indigo--text" :class="[{history5lg: $vuetify.breakpoint.lgOnly}, {history5xl: $vuetify.breakpoint.xlOnly}]">
+                2016.4
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory5" :color="'indigo darken-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory5}">
               <v-card-title class="history-card-title">大阪大学に入学</v-card-title>
@@ -297,7 +308,9 @@
 
           <v-timeline-item :color="'purple darken-1'" :icon="'mdi-city'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite purple--text" style="margin-bottom: 33%;">2020.4</div>
+              <div class="opposite purple--text" :class="[{history6lg: $vuetify.breakpoint.lgOnly}, {history6xl: $vuetify.breakpoint.xlOnly}]">
+                2020.4
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory6" :color="'purple darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory6}">
               <v-card-title class="history-card-title">公立中学校教諭に赴任</v-card-title>
@@ -313,7 +326,9 @@
 
           <v-timeline-item :color="'deep-orange lighten-1'" :icon="'mdi-code-tags'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite deep-orange--text" style="margin-bottom: 23%;">2020.9</div>
+              <div class="opposite deep-orange--text" :class="[{history7lg: $vuetify.breakpoint.lgOnly}, {history7xl: $vuetify.breakpoint.xlOnly}]">
+                2020.9
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory7" :color="'deep-orange lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory7}">
               <v-card-title class="history-card-title">Web開発の学習を始める</v-card-title>
@@ -328,7 +343,9 @@
 
           <v-timeline-item :color="'cyan darken-1'" :icon="'mdi-lightbulb-on'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite cyan--text" style="margin-bottom: 23%;">2021.3</div>
+              <div class="opposite cyan--text" :class="[{history8lg: $vuetify.breakpoint.lgOnly}, {history8xl: $vuetify.breakpoint.xlOnly}]">
+                2021.3
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory8" :color="'cyan darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory8}">
               <v-card-title class="history-card-title">席替えメーカーを個人開発</v-card-title>
@@ -424,8 +441,12 @@
     transform: scale(1.1,1.1);
     transition-duration: 0.2s;
   }
-  .profile {
-    height: 95vh;
+  .profileLg {
+    height: 98vh;
+    background-color: #eaeaf3fb;
+  }
+  .profileXl {
+    height: 86vh;
     background-color: #eaeaf3fb;
   }
   .name {
@@ -444,7 +465,7 @@
     margin: 1% auto;
   }
   .works {
-    height: 85vh;
+    height: 87vh;
     background-color: #f8f8ff;
   }
   .works-item {
@@ -479,7 +500,7 @@
 
   }
   .skills {
-    height: 90vh;
+    height: 92vh;
     background-color: #eaeaf3fb;
   }
   /*.skill-img {
@@ -503,8 +524,12 @@
     /*display: inline-block;*/
     /*margin:0 auto;*/
   }
-  .history {
+  .historyLg {
     height: 275vh;
+    background-color: #f8f8ff;
+  }
+  .historyXl {
+    height: 215vh;
     background-color: #f8f8ff;
   }
   .opposite {
@@ -524,12 +549,60 @@
     font-weight: 500;
     padding-left: 4%;
   }
+  .history1lg {
+    margin-top: -9%;
+  }
+  .history1xl {
+    margin-top: -7%;
+  }
+  .history2lg {
+    margin-top: -11%;
+  }
+  .history2xl {
+    margin-top: -8%;
+  }
+  .history3lg {
+    margin-top: -14%;
+  }
+  .history3xl {
+    margin-top: -10%;
+  }
+  .history4lg {
+    margin-top: -20%;
+  }
+  .history4xl {
+    margin-top: -13%;
+  }
+  .history5lg {
+    margin-top: -19%;
+  }
+  .history5xl {
+    margin-top: -12%;
+  }
+  .history6lg {
+    margin-top: -19%;
+  }
+  .history6xl {
+    margin-top: -13%;
+  }
+  .history7lg {
+    margin-top: -14%;
+  }
+  .history7xl {
+    margin-top: -10%;
+  }
+  .history8lg {
+    margin-top: -14%;
+  }
+  .history8xl {
+    margin-top: -10%;
+  }
   .footer-item {
     margin: 0 5% 0 auto;
     color: #099e9e;
   }
   .div-title {
-    padding: 1% 0 0 0 ;
+    padding: 1% 0 1% 0 ;
     color: #23bdbd;
     font-weight: 700;
     font-size: 5em;
@@ -604,51 +677,117 @@ export default {
         window.removeEventListener("scroll", this.handleScroll);
       }
     },
+    mounted() {
+      console.log(this.$vuetify.breakpoint)
+    },
     methods: {
       handleScroll() {
         this.innnerHeight = window.innerHeight;
         this.scrollY = window.scrollY;
+
+        let fadeInUpProfile1Height
+        let fadeInUpProfile2Height
+        let fadeInUpWorks1Height
+        let fadeInUpSkills1Height
+        let fadeInUpSkills2Height
+        let fadeInUpSkills3Height
+        let fadeInUpHistory1Height
+        let fadeInUpHistory2Height
+        let fadeInUpHistory3Height
+        let fadeInUpHistory4Height
+        let fadeInUpHistory5Height
+        let fadeInUpHistory6Height
+        let fadeInUpHistory7Height
+        let fadeInUpHistory8Height
+
+        if(this.$vuetify.breakpoint.lgOnly) {
+          fadeInUpProfile1Height = 140;
+          fadeInUpProfile2Height = 520;
+          fadeInUpWorks1Height = 840;
+          fadeInUpSkills1Height = 1480;
+          fadeInUpSkills2Height = 1650;
+          fadeInUpSkills3Height = 1800;
+          fadeInUpHistory1Height = 2170;
+          fadeInUpHistory2Height = 2300;
+          fadeInUpHistory3Height = 2520;
+          fadeInUpHistory4Height = 2730;
+          fadeInUpHistory5Height = 3070;
+          fadeInUpHistory6Height = 3350;
+          fadeInUpHistory7Height = 3630;
+          fadeInUpHistory8Height = 3850;
+        } else if(this.$vuetify.breakpoint.xlOnly) {
+          fadeInUpProfile1Height = 100;
+          fadeInUpProfile2Height = 510;
+          fadeInUpWorks1Height = 900;
+          fadeInUpSkills1Height = 1750;
+          fadeInUpSkills2Height = 1950;
+          fadeInUpSkills3Height = 2130;
+          fadeInUpHistory1Height = 2610;
+          fadeInUpHistory2Height = 2780;
+          fadeInUpHistory3Height = 2960;
+          fadeInUpHistory4Height = 3180;
+          fadeInUpHistory5Height = 3430;
+          fadeInUpHistory6Height = 3700;
+          fadeInUpHistory7Height = 3960;
+          fadeInUpHistory8Height = 4190;
+        } else {
+          fadeInUpProfile1Height = 140;
+          fadeInUpProfile2Height = 520;
+          fadeInUpWorks1Height = 840;
+          fadeInUpSkills1Height = 1480;
+          fadeInUpSkills2Height = 1650;
+          fadeInUpSkills3Height = 1800;
+          fadeInUpHistory1Height = 2170;
+          fadeInUpHistory2Height = 2300;
+          fadeInUpHistory3Height = 2520;
+          fadeInUpHistory4Height = 2730;
+          fadeInUpHistory5Height = 3070;
+          fadeInUpHistory6Height = 3350;
+          fadeInUpHistory7Height = 3630;
+          fadeInUpHistory8Height = 3850;
+        }
+
         if(!this.isFadeInUpProfile1) {
-          this.isFadeInUpProfile1 = window.scrollY > 140;
+          this.isFadeInUpProfile1 = window.scrollY > fadeInUpProfile1Height;
         }
         if(!this.isFadeInUpProfile2) {
-          this.isFadeInUpProfile2 = window.scrollY > 520;
+          this.isFadeInUpProfile2 = window.scrollY > fadeInUpProfile2Height;
         }
         if(!this.isFadeInUpWorks1) {
-          this.isFadeInUpWorks1 = window.scrollY > 840;
+          this.isFadeInUpWorks1 = window.scrollY > fadeInUpWorks1Height;
         }
         if(!this.isFadeInUpSkills1) {
-          this.isFadeInUpSkills1 = window.scrollY > 1480;
+          this.isFadeInUpSkills1 = window.scrollY > fadeInUpSkills1Height;
         }
         if(!this.isFadeInUpSkills2) {
-          this.isFadeInUpSkills2 = window.scrollY > 1650;
+          this.isFadeInUpSkills2 = window.scrollY > fadeInUpSkills2Height;
         }
         if(!this.isFadeInUpSkills3) {
-          this.isFadeInUpSkills3 = window.scrollY > 1800;
+          this.isFadeInUpSkills3 = window.scrollY > fadeInUpSkills3Height;
         }
         if(!this.isFadeInUpHistory1) {
-          this.isFadeInUpHistory1 = window.scrollY > 2170;
+          this.isFadeInUpHistory1 = window.scrollY > fadeInUpHistory1Height;
         }
         if(!this.isFadeInUpHistory2) {
-          this.isFadeInUpHistory2 = window.scrollY > 2300;
+          this.isFadeInUpHistory2 = window.scrollY > fadeInUpHistory2Height;
         }
         if(!this.isFadeInUpHistory3) {
-          this.isFadeInUpHistory3 = window.scrollY > 2520;
+          this.isFadeInUpHistory3 = window.scrollY > fadeInUpHistory3Height;
         }
         if(!this.isFadeInUpHistory4) {
-          this.isFadeInUpHistory4 = window.scrollY > 2730;
+          this.isFadeInUpHistory4 = window.scrollY > fadeInUpHistory4Height;
         }
         if(!this.isFadeInUpHistory5) {
-          this.isFadeInUpHistory5 = window.scrollY > 3070;
+          this.isFadeInUpHistory5 = window.scrollY > fadeInUpHistory5Height;
         }
         if(!this.isFadeInUpHistory6) {
-          this.isFadeInUpHistory6 = window.scrollY > 3350;
+          this.isFadeInUpHistory6 = window.scrollY > fadeInUpHistory6Height;
         }
         if(!this.isFadeInUpHistory7) {
-          this.isFadeInUpHistory7 = window.scrollY > 3630;
+          this.isFadeInUpHistory7 = window.scrollY > fadeInUpHistory7Height;
         }
         if(!this.isFadeInUpHistory8) {
-          this.isFadeInUpHistory8 = window.scrollY > 3850;
+          this.isFadeInUpHistory8 = window.scrollY > fadeInUpHistory8Height;
         }
 
 
