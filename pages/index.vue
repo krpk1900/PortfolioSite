@@ -442,7 +442,7 @@
     transition-duration: 0.2s;
   }
   .profile {
-    height: 95vh;
+    height: 97vh;
     background-color: #eaeaf3fb;
   }
   .name {
@@ -461,7 +461,7 @@
     margin: 1% auto;
   }
   .works {
-    height: 85vh;
+    height: 87vh;
     background-color: #f8f8ff;
   }
   .works-item {
@@ -496,7 +496,7 @@
 
   }
   .skills {
-    height: 90vh;
+    height: 92vh;
     background-color: #eaeaf3fb;
   }
   /*.skill-img {
@@ -594,7 +594,7 @@
     color: #099e9e;
   }
   .div-title {
-    padding: 1% 0 0 0 ;
+    padding: 1% 0 1% 0 ;
     color: #23bdbd;
     font-weight: 700;
     font-size: 5em;
