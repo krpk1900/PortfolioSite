@@ -251,13 +251,15 @@
         <h2 class="div-title">History</h2>
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item :color="'orange lighten-1'" :icon="' mdi-baby-face'" fill-dot>
-            <template v-slot:opposite style="align-self: start;">
-              <div style="align-self: start;" class="opposite orange--text" :class="[{history1lg: $vuetify.breakpoint.lgOnly}, {history1xl: $vuetify.breakpoint.xlOnly}]">
+            <template v-slot:opposite>
+              <div class="opposite orange--text" :class="[{history1lg: $vuetify.breakpoint.lgOnly}, {history1xl: $vuetify.breakpoint.xlOnly}]">
                 1995.9
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory1" :color="'orange lighten-1'" dark class="animate__animated history-card-right"
-              :class="[{animate__fadeInRight: isFadeInUpHistory1}, {historyCardRightMd: $vuetify.breakpoint.mdOnly}]">
+            <v-card v-if="isFadeInUpHistory1" :color="'orange lighten-1'" dark class="animate__animated"
+              :class="[{animate__fadeInRight: isFadeInUpHistory1}, {historyCardXs: $vuetify.breakpoint.xsOnly},
+              {historyCardSm: $vuetify.breakpoint.smOnly}, {historyCardRightMd: $vuetify.breakpoint.mdOnly},
+              {historyCardRightLg: $vuetify.breakpoint.lgOnly}, {historyCardRightXl: $vuetify.breakpoint.xlOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">富山県で生まれる</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500; padding-left: 4%;">
                 <p style="padding-top: 3%;">自然豊かな場所で生まれました。</p>
@@ -271,8 +273,10 @@
                 2008.4
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory2" :color="'blue lighten-2'" dark class="animate__animated history-card-left"
-              :class="[{animate__fadeInLeft: isFadeInUpHistory2}, {historyCardLeftMd: $vuetify.breakpoint.mdOnly}]">
+            <v-card v-if="isFadeInUpHistory2" :color="'blue lighten-2'" dark class="animate__animated"
+              :class="[{animate__fadeInLeft: isFadeInUpHistory2}, {historyCardXs: $vuetify.breakpoint.xsOnly},
+              {historyCardSm: $vuetify.breakpoint.smOnly}, {historyCardLeftMd: $vuetify.breakpoint.mdOnly},
+              {historyCardLeftLg: $vuetify.breakpoint.lgOnly}, {historyCardLeftXl: $vuetify.breakpoint.xlOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">中学校に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">自分の生きる姿勢を通して、心に一生残り続けるような<b>良い影響を人に与えたい</b>と考えて、教師を目指すようになりました。</p>
@@ -286,8 +290,10 @@
                 2011.4
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory3" :color="'pink lighten-2'" dark class="animate__animated history-card-right"
-              :class="[{animate__fadeInRight: isFadeInUpHistory3}, {historyCardRightMd: $vuetify.breakpoint.mdOnly}]">
+            <v-card v-if="isFadeInUpHistory3" :color="'pink lighten-2'" dark class="animate__animated"
+              :class="[{animate__fadeInRight: isFadeInUpHistory3}, {historyCardXs: $vuetify.breakpoint.xsOnly},
+              {historyCardSm: $vuetify.breakpoint.smOnly}, {historyCardRightMd: $vuetify.breakpoint.mdOnly},
+              {historyCardRightLg: $vuetify.breakpoint.lgOnly}, {historyCardRightXl: $vuetify.breakpoint.xlOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">富山東高等学校に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -304,8 +310,10 @@
                 2015.3
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory4" :color="'green lighten-1'" dark class="animate__animated history-card-left"
-              :class="[{animate__fadeInLeft: isFadeInUpHistory4}, {historyCardLeftMd: $vuetify.breakpoint.mdOnly}]">
+            <v-card v-if="isFadeInUpHistory4" :color="'green lighten-1'" dark class="animate__animated"
+              :class="[{animate__fadeInLeft: isFadeInUpHistory4}, {historyCardXs: $vuetify.breakpoint.xsOnly},
+              {historyCardSm: $vuetify.breakpoint.smOnly}, {historyCardLeftMd: $vuetify.breakpoint.mdOnly},
+              {historyCardLeftLg: $vuetify.breakpoint.lgOnly}, {historyCardLeftXl: $vuetify.breakpoint.xlOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">将棋がきっかけで人工知能に関心を持つ</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -323,8 +331,10 @@
                 2016.4
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory5" :color="'indigo darken-1'" dark class="animate__animated history-card-right"
-              :class="[{animate__fadeInRight: isFadeInUpHistory5}, {historyCardRightMd: $vuetify.breakpoint.mdOnly}]">
+            <v-card v-if="isFadeInUpHistory5" :color="'indigo darken-1'" dark class="animate__animated"
+              :class="[{animate__fadeInRight: isFadeInUpHistory5}, {historyCardXs: $vuetify.breakpoint.xsOnly},
+              {historyCardSm: $vuetify.breakpoint.smOnly}, {historyCardRightMd: $vuetify.breakpoint.mdOnly},
+              {historyCardRightLg: $vuetify.breakpoint.lgOnly}, {historyCardRightXl: $vuetify.breakpoint.xlOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">大阪大学に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -342,8 +352,10 @@
                 2020.4
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory6" :color="'purple darken-1'" dark class="animate__animated history-card-left"
-              :class="[{animate__fadeInLeft: isFadeInUpHistory6}, {historyCardLeftMd: $vuetify.breakpoint.mdOnly}]">
+            <v-card v-if="isFadeInUpHistory6" :color="'purple darken-1'" dark class="animate__animated"
+              :class="[{animate__fadeInLeft: isFadeInUpHistory6}, {historyCardXs: $vuetify.breakpoint.xsOnly},
+              {historyCardSm: $vuetify.breakpoint.smOnly}, {historyCardLeftMd: $vuetify.breakpoint.mdOnly},
+              {historyCardLeftLg: $vuetify.breakpoint.lgOnly}, {historyCardLeftXl: $vuetify.breakpoint.xlOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">公立中学校教諭に赴任</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -361,8 +373,10 @@
                 2020.9
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory7" :color="'deep-orange lighten-1'" dark class="animate__animated history-card-right"
-            :class="[{animate__fadeInRight: isFadeInUpHistory7}, {historyCardRightMd: $vuetify.breakpoint.mdOnly}]">
+            <v-card v-if="isFadeInUpHistory7" :color="'deep-orange lighten-1'" dark class="animate__animated"
+            :class="[{animate__fadeInRight: isFadeInUpHistory7}, {historyCardXs: $vuetify.breakpoint.xsOnly},
+              {historyCardSm: $vuetify.breakpoint.smOnly}, {historyCardRightMd: $vuetify.breakpoint.mdOnly},
+              {historyCardRightLg: $vuetify.breakpoint.lgOnly}, {historyCardRightXl: $vuetify.breakpoint.xlOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">Web開発の学習を始める</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -379,8 +393,10 @@
                 2021.3
               </div>
             </template>
-            <v-card v-if="isFadeInUpHistory8" :color="'cyan darken-1'" dark class="animate__animated history-card-left"
-              :class="[{animate__fadeInLeft: isFadeInUpHistory8}, {historyCardRightMd: $vuetify.breakpoint.mdOnly}]">
+            <v-card v-if="isFadeInUpHistory8" :color="'cyan darken-1'" dark class="animate__animated"
+              :class="[{animate__fadeInLeft: isFadeInUpHistory8}, {historyCardXs: $vuetify.breakpoint.xsOnly},
+              {historyCardSm: $vuetify.breakpoint.smOnly}, {historyCardLeftMd: $vuetify.breakpoint.mdOnly},
+              {historyCardLeftLg: $vuetify.breakpoint.lgOnly}, {historyCardLeftXl: $vuetify.breakpoint.xlOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">席替えメーカーを個人開発</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
@@ -633,17 +649,29 @@
   .history8xl {
     margin-top: -11%;
   }*/
-  .history-card-right {
-    margin-right: 10vw;
+  .historyCardXs {
+    margin-right: 3vw;
   }
-  .history-card-left {
-    margin-left: 10vw;
+  .historyCardSm {
+    margin-right: 3vw;
   }
   .historyCardRightMd {
     margin-right: 3vw;
   }
   .historyCardLeftMd {
     margin-left: 3vw;
+  }
+  .historyCardRightLg {
+    margin-right: 10vw;
+  }
+  .historyCardLeftLg {
+    margin-left: 10vw;
+  }
+  .historyCardRightXl {
+    margin-right: 10vw;
+  }
+  .historyCardLeftXl {
+    margin-left: 10vw;
   }
   .footer-item {
     margin: 0 5% 0 auto;
@@ -748,7 +776,22 @@ export default {
         let fadeInUpHistory7Height
         let fadeInUpHistory8Height
 
-        if(this.$vuetify.breakpoint.lgOnly) {
+        if(this.$vuetify.breakpoint.mdOnly) {
+          fadeInUpProfile1Height = 50;
+          fadeInUpProfile2Height = 430;
+          fadeInUpWorks1Height = 660;
+          fadeInUpSkills1Height = 1360;
+          fadeInUpSkills2Height = 1500;
+          fadeInUpSkills3Height = 1640;
+          fadeInUpHistory1Height = 2120;
+          fadeInUpHistory2Height = 2270;
+          fadeInUpHistory3Height = 2470;
+          fadeInUpHistory4Height = 2700;
+          fadeInUpHistory5Height = 3100;
+          fadeInUpHistory6Height = 3410;
+          fadeInUpHistory7Height = 3730;
+          fadeInUpHistory8Height = 3970;
+        } else if(this.$vuetify.breakpoint.lgOnly) {
           fadeInUpProfile1Height = 140;
           fadeInUpProfile2Height = 520;
           fadeInUpWorks1Height = 840;
