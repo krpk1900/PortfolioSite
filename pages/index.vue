@@ -45,7 +45,7 @@
       </div>
 
       <!-- Profile -->
-      <div class="profile" id="profile">
+      <div :class="[{profileLg: $vuetify.breakpoint.lgOnly}, {profileXl: $vuetify.breakpoint.xlOnly}]">
         <h2 class="div-title">Profile</h2>
         <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300vh" height="300vh">
         <div v-else style="padding: 10em;"></div>
@@ -441,8 +441,12 @@
     transform: scale(1.1,1.1);
     transition-duration: 0.2s;
   }
-  .profile {
-    height: 97vh;
+  .profileLg {
+    height: 98vh;
+    background-color: #eaeaf3fb;
+  }
+  .profileXl {
+    height: 86vh;
     background-color: #eaeaf3fb;
   }
   .name {
@@ -709,19 +713,19 @@ export default {
           fadeInUpHistory8Height = 3850;
         } else if(this.$vuetify.breakpoint.xlOnly) {
           fadeInUpProfile1Height = 100;
-          fadeInUpProfile2Height = 480;
-          fadeInUpWorks1Height = 970;
-          fadeInUpSkills1Height = 1780;
-          fadeInUpSkills2Height = 1980;
-          fadeInUpSkills3Height = 2180;
-          fadeInUpHistory1Height = 2630;
-          fadeInUpHistory2Height = 2830;
-          fadeInUpHistory3Height = 3040;
-          fadeInUpHistory4Height = 3330;
-          fadeInUpHistory5Height = 3740;
-          fadeInUpHistory6Height = 4100;
-          fadeInUpHistory7Height = 4470;
-          fadeInUpHistory8Height = 4730;
+          fadeInUpProfile2Height = 510;
+          fadeInUpWorks1Height = 900;
+          fadeInUpSkills1Height = 1750;
+          fadeInUpSkills2Height = 1950;
+          fadeInUpSkills3Height = 2130;
+          fadeInUpHistory1Height = 2610;
+          fadeInUpHistory2Height = 2780;
+          fadeInUpHistory3Height = 2960;
+          fadeInUpHistory4Height = 3180;
+          fadeInUpHistory5Height = 3430;
+          fadeInUpHistory6Height = 3700;
+          fadeInUpHistory7Height = 3960;
+          fadeInUpHistory8Height = 4190;
         } else {
           fadeInUpProfile1Height = 140;
           fadeInUpProfile2Height = 520;
