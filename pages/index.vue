@@ -95,7 +95,7 @@
       <div class="skills" id="skills">
         <h2 class="div-title">Skills</h2>
         <v-card v-if="isFadeInUpSkills1" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills1}" width="50%" elevation="4" rounded>
-          <v-card-title class="skills-card-title justify-center">今後学習したい</v-card-title>
+          <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">今後学習したい</v-card-title>
           <div class="skills-item">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
@@ -150,7 +150,7 @@
         <div v-else style="padding: 5em;"></div>
 
         <v-card v-if="isFadeInUpSkills2" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills2}" width="50%" elevation="4" rounded>
-          <v-card-title class="skills-card-title justify-center">最近よく使う</v-card-title>
+          <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">最近よく使う</v-card-title>
           <div class="skills-item">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
@@ -199,7 +199,7 @@
         <div v-else style="padding: 5em;"></div>
 
         <v-card v-if="isFadeInUpSkills3" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills3}" width="50%" elevation="4" rounded>
-          <v-card-title class="skills-card-title justify-center">過去使っていた</v-card-title>
+          <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">過去使っていた</v-card-title>
           <div class="skills-item">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
@@ -235,8 +235,8 @@
               </div>
             </template>
             <v-card v-if="isFadeInUpHistory1" :color="'orange lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory1}">
-              <v-card-title class="history-card-title">富山県で生まれる</v-card-title>
-              <v-card-text class="white text--primary history-card-text">
+              <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">富山県で生まれる</v-card-title>
+              <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">自然豊かな場所で生まれました。</p>
               </v-card-text>
             </v-card>
@@ -523,7 +523,7 @@
   .skills-card-title {
     font-size: 1.7em;
     font-weight: 550;
-    color: red/*#696464;*/
+    color: #696464;
   }
   .skills-item {
     text-align: center;
