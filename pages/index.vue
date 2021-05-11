@@ -227,7 +227,9 @@
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item :color="'orange lighten-1'" :icon="' mdi-baby-face'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite orange--text" style="margin-top: -9%;">1995.9</div>
+              <div class="opposite orange--text" :class="[{history1lg: $vuetify.breakpoint.lgOnly}, {history1xl: $vuetify.breakpoint.xlOnly}]">
+                1995.9
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory1" :color="'orange lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory1}">
               <v-card-title class="history-card-title">富山県で生まれる</v-card-title>
@@ -239,7 +241,9 @@
 
           <v-timeline-item :color="'blue lighten-2'" :icon="'mdi-school'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite blue--text" style="margin-top: -11%;">2008.4</div>
+              <div class="opposite blue--text" :class="[{history2lg: $vuetify.breakpoint.lgOnly}, {history2xl: $vuetify.breakpoint.xlOnly}]">
+                2008.4
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory2" :color="'blue lighten-2'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory2}">
               <v-card-title class="history-card-title">中学校に入学</v-card-title>
@@ -251,7 +255,9 @@
 
           <v-timeline-item :color="'pink lighten-2'" :icon="'mdi-school'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite pink--text" style="margin-top: -14%;">2011.4</div>
+              <div class="opposite pink--text" :class="[{history3lg: $vuetify.breakpoint.lgOnly}, {history3xl: $vuetify.breakpoint.xlOnly}]">
+                2011.4
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory3" :color="'pink lighten-2'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory3}">
               <v-card-title class="history-card-title">富山東高等学校に入学</v-card-title>
@@ -266,7 +272,9 @@
 
           <v-timeline-item :color="'green lighten-1'" :icon="'mdi-lightbulb-on'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite green--text" style="margin-top: -21%;">2015.3</div>
+              <div class="opposite green--text" :class="[{history4lg: $vuetify.breakpoint.lgOnly}, {history4xl: $vuetify.breakpoint.xlOnly}]">
+                2015.3
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory4" :color="'green lighten-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory4}">
               <v-card-title class="history-card-title">将棋がきっかけで人工知能に関心を持つ</v-card-title>
@@ -282,7 +290,9 @@
 
           <v-timeline-item :color="'indigo darken-1'" :icon="'mdi-school'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite indigo--text" style="margin-top: -19%;">2016.4</div>
+              <div class="opposite indigo--text" :class="[{history5lg: $vuetify.breakpoint.lgOnly}, {history5xl: $vuetify.breakpoint.xlOnly}]">
+                2016.4
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory5" :color="'indigo darken-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory5}">
               <v-card-title class="history-card-title">大阪大学に入学</v-card-title>
@@ -298,7 +308,9 @@
 
           <v-timeline-item :color="'purple darken-1'" :icon="'mdi-city'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite purple--text" style="margin-top: -19%;">2020.4</div>
+              <div class="opposite purple--text" :class="[{history6lg: $vuetify.breakpoint.lgOnly}, {history6xl: $vuetify.breakpoint.xlOnly}]">
+                2020.4
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory6" :color="'purple darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory6}">
               <v-card-title class="history-card-title">公立中学校教諭に赴任</v-card-title>
@@ -314,7 +326,9 @@
 
           <v-timeline-item :color="'deep-orange lighten-1'" :icon="'mdi-code-tags'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite deep-orange--text" style="margin-top: -14%;">2020.9</div>
+              <div class="opposite deep-orange--text" :class="[{history7lg: $vuetify.breakpoint.lgOnly}, {history7xl: $vuetify.breakpoint.xlOnly}]">
+                2020.9
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory7" :color="'deep-orange lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory7}">
               <v-card-title class="history-card-title">Web開発の学習を始める</v-card-title>
@@ -329,7 +343,9 @@
 
           <v-timeline-item :color="'cyan darken-1'" :icon="'mdi-lightbulb-on'" fill-dot>
             <template v-slot:opposite>
-              <div class="opposite cyan--text" style="margin-top: -14%;">2021.3</div>
+              <div class="opposite cyan--text" :class="[{history8lg: $vuetify.breakpoint.lgOnly}, {history8xl: $vuetify.breakpoint.xlOnly}]">
+                2021.3
+              </div>
             </template>
             <v-card v-if="isFadeInUpHistory8" :color="'cyan darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory8}">
               <v-card-title class="history-card-title">席替えメーカーを個人開発</v-card-title>
@@ -524,6 +540,54 @@
     font-size: 1em;
     font-weight: 500;
     padding-left: 4%;
+  }
+  .history1lg {
+    margin-top: -9%;
+  }
+  .history1xl {
+    margin-top: -7%;
+  }
+  .history2lg {
+    margin-top: -11%;
+  }
+  .history2xl {
+    margin-top: -8%;
+  }
+  .history3lg {
+    margin-top: -14%;
+  }
+  .history3xl {
+    margin-top: -10%;
+  }
+  .history4lg {
+    margin-top: -20%;
+  }
+  .history4xl {
+    margin-top: -13%;
+  }
+  .history5lg {
+    margin-top: -19%;
+  }
+  .history5xl {
+    margin-top: -12%;
+  }
+  .history6lg {
+    margin-top: -19%;
+  }
+  .history6xl {
+    margin-top: -13%;
+  }
+  .history7lg {
+    margin-top: -14%;
+  }
+  .history7xl {
+    margin-top: -10%;
+  }
+  .history8lg {
+    margin-top: -14%;
+  }
+  .history8xl {
+    margin-top: -10%;
   }
   .footer-item {
     margin: 0 5% 0 auto;
