@@ -22,25 +22,25 @@
 
         <div class="sns-links">
           <a href="https://twitter.com/krpk1900_dev" target="_blank">
-            <img class="sns-img" src="/twitter.png" width="4%">
+            <img class="sns-img" src="/twitter.png">
           </a>
           <a href="https://qiita.com/krpk1900" target="_blank">
-            <img class="sns-img" src="/qiita.png" width="4%">
+            <img class="sns-img" src="/qiita.png" width="55px">
           </a>
           <a href="https://github.com/krpk1900" target="_blank">
-            <img class="sns-img" src="/github.png" width="4%">
+            <img class="sns-img" src="/github.png" width="55px">
           </a>
           <a href="https://note.com/krpk1900" target="_blank">
-            <img class="sns-img" src="/note.png" width="4%">
+            <img class="sns-img" src="/note.png" width="55px">
           </a>
           <a href="https://www.wantedly.com/id/krpk1900" target="_blank">
-            <img class="sns-img" src="/wantedly.png" width="4%">
+            <img class="sns-img" src="/wantedly.png" width="55px">
           </a>
           <a href="https://www.facebook.com/krpk1900" target="_blank">
-            <img class="sns-img" src="/facebook.png" width="4%">
+            <img class="sns-img" src="/facebook.png" width="55px">
           </a>
           <a href="https://connpass.com/user/krpk1900/" target="_blank">
-            <img class="sns-img" src="/connpass.png" width="4%">
+            <img class="sns-img" src="/connpass.png" width="55px">
           </a>
 
         </div>
@@ -424,6 +424,38 @@
 </template>
 
 <style>
+  @media screen and (max-width: 767px) {
+    /* SP */
+    .div-title {
+      padding: 1% 0 1% 0 ;
+      color: #23bdbd;
+      font-weight: 700;
+      font-size: 4em;
+    }
+    .sns-img {
+      /*position: absolute;*/
+      margin: 78vh 2px 0 2px;
+      border-radius: 10px;
+      transition-duration: 0.2s;
+      width: 35px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    /* PC */
+    .div-title {
+      padding: 1% 0 1% 0 ;
+      color: #23bdbd;
+      font-weight: 700;
+      font-size: 5.5em;
+    }
+    .sns-img {
+      /*position: absolute;*/
+      margin: 78vh 2px 0 2px;
+      border-radius: 10px;
+      transition-duration: 0.2s;
+      width: 55px;
+    }
+  }
   :root {
     --animate-duration: 1000ms;
   }
@@ -484,12 +516,6 @@
   .sns-links {
     text-align: center;
   }
-  .sns-img {
-    /*position: absolute;*/
-    margin: 78vh 2px 0 2px;
-    border-radius: 10px;
-    transition-duration: 0.2s;
-  }
   .sns-img:hover {
     transform: scale(1.1,1.1);
     transition-duration: 0.2s;
@@ -503,7 +529,7 @@
     background-color: #eaeaf3fb;
   }
   .name {
-    font-size: 3vw;
+    font-size: 3em;
     font-weight: 600;
     color: #696464;
   }
@@ -539,7 +565,7 @@
     transition-duration: 0.2s;
   }
   .sekigaemaker-title {
-    font-size: 2vw;
+    font-size: 2em;
     font-weight: 600;
     color: #696464;
     margin-top: 1%;
@@ -568,7 +594,7 @@
     padding-bottom: 1%;
   }
   .skills-card-title {
-    font-size: 1.7vw;
+    font-size: 2em;
     font-weight: 550;
     color: #696464;
   }
@@ -680,12 +706,6 @@
   .footer-item {
     margin: 0 5% 0 auto;
     color: #099e9e;
-  }
-  .div-title {
-    padding: 1% 0 1% 0 ;
-    color: #23bdbd;
-    font-weight: 700;
-    font-size: 6vw;
   }
   .else-padding {
     padding: 4.1em;
