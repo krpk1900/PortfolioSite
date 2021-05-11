@@ -523,7 +523,7 @@
   .skills-card-title {
     font-size: 1.7em;
     font-weight: 550;
-    color: #696464;
+    color: red/*#696464;*/
   }
   .skills-item {
     text-align: center;
