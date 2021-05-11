@@ -4,9 +4,7 @@
     <!--v-col cols="12"-->
     <v-row justify="center" align="center">
       <v-system-bar color="#fffaf0" app height="50vh" style="opacity: 0.95;">
-        <!--p>xs={{ $vuetify.breakpoint.xsOnly }}  sm={{ $vuetify.breakpoint.smOnly }}  md={{ $vuetify.breakpoint.mdOnly }}  lg={{ $vuetify.breakpoint.lgOnly }}  xl={{ $vuetify.breakpoint.xlOnly }}
-          scrollY={{ scrollY }}
-        </p-->
+        <p>scrollY={{ scrollY }}</p>
         <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to style="color: #099e9e;">Top</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#profile'" to style="color: #099e9e;">Profile</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#works'" to style="color: #099e9e;">Works</nuxt-link>
@@ -636,7 +634,7 @@
   }
   .profile-card {
     display: block;
-    margin: 1% auto;
+    margin: 0 auto;
   }
   .works {
     height: 87vh;
@@ -651,19 +649,16 @@
     display: block;
     margin: 1% auto;
   }
-
   .sekigaemaker-img:hover {
     transform: scale(1.03,1.03);
     transition-duration: 0.2s;
   }
-
   .sekigaemaker-description {
     font-size: 1em;
     font-weight: 550;
     color: #696464;
     margin: 0% auto;
     width: 30%;
-
   }
   .skills {
     height: 92vh;
@@ -680,9 +675,9 @@
     margin: 1% auto;
     padding-bottom: 1%;
   }
-
   .skills-item {
     text-align: center;
+    margin-bottom: 5px;
     /*display: inline-block;*/
     /*margin:0 auto;*/
   }
