@@ -47,8 +47,8 @@
       </div>
 
       <!-- Profile -->
-      <div :class="[{profileLg: $vuetify.breakpoint.lgOnly}, {profileXl: $vuetify.breakpoint.xlOnly}]">
-        <h2 class="div-title" id="profile">Profile</h2>
+      <div class="profile" id="profile">
+        <h2 class="div-title">Profile</h2>
         <v-row justify="center" align="center">
           <v-col cols="12" xs="12" sm="12" md="12" lg="5" xl="4">
             <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}">
@@ -246,7 +246,7 @@
       </div>
 
       <!-- History -->
-      <div :class="[{historyLg: $vuetify.breakpoint.lgOnly}, {historyXl: $vuetify.breakpoint.xlOnly}]" id="history">
+      <div class="history" id="history">
         <h2 class="div-title">History</h2>
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item :color="'orange lighten-1'" :icon="' mdi-baby-face'" fill-dot>
@@ -423,13 +423,24 @@
 </template>
 
 <style>
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 960px) {
     /* SP */
     .div-title {
       padding: 1% 0 1% 0 ;
       color: #23bdbd;
       font-weight: 700;
       font-size: 3em;
+    }
+    .link {
+      font-size: 1.2em;
+      text-decoration: none;
+      color: #099e9e;
+      /*background-color: red; デバッグ用*/
+      padding: 1.2vh;/*0.75%;*/
+      transition: all  0.3s ease;
+    }
+    .rightmost-link {
+      margin-right: auto;
     }
     .title .typing {
       position: absolute;
@@ -451,6 +462,10 @@
       transition-duration: 0.2s;
       width: 35px;
     }
+    .profile {
+      height: 98vh;
+      background-color: #eaeaf3fb;
+    }
     .profile-img {
       border-radius: 50%;
       border: 9px solid #1d7777;
@@ -464,6 +479,10 @@
       font-weight: 600;
       color: #696464;
     }
+    .works {
+      height: 87vh;
+      background-color: #f8f8ff;
+    }
     .sekigaemaker-img {
       border-radius: 20px;
       transition-duration: 0.2s;
@@ -475,10 +494,18 @@
       color: #696464;
       margin-top: 1%;
     }
+    .skills {
+      height: 88vh;
+      background-color: #eaeaf3fb;
+    }
     .skills-card-title {
       font-size: 1.5em !important;
       font-weight: 550;
       color: #696464;
+    }
+    .history {
+      height: 280vh;
+      background-color: #f8f8ff;
     }
     .history-card-title {
       font-size: 1.2em !important;
@@ -490,8 +517,17 @@
       font-weight: 500;
       padding-left: 4%;
     }
+  }
+  @media screen and (min-width: 960px) and ( max-width:1904px) {
+    /* md, lg */
+    .div-title {
+      padding: 1% 0 1% 0 ;
+      color: #23bdbd;
+      font-weight: 700;
+      font-size: 5.5em;
+    }
     .link {
-      font-size: 1.2em;
+      font-size: 1.4em;
       text-decoration: none;
       color: #099e9e;
       /*background-color: red; デバッグ用*/
@@ -499,16 +535,7 @@
       transition: all  0.3s ease;
     }
     .rightmost-link {
-      margin-right: auto;
-    }
-  }
-  @media screen and (min-width: 768px) {
-    /* PC */
-    .div-title {
-      padding: 1% 0 1% 0 ;
-      color: #23bdbd;
-      font-weight: 700;
-      font-size: 5.5em;
+      margin-right: 3%;
     }
     .title .typing {
       position: absolute;
@@ -530,6 +557,10 @@
       transition-duration: 0.2s;
       width: 55px;
     }
+    .profile {
+      height: 95vh;
+      background-color: #eaeaf3fb;
+    }
     .profile-img {
       border-radius: 50%;
       border: 9px solid #1d7777;
@@ -543,6 +574,10 @@
       font-weight: 600;
       color: #696464;
     }
+    .works {
+      height: 87vh;
+      background-color: #f8f8ff;
+    }
     .sekigaemaker-img {
       border-radius: 20px;
       transition-duration: 0.2s;
@@ -554,10 +589,18 @@
       color: #696464;
       margin-top: 1%;
     }
+    .skills {
+      height: 88vh;
+      background-color: #eaeaf3fb;
+    }
     .skills-card-title {
       font-size: 1.8em !important;
       font-weight: 550;
       color: #696464;
+    }
+    .history {
+      height: 280vh;
+      background-color: #f8f8ff;
     }
     .history-card-title {
       font-size: 1.5em !important;
@@ -569,6 +612,15 @@
       font-weight: 500;
       padding-left: 4%;
     }
+  }
+  @media screen and (min-width: 1904px) {
+    /* xl */
+    .div-title {
+      padding: 1% 0 1% 0 ;
+      color: #23bdbd;
+      font-weight: 700;
+      font-size: 5.5em;
+    }
     .link {
       font-size: 1.4em;
       text-decoration: none;
@@ -579,6 +631,81 @@
     }
     .rightmost-link {
       margin-right: 3%;
+    }
+    .title .typing {
+      position: absolute;
+      font-size: 4em;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+    .vue-typer .custom.char {
+      color:  #71e9e9; /*#6cd0ff*/;
+      font-weight: 700;
+      font-size: 1.1em;/*1.1em;*/
+    }
+    .sns-img {
+      /*position: absolute;*/
+      margin: 78vh 2px 0 2px;
+      border-radius: 10px;
+      transition-duration: 0.2s;
+      width: 55px;
+    }
+    .profile {
+      height: 80vh;
+      background-color: #eaeaf3fb;
+    }
+    .profile-img {
+      border-radius: 50%;
+      border: 9px solid #1d7777;
+      display: block;
+      margin: 1% auto 0.5% auto;
+      width: 300px;
+      height: 300px;
+    }
+    .name {
+      font-size: 3em;
+      font-weight: 600;
+      color: #696464;
+    }
+    .works {
+      height: 74vh;
+      background-color: #f8f8ff;
+    }
+    .sekigaemaker-img {
+      border-radius: 20px;
+      transition-duration: 0.2s;
+      width: 400px;
+    }
+    .sekigaemaker-title {
+      font-size: 2em;
+      font-weight: 600;
+      color: #696464;
+      margin-top: 1%;
+    }
+    .skills {
+      height: 84vh;
+      background-color: #eaeaf3fb;
+    }
+    .skills-card-title {
+      font-size: 1.8em !important;
+      font-weight: 550;
+      color: #696464;
+    }
+    .history {
+      height: 220vh;
+      background-color: #f8f8ff;
+    }
+    .history-card-title {
+      font-size: 1.5em !important;
+      font-weight: 550 !important;
+      margin-left: 2% !important;
+    }
+    .history-card-text {
+      font-size: 1em;
+      font-weight: 500;
+      padding-left: 4%;
     }
   }
   :root {
@@ -624,21 +751,9 @@
     transform: scale(1.1,1.1);
     transition-duration: 0.2s;
   }
-  .profileLg {
-    height: 98vh;
-    background-color: #eaeaf3fb;
-  }
-  .profileXl {
-    height: 86vh;
-    background-color: #eaeaf3fb;
-  }
   .profile-card {
     display: block;
     margin: 0 auto;
-  }
-  .works {
-    height: 87vh;
-    background-color: #f8f8ff;
   }
   .works-item {
     /*display: inline-block;*/
@@ -660,10 +775,6 @@
     margin: 0% auto;
     width: 30%;
   }
-  .skills {
-    height: 92vh;
-    background-color: #eaeaf3fb;
-  }
   /*.skill-img {
     margin: 0 1%;
   }
@@ -681,14 +792,6 @@
     /*display: inline-block;*/
     /*margin:0 auto;*/
   }
-  .historyLg {
-    height: 280vh;
-    background-color: #f8f8ff;
-  }
-  .historyXl {
-    height: 215vh;
-    background-color: #f8f8ff;
-  }
   .opposite {
     /*position: absolute;*/
     /*bottom: 12%;*/
@@ -704,54 +807,6 @@
     font-weight: 550;
     margin-left: 2%;
   }
-  /*.history1lg {
-    margin-top: -10%;
-  }
-  .history1xl {
-    margin-top: -8%;
-  }
-  .history2lg {
-    margin-top: -11%;
-  }
-  .history2xl {
-    margin-top: -9%;
-  }
-  .history3lg {
-    margin-top: -15%;
-  }
-  .history3xl {
-    margin-top: -10%;
-  }
-  .history4lg {
-    margin-top: -23%;
-  }
-  .history4xl {
-    margin-top: -14%;
-  }
-  .history5lg {
-    margin-top: -20%;
-  }
-  .history5xl {
-    margin-top: -13%;
-  }
-  .history6lg {
-    margin-top: -20%;
-  }
-  .history6xl {
-    margin-top: -14%;
-  }
-  .history7lg {
-    margin-top: -15%;
-  }
-  .history7xl {
-    margin-top: -11%;
-  }
-  .history8lg {
-    margin-top: -15%;
-  }
-  .history8xl {
-    margin-top: -11%;
-  }*/
   .historyCardXs {
     margin-right: 3vw;
   }
@@ -876,23 +931,23 @@ export default {
           fadeInUpHistory7Height = 3730;
           fadeInUpHistory8Height = 3970;
         } else if(this.$vuetify.breakpoint.lgOnly) {
-          fadeInUpProfile1Height = 140;
-          fadeInUpProfile2Height = 520;
-          fadeInUpWorks1Height = 840;
-          fadeInUpSkills1Height = 1480;
+          fadeInUpProfile1Height = 90;
+          fadeInUpProfile2Height = 470;
+          fadeInUpWorks1Height = 860;
+          fadeInUpSkills1Height = 1500;
           fadeInUpSkills2Height = 1650;
           fadeInUpSkills3Height = 1800;
-          fadeInUpHistory1Height = 2170;
-          fadeInUpHistory2Height = 2300;
-          fadeInUpHistory3Height = 2520;
-          fadeInUpHistory4Height = 2730;
+          fadeInUpHistory1Height = 2200;
+          fadeInUpHistory2Height = 2360;
+          fadeInUpHistory3Height = 2540;
+          fadeInUpHistory4Height = 2760;
           fadeInUpHistory5Height = 3070;
-          fadeInUpHistory6Height = 3350;
-          fadeInUpHistory7Height = 3630;
-          fadeInUpHistory8Height = 3850;
+          fadeInUpHistory6Height = 3360;
+          fadeInUpHistory7Height = 3650;
+          fadeInUpHistory8Height = 3870;
         } else if(this.$vuetify.breakpoint.xlOnly) {
-          fadeInUpProfile1Height = 100;
-          fadeInUpProfile2Height = 510;
+          fadeInUpProfile1Height = 80;
+          fadeInUpProfile2Height = 470;
           fadeInUpWorks1Height = 900;
           fadeInUpSkills1Height = 1750;
           fadeInUpSkills2Height = 1950;
