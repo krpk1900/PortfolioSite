@@ -222,7 +222,7 @@
       </div>
 
       <!-- History -->
-      <div class="history" id="history">
+      <div :class="[{historyLg: $vuetify.breakpoint.lgOnly}, {historyXl: $vuetify.breakpoint.xlOnly}]">
         <h2 class="div-title">History</h2>
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item :color="'orange lighten-1'" :icon="' mdi-baby-face'" fill-dot>
@@ -524,8 +524,12 @@
     /*display: inline-block;*/
     /*margin:0 auto;*/
   }
-  .history {
+  .historyLg {
     height: 275vh;
+    background-color: #f8f8ff;
+  }
+  .historyXl {
+    height: 215vh;
     background-color: #f8f8ff;
   }
   .opposite {
