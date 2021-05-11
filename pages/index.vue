@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid style="padding: 0;">
   <!--v-row justify="center" align="center"-->
     <!--v-col cols="12"-->
     <v-row justify="center" align="center">
@@ -50,20 +50,29 @@
       <!-- Profile -->
       <div :class="[{profileLg: $vuetify.breakpoint.lgOnly}, {profileXl: $vuetify.breakpoint.xlOnly}]">
         <h2 class="div-title" id="profile">Profile</h2>
-        <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300vh" height="300vh">
-        <div v-else style="padding: 10em;"></div>
-        <p v-if="isFadeInUpProfile1" class="animate__animated text-center name" :class="{animate__fadeInUp: isFadeInUpProfile1}">Terai Shogo</p>
-        <div v-else style="padding: 10em;"></div>
+        <v-row justify="center" align="center">
+          <v-col cols="12" xs="12" sm="12" md="12" lg="5" xl="4">
+            <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300vh" height="300vh">
+            <div v-else style="padding: 10em;"></div>
+            <p v-if="isFadeInUpProfile1" class="animate__animated text-center name" :class="{animate__fadeInUp: isFadeInUpProfile1}">Terai Shogo</p>
+            <div v-else style="padding: 10em;"></div>
+          </v-col>
+        </v-row>
 
-        <v-card v-if="isFadeInUpProfile2" class="animate__animated profile-card" :class="{animate__fadeInUp: isFadeInUpProfile2}" elevation="4" width="35%" rounded>
-          <v-card-text class="text-body-1" style="padding-left: 7%;">
-            1995年生まれ富山県出身。<br>
-            大阪大学で情報科学を学んだ後、公立中学校で教諭となる。<br>
-            現在はWeb開発を学習中。<br>
-            趣味はバドミントン・サッカー・将棋・料理など。
-          </v-card-text>
-        </v-card>
-        <div v-else style="padding: 5em;"></div>
+
+        <v-row justify="center" align="center">
+          <v-col cols="12" xs="12" sm="12" md="12" lg="5" xl="4">
+            <v-card v-if="isFadeInUpProfile2" class="animate__animated profile-card" :class="{animate__fadeInUp: isFadeInUpProfile2}" elevation="4" width="85%" rounded>
+              <v-card-text class="text-body-1" style="padding-left: 7%;">
+                1995年生まれ富山県出身。<br>
+                大阪大学で情報科学を学んだ後、公立中学校で教諭となる。<br>
+                現在はWeb開発を学習中。<br>
+                趣味はバドミントン・サッカー・将棋・料理など。
+              </v-card-text>
+            </v-card>
+            <div v-else style="padding: 5em;"></div>
+          </v-col>
+        </v-row>
       </div>
 
       <!-- Works -->
