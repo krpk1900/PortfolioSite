@@ -52,7 +52,7 @@
         <h2 class="div-title" id="profile">Profile</h2>
         <v-row justify="center" align="center">
           <v-col cols="12" xs="12" sm="12" md="12" lg="5" xl="4">
-            <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300vh" height="300vh">
+            <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}">
             <div v-else style="padding: 10em;"></div>
             <p v-if="isFadeInUpProfile1" class="animate__animated text-center name" :class="{animate__fadeInUp: isFadeInUpProfile1}">Terai Shogo</p>
             <div v-else style="padding: 10em;"></div>
@@ -81,7 +81,7 @@
         <div class="works-item">
           <div v-if="isFadeInUpWorks1" class="animate__animated" :class="{animate__fadeInUp: isFadeInUpWorks1}">
             <a href="https://sekigae.jp/" target="_blank">
-              <img class="sekigaemaker-img" src="/sekigae2.png" width="420vw">
+              <img class="sekigaemaker-img" src="/sekigae2.png">
             </a>
           </div>
           <div v-else style="margin: 30%;"></div>
@@ -430,7 +430,7 @@
       padding: 1% 0 1% 0 ;
       color: #23bdbd;
       font-weight: 700;
-      font-size: 4em;
+      font-size: 3em;
     }
     .sns-img {
       /*position: absolute;*/
@@ -438,6 +438,40 @@
       border-radius: 10px;
       transition-duration: 0.2s;
       width: 35px;
+    }
+    .profile-img {
+      border-radius: 50%;
+      border: 9px solid #1d7777;
+      display: block;
+      margin: 2% auto 0.5% auto;
+      width: 200px;
+      height: 200px;
+    }
+    .name {
+      font-size: 2em;
+      font-weight: 600;
+      color: #696464;
+    }
+    .sekigaemaker-title {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #696464;
+      margin-top: 1%;
+    }
+    .skills-card-title {
+      font-size: 1.5em !important;
+      font-weight: 550;
+      color: #696464;
+    }
+    .history-card-title {
+      font-size: 1.2em !important;
+      font-weight: 550 !important;
+      margin-left: 2% !important;
+    }
+    .history-card-text {
+      font-size: 0.8em;
+      font-weight: 500;
+      padding-left: 4%;
     }
   }
   @media screen and (min-width: 768px) {
@@ -454,6 +488,40 @@
       border-radius: 10px;
       transition-duration: 0.2s;
       width: 55px;
+    }
+    .profile-img {
+      border-radius: 50%;
+      border: 9px solid #1d7777;
+      display: block;
+      margin: 1% auto 0.5% auto;
+      width: 300px;
+      height: 300px;
+    }
+    .name {
+      font-size: 3em;
+      font-weight: 600;
+      color: #696464;
+    }
+    .sekigaemaker-title {
+      font-size: 2em;
+      font-weight: 600;
+      color: #696464;
+      margin-top: 1%;
+    }
+    .skills-card-title {
+      font-size: 2em !important;
+      font-weight: 550;
+      color: #696464;
+    }
+    .history-card-title {
+      font-size: 1.5em !important;
+      font-weight: 550 !important;
+      margin-left: 2% !important;
+    }
+    .history-card-text {
+      font-size: 1em;
+      font-weight: 500;
+      padding-left: 4%;
     }
   }
   :root {
@@ -528,17 +596,6 @@
     height: 86vh;
     background-color: #eaeaf3fb;
   }
-  .name {
-    font-size: 3em;
-    font-weight: 600;
-    color: #696464;
-  }
-  .profile-img {
-    border-radius: 50%;
-    border: 9px solid #1d7777;
-    display: block;
-    margin: 1% auto 0.5% auto;
-  }
   .profile-card {
     display: block;
     margin: 1% auto;
@@ -559,17 +616,13 @@
   .sekigaemaker-img {
     border-radius: 20px;
     transition-duration: 0.2s;
+    width: 300px;
   }
   .sekigaemaker-img:hover {
     transform: scale(1.03,1.03);
     transition-duration: 0.2s;
   }
-  .sekigaemaker-title {
-    font-size: 2em;
-    font-weight: 600;
-    color: #696464;
-    margin-top: 1%;
-  }
+
   .sekigaemaker-description {
     font-size: 1em;
     font-weight: 550;
@@ -593,11 +646,7 @@
     margin: 1% auto;
     padding-bottom: 1%;
   }
-  .skills-card-title {
-    font-size: 2em;
-    font-weight: 550;
-    color: #696464;
-  }
+
   .skills-item {
     text-align: center;
     /*display: inline-block;*/
@@ -625,11 +674,6 @@
     font-size: 1.5vw;
     font-weight: 550;
     margin-left: 2%;
-  }
-  .history-card-text {
-    font-size: 1vw;
-    font-weight: 500;
-    padding-left: 4%;
   }
   /*.history1lg {
     margin-top: -10%;
