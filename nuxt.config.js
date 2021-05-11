@@ -6,10 +6,10 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - PortfolioSite',
-    title: 'PortfolioSite',
+    //titleTemplate: '%s - PortfolioSite',
+    title: "Terai Shogo's Portfolio",
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
