@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid style="padding: 0;">
   <!--v-row justify="center" align="center"-->
     <!--v-col cols="12"-->
     <v-row justify="center" align="center">
@@ -50,20 +50,29 @@
       <!-- Profile -->
       <div :class="[{profileLg: $vuetify.breakpoint.lgOnly}, {profileXl: $vuetify.breakpoint.xlOnly}]">
         <h2 class="div-title" id="profile">Profile</h2>
-        <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300vh" height="300vh">
-        <div v-else style="padding: 10em;"></div>
-        <p v-if="isFadeInUpProfile1" class="animate__animated text-center name" :class="{animate__fadeInUp: isFadeInUpProfile1}">Terai Shogo</p>
-        <div v-else style="padding: 10em;"></div>
+        <v-row justify="center" align="center">
+          <v-col cols="12" xs="12" sm="12" md="12" lg="5" xl="4">
+            <img v-if="isFadeInUpProfile1" src="/zoomup.jpg" class="animate__animated profile-img" :class="{animate__fadeInUp: isFadeInUpProfile1}" width="300vh" height="300vh">
+            <div v-else style="padding: 10em;"></div>
+            <p v-if="isFadeInUpProfile1" class="animate__animated text-center name" :class="{animate__fadeInUp: isFadeInUpProfile1}">Terai Shogo</p>
+            <div v-else style="padding: 10em;"></div>
+          </v-col>
+        </v-row>
 
-        <v-card v-if="isFadeInUpProfile2" class="animate__animated profile-card" :class="{animate__fadeInUp: isFadeInUpProfile2}" elevation="4" width="35%" rounded>
-          <v-card-text class="text-body-1" style="padding-left: 7%;">
-            1995年生まれ富山県出身。<br>
-            大阪大学で情報科学を学んだ後、公立中学校で教諭となる。<br>
-            現在はWeb開発を学習中。<br>
-            趣味はバドミントン・サッカー・将棋・料理など。
-          </v-card-text>
-        </v-card>
-        <div v-else style="padding: 5em;"></div>
+
+        <v-row justify="center" align="center">
+          <v-col cols="12" xs="12" sm="12" md="7" lg="5" xl="4">
+            <v-card v-if="isFadeInUpProfile2" class="animate__animated profile-card" :class="{animate__fadeInUp: isFadeInUpProfile2}" elevation="4" width="85%" rounded>
+              <v-card-text class="text-body-1" style="padding-left: 7%;">
+                1995年生まれ富山県出身。<br>
+                大阪大学で情報科学を学んだ後、公立中学校で教諭となる。<br>
+                現在はWeb開発を学習中。<br>
+                趣味はバドミントン・サッカー・将棋・料理など。
+              </v-card-text>
+            </v-card>
+            <div v-else style="padding: 5em;"></div>
+          </v-col>
+        </v-row>
       </div>
 
       <!-- Works -->
@@ -94,134 +103,147 @@
       <!-- Skills -->
       <div class="skills" id="skills">
         <h2 class="div-title">Skills</h2>
-        <v-card v-if="isFadeInUpSkills1" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills1}" width="50%" elevation="4" rounded>
-          <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">今後学習したい</v-card-title>
-          <div class="skills-item">
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/TypeScript.png" alt="TypeScript" width="9%" style="margin: 0 1%;">
-              </template>
-              <span>TypeScript</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/React.png" alt="React" width="9%" style="margin: 0 1%;">
-              </template>
-              <span>React</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/nextjs.png" alt="Next.js" width="11%" style="margin: 0.5%; 1% 0 1%">
-              </template>
-              <span>Next.js</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/sql.png" alt="SQL" width="9%" style="margin: 0 1%;">
-              </template>
-              <span>SQL</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/aws.png" alt="AWS" width="12%" style="margin: 1% 1% 0 1%;">
-              </template>
-              <span>AWS</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/webpack.png" alt="webpack" width="9%" style="margin: 0 1%;">
-              </template>
-              <span>webpack</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/nodejs.png" alt="Node.js" width="11%" style="margin: 1% 1% 0 1%;">
-              </template>
-              <span>Node.js</span>
-            </v-tooltip>
-            <!--v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/docker.png" alt="docker" width="9%">
-              </template>
-              <span>docker</span>
-            </v-tooltip-->
-          </div>
-        </v-card>
-        <div v-else style="padding: 5em;"></div>
 
-        <v-card v-if="isFadeInUpSkills2" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills2}" width="50%" elevation="4" rounded>
-          <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">最近よく使う</v-card-title>
-          <div class="skills-item">
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/ruby.png" alt="Ruby" width="9%" style="margin: 0 1%;">
-              </template>
-              <span>Ruby</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/rails.png" alt="Ruby on Rails" width="9%" style="margin: 0 2%;">
-              </template>
-              <span>Ruby on Rails</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/javascript.svg" alt="JavaScript" width="8%" style="margin: 0 2%;">
-              </template>
-              <span>JavaScript</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/vue.png" alt="Vue.js" width="9%" style="margin: 0 1%;">
-              </template>
-              <span>Vue.js</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/nuxtjs.svg" alt="Nuxt.js" width="11%" style="margin: 0 1% 0 1%;">
-              </template>
-              <span>Nuxt.js</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/html.png" alt="HTML" width="9%" style="margin: 0 2%;">
-              </template>
-              <span>HTML</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/css.png" alt="CSS" width="8%" style="margin: 0 5% 0 1%;">
-              </template>
-              <span>CSS</span>
-            </v-tooltip>
-          </div>
-        </v-card>
-        <div v-else style="padding: 5em;"></div>
+        <v-row justify="center" align="center">
+          <v-col cols="12" xs="3" sm="12" md="8" lg="6" xl="6">
+            <v-card v-if="isFadeInUpSkills1" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills1}" elevation="4" width="85%" rounded>
+              <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">今後学習したい</v-card-title>
+              <div class="skills-item">
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="skill-img" src="/TypeScript.png" alt="TypeScript" width="9%" style="margin: 0 1%;">
+                  </template>
+                  <span>TypeScript</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="skill-img" src="/React.png" alt="React" width="9%" style="margin: 0 1%;">
+                  </template>
+                  <span>React</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="skill-img" src="/nextjs.png" alt="Next.js" width="11%" style="margin: 0.5%; 1% 0 1%">
+                  </template>
+                  <span>Next.js</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="skill-img" src="/sql.png" alt="SQL" width="9%" style="margin: 0 1%;">
+                  </template>
+                  <span>SQL</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="skill-img" src="/aws.png" alt="AWS" width="12%" style="margin: 1% 1% 0 1%;">
+                  </template>
+                  <span>AWS</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="skill-img" src="/webpack.png" alt="webpack" width="9%" style="margin: 0 1%;">
+                  </template>
+                  <span>webpack</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="skill-img" src="/nodejs.png" alt="Node.js" width="11%" style="margin: 1% 1% 0 1%;">
+                  </template>
+                  <span>Node.js</span>
+                </v-tooltip>
+                <!--v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="skill-img" src="/docker.png" alt="docker" width="9%">
+                  </template>
+                  <span>docker</span>
+                </v-tooltip-->
+              </div>
+            </v-card>
+            <div v-else style="padding: 5em;"></div>
+          </v-col>
+        </v-row>
 
-        <v-card v-if="isFadeInUpSkills3" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills3}" width="50%" elevation="4" rounded>
-          <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">過去使っていた</v-card-title>
-          <div class="skills-item">
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/python.png" alt="Python" width="9.5%" style="margin: 0 1%;">
-              </template>
-              <span>Python</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/java.png" alt="Java" width="9%" style="margin: 0 1%;">
-              </template>
-              <span>Java</span>
-            </v-tooltip>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <img v-bind="attrs" v-on="on" class="skill-img" src="/c.png" alt="C言語" width="10%" style="margin: 0 2% 0 1%">
-              </template>
-              <span>C言語</span>
-            </v-tooltip>
-          </div>
-        </v-card>
-        <div v-else style="padding: 5em;"></div>
+        <v-row justify="center" align="center">
+          <v-col cols="12" xs="12" sm="12" md="8" lg="6" xl="6">
+            <v-card v-if="isFadeInUpSkills2" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills2}" elevation="4" width="85%" rounded>
+              <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">最近よく使う</v-card-title>
+              <div class="skills-item">
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/ruby.png" alt="Ruby" width="9%" style="margin: 0 1%;">
+                  </template>
+                  <span>Ruby</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/rails.png" alt="Ruby on Rails" width="9%" style="margin: 0 2%;">
+                  </template>
+                  <span>Ruby on Rails</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/javascript.svg" alt="JavaScript" width="8%" style="margin: 0 2%;">
+                  </template>
+                  <span>JavaScript</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/vue.png" alt="Vue.js" width="9%" style="margin: 0 1%;">
+                  </template>
+                  <span>Vue.js</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/nuxtjs.svg" alt="Nuxt.js" width="11%" style="margin: 0 1% 0 1%;">
+                  </template>
+                  <span>Nuxt.js</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/html.png" alt="HTML" width="9%" style="margin: 0 2%;">
+                  </template>
+                  <span>HTML</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="recent-skill-img" src="/css.png" alt="CSS" width="8%" style="margin: 0 5% 0 1%;">
+                  </template>
+                  <span>CSS</span>
+                </v-tooltip>
+              </div>
+            </v-card>
+            <div v-else style="padding: 5em;"></div>
+          </v-col>
+        </v-row>
+
+        <v-row justify="center" align="center">
+          <v-col cols="12" xs="12" sm="12" md="8" lg="6" xl="6">
+            <v-card v-if="isFadeInUpSkills3" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills3}" elevation="4" width="85%" rounded>
+              <v-card-title class="skills-card-title justify-center" style="font-size: 1.7em; font-weight: 550;">過去使っていた</v-card-title>
+              <div class="skills-item">
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="skill-img" src="/python.png" alt="Python" width="9.5%" style="margin: 0 1%;">
+                  </template>
+                  <span>Python</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="skill-img" src="/java.png" alt="Java" width="9%" style="margin: 0 1%;">
+                  </template>
+                  <span>Java</span>
+                </v-tooltip>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <img v-bind="attrs" v-on="on" class="skill-img" src="/c.png" alt="C言語" width="10%" style="margin: 0 2% 0 1%">
+                  </template>
+                  <span>C言語</span>
+                </v-tooltip>
+              </div>
+            </v-card>
+            <div v-else style="padding: 5em;"></div>
+          </v-col>
+        </v-row>
       </div>
 
       <!-- History -->
