@@ -573,7 +573,7 @@
     font-weight: 550;
   }
   .v-timeline-item__opposite {
-    align-self: start;
+    align-self: start !important;
   }
   .history-card-title {
     font-size: 1.5vw;
