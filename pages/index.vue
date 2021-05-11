@@ -4,9 +4,9 @@
     <!--v-col cols="12"-->
     <v-row justify="center" align="center">
       <v-system-bar color="#fffaf0" app height="50vh" style="opacity: 0.95;">
-        <p>xs={{ $vuetify.breakpoint.xsOnly }}  sm={{ $vuetify.breakpoint.smOnly }}  md={{ $vuetify.breakpoint.mdOnly }}  lg={{ $vuetify.breakpoint.lgOnly }}  xl={{ $vuetify.breakpoint.xlOnly }}
+        <!--p>xs={{ $vuetify.breakpoint.xsOnly }}  sm={{ $vuetify.breakpoint.smOnly }}  md={{ $vuetify.breakpoint.mdOnly }}  lg={{ $vuetify.breakpoint.lgOnly }}  xl={{ $vuetify.breakpoint.xlOnly }}
           scrollY={{ scrollY }}
-        </p>
+        </p-->
         <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to style="color: #099e9e;">Top</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#profile'" to style="color: #099e9e;">Profile</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#works'" to style="color: #099e9e;">Works</nuxt-link>
@@ -452,6 +452,11 @@
       font-weight: 600;
       color: #696464;
     }
+    .sekigaemaker-img {
+      border-radius: 20px;
+      transition-duration: 0.2s;
+      width: 300px;
+    }
     .sekigaemaker-title {
       font-size: 1.5em;
       font-weight: 600;
@@ -472,6 +477,17 @@
       font-size: 0.8em;
       font-weight: 500;
       padding-left: 4%;
+    }
+    .link {
+      font-size: 1.2em;
+      text-decoration: none;
+      color: #099e9e;
+      /*background-color: red; デバッグ用*/
+      padding: 1.2vh;/*0.75%;*/
+      transition: all  0.3s ease;
+    }
+    .rightmost-link {
+      margin-right: auto;
     }
   }
   @media screen and (min-width: 768px) {
@@ -502,6 +518,11 @@
       font-weight: 600;
       color: #696464;
     }
+    .sekigaemaker-img {
+      border-radius: 20px;
+      transition-duration: 0.2s;
+      width: 400px;
+    }
     .sekigaemaker-title {
       font-size: 2em;
       font-weight: 600;
@@ -509,7 +530,7 @@
       margin-top: 1%;
     }
     .skills-card-title {
-      font-size: 2em !important;
+      font-size: 1.8em !important;
       font-weight: 550;
       color: #696464;
     }
@@ -522,6 +543,17 @@
       font-size: 1em;
       font-weight: 500;
       padding-left: 4%;
+    }
+    .link {
+      font-size: 1.4em;
+      text-decoration: none;
+      color: #099e9e;
+      /*background-color: red; デバッグ用*/
+      padding: 1.2vh;/*0.75%;*/
+      transition: all  0.3s ease;
+    }
+    .rightmost-link {
+      margin-right: 3%;
     }
   }
   :root {
@@ -537,22 +569,11 @@
   a {
     text-decoration: none;
   }
-  .link {
-    font-size: 1.4em;
-    text-decoration: none;
-    color: #099e9e;
-    /*background-color: red; デバッグ用*/
-    padding: 1.2vh;/*0.75%;*/
-    transition: all  0.3s ease;
-  }
   .link:hover {
     background-color: #e2d8d8;
   }
   .leftmost-link {
     margin-left: auto;
-  }
-  .rightmost-link {
-    margin-right: 3%;
   }
   .code-img {
     width: 100%;
@@ -561,6 +582,9 @@
   .title {
     position: relative;
     height: 90vh;
+  }
+  .vue-typer {
+    white-space: pre;
   }
   .vue-typer .custom.char {
     color:  #71e9e9; /*#6cd0ff*/;
@@ -613,11 +637,7 @@
     display: block;
     margin: 1% auto;
   }
-  .sekigaemaker-img {
-    border-radius: 20px;
-    transition-duration: 0.2s;
-    width: 300px;
-  }
+
   .sekigaemaker-img:hover {
     transform: scale(1.03,1.03);
     transition-duration: 0.2s;
@@ -773,24 +793,6 @@
 <script>
 export default {
     data: () => ({
-      items: [
-        {
-          color: 'red lighten-2',
-          icon: 'mdi-star',
-        },
-        {
-          color: 'purple darken-1',
-          icon: 'mdi-book-variant',
-        },
-        {
-          color: 'green lighten-1',
-          icon: 'mdi-airballoon',
-        },
-        {
-          color: 'indigo',
-          icon: 'mdi-buffer',
-        },
-      ],
       isCreated: false,
       isFadeInUpProfile1: false,
       isFadeInUpProfile2: false,
@@ -813,6 +815,7 @@ export default {
 
       scrollY: 0,
       innnerHeight: 0,
+      typingWords: "Terai Shogo's Portfolio",
     }),
     created() {
       if (process.browser) {
