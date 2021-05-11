@@ -251,15 +251,15 @@
         <h2 class="div-title">History</h2>
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item :color="'orange lighten-1'" :icon="' mdi-baby-face'" fill-dot>
-            <template v-slot:opposite>
-              <div class="opposite orange--text" :class="[{history1lg: $vuetify.breakpoint.lgOnly}, {history1xl: $vuetify.breakpoint.xlOnly}]">
+            <template v-slot:opposite style="align-self: start;">
+              <div style="align-self: start;" class="opposite orange--text" :class="[{history1lg: $vuetify.breakpoint.lgOnly}, {history1xl: $vuetify.breakpoint.xlOnly}]">
                 1995.9
               </div>
             </template>
             <v-card v-if="isFadeInUpHistory1" :color="'orange lighten-1'" dark class="animate__animated history-card-right"
               :class="[{animate__fadeInRight: isFadeInUpHistory1}, {historyCardRightMd: $vuetify.breakpoint.mdOnly}]">
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">富山県で生まれる</v-card-title>
-              <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
+              <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500; padding-left: 4%;">
                 <p style="padding-top: 3%;">自然豊かな場所で生まれました。</p>
               </v-card-text>
             </v-card>
@@ -572,6 +572,9 @@
     font-size: 1.8vw;
     font-weight: 550;
   }
+  .v-timeline-item__opposite {
+    align-self: start;
+  }
   .history-card-title {
     font-size: 1.5vw;
     font-weight: 550;
@@ -582,7 +585,7 @@
     font-weight: 500;
     padding-left: 4%;
   }
-  .history1lg {
+  /*.history1lg {
     margin-top: -10%;
   }
   .history1xl {
@@ -629,7 +632,7 @@
   }
   .history8xl {
     margin-top: -11%;
-  }
+  }*/
   .history-card-right {
     margin-right: 10vw;
   }
