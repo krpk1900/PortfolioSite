@@ -249,8 +249,8 @@
               </div>
             </template>
             <v-card v-if="isFadeInUpHistory2" :color="'blue lighten-2'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory2}">
-              <v-card-title class="history-card-title">中学校に入学</v-card-title>
-              <v-card-text class="white text--primary history-card-text">
+              <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">中学校に入学</v-card-title>
+              <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">自分の生きる姿勢を通して、心に一生残り続けるような<b>良い影響を人に与えたい</b>と考えて、教師を目指すようになりました。</p>
               </v-card-text>
             </v-card>
@@ -263,8 +263,8 @@
               </div>
             </template>
             <v-card v-if="isFadeInUpHistory3" :color="'pink lighten-2'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory3}">
-              <v-card-title class="history-card-title">富山東高等学校に入学</v-card-title>
-              <v-card-text class="white text--primary history-card-text">
+              <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">富山東高等学校に入学</v-card-title>
+              <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
                   これまで関心があった教育に加えて、<b>学習</b>に対しても興味を持つようになりました。
                   人が何かを学習するとは一体どのような仕組みなのか、学習の効率を最大化するためにはどのような方法があるのかなどを探求していました。
@@ -280,8 +280,8 @@
               </div>
             </template>
             <v-card v-if="isFadeInUpHistory4" :color="'green lighten-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory4}">
-              <v-card-title class="history-card-title">将棋がきっかけで人工知能に関心を持つ</v-card-title>
-              <v-card-text class="white text--primary history-card-text">
+              <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">将棋がきっかけで人工知能に関心を持つ</v-card-title>
+              <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
                   将棋でコンピュータがプロ棋士を超え始めたことを知り、<b>コンピュータが自らで学習</b>していることに衝撃を受けました。
                   そもそもコンピュータが学習するとは一体どういうことなのか、コンピュータはどのような仕組みで学習しているのかなどを詳しく学びたいと思うようになりました。<br><br>
@@ -298,8 +298,8 @@
               </div>
             </template>
             <v-card v-if="isFadeInUpHistory5" :color="'indigo darken-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory5}">
-              <v-card-title class="history-card-title">大阪大学に入学</v-card-title>
-              <v-card-text class="white text--primary history-card-text">
+              <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">大阪大学に入学</v-card-title>
+              <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
                   情報科学を学んだ後、教育工学分野における研究を行いました。
                   機械学習を用いて学習者の状態推定を行い、<b>コンピュータの学習によって人間の学習を支援する</b>手法を研究していました。<br><br>
@@ -316,8 +316,8 @@
               </div>
             </template>
             <v-card v-if="isFadeInUpHistory6" :color="'purple darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory6}">
-              <v-card-title class="history-card-title">公立中学校教諭に赴任</v-card-title>
-              <v-card-text class="white text--primary history-card-text">
+              <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">公立中学校教諭に赴任</v-card-title>
+              <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
                   心から尊敬できる教師の方々に囲まれながら働くことができました。
                   しかし、そんな素敵な人たちが様々なものを犠牲にしている現実を知り、<b>「この人たちは絶対にこんなに苦しむべき人ではない」</b>と強く感じました。<br><br>
@@ -334,8 +334,8 @@
               </div>
             </template>
             <v-card v-if="isFadeInUpHistory7" :color="'deep-orange lighten-1'" dark class="animate__animated right" :class="{animate__fadeInRight: isFadeInUpHistory7}">
-              <v-card-title class="history-card-title">Web開発の学習を始める</v-card-title>
-              <v-card-text class="white text--primary history-card-text">
+              <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">Web開発の学習を始める</v-card-title>
+              <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
                   サービスを開発して多くの人に届けることによって、<b>自分が直接出会うことができないような規模の人たちにも価値を提供できる点</b>に魅力を感じ、
                   これまで学んだ経験がなかった分野であるWeb開発を学習し始めました。
@@ -351,8 +351,8 @@
               </div>
             </template>
             <v-card v-if="isFadeInUpHistory8" :color="'cyan darken-1'" dark class="animate__animated left" :class="{animate__fadeInLeft: isFadeInUpHistory8}">
-              <v-card-title class="history-card-title">席替えメーカーを個人開発</v-card-title>
-              <v-card-text class="white text--primary history-card-text">
+              <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">席替えメーカーを個人開発</v-card-title>
+              <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
                   <b>業務を改善することで教師の方の力になりたい</b>と考え、席替えサービスを個人開発しました。
                   ユーザー数は8,000人を超え、実際に現場で働いておられる数多くの教員の方にも使っていただいています。
