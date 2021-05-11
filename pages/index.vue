@@ -4,7 +4,6 @@
     <!--v-col cols="12"-->
     <v-row justify="center" align="center">
       <v-system-bar color="#fffaf0" app height="50vh" style="opacity: 0.95;">
-        <p>scrollY={{ scrollY }}</p>
         <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to style="color: #099e9e;">Top</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#profile'" to style="color: #099e9e;">Profile</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#works'" to style="color: #099e9e;">Works</nuxt-link>
