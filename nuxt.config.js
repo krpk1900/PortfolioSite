@@ -9,12 +9,21 @@ export default {
     //titleTemplate: '%s - PortfolioSite',
     title: "Terai Shogo's Portfolio",
     htmlAttrs: {
-      lang: 'ja'
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Terai Shogoのポートフォリオサイトです。' },
+      { hid: 'og:site_name', property: 'og:site_name', content: "Terai Shogo's Portfolio" },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://krpk1900.com/' },
+      { hid: 'og:title', property: 'og:title', content: "Terai Shogo's Portfolio" },
+      { hid: 'og:description', property: 'og:description', content: 'Terai Shogoのポートフォリオサイトです。' },
+      { hid: 'og:image', property: 'og:image', content: 'https://krpk1900.com/og_img.jpeg' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@krpk1900_dev'},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -45,7 +54,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/google-gtag',
   ],
+  'google-gtag': {
+    id: process.env.GAID,
+    debug: true
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

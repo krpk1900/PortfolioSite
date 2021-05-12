@@ -40,9 +40,7 @@
           <a href="https://connpass.com/user/krpk1900/" target="_blank">
             <img class="sns-img" src="/connpass.png" width="55px">
           </a>
-
         </div>
-
       </div>
 
       <!-- Profile -->
@@ -82,7 +80,7 @@
               <img class="sekigaemaker-img" src="/sekigae2.png">
             </a>
           </div>
-          <div v-else style="margin: 30%;"></div>
+          <div v-else style="margin: 300px;"></div>
           <a href="https://sekigae.jp/" target="_blank">
             <div class="text-center sekigaemaker-title">席替えメーカー</div>
           </a>
@@ -101,7 +99,6 @@
       <!-- Skills -->
       <div class="skills" id="skills">
         <h2 class="div-title">Skills</h2>
-
         <v-row justify="center" align="center">
           <v-col cols="12" xs="3" sm="12" md="8" lg="6" xl="6" style="padding: 0;">
             <v-card v-if="isFadeInUpSkills1" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills1}" elevation="4" width="85%" rounded>
@@ -263,6 +260,7 @@
                 <p style="padding-top: 3%;">自然豊かな場所で生まれました。</p>
               </v-card-text>
             </v-card>
+            <div v-else style="margin: 500px;"></div>
           </v-timeline-item>
 
           <v-timeline-item :color="'blue lighten-2'" :icon="'mdi-school'" fill-dot>
@@ -281,6 +279,7 @@
                 <p style="padding-top: 3%;">自分の生きる姿勢を通して、心に一生残り続けるような<b>良い影響を人に与えたい</b>と考えて、教師を目指すようになりました。</p>
               </v-card-text>
             </v-card>
+            <div v-else style="margin: 500px;"></div>
           </v-timeline-item>
 
           <v-timeline-item :color="'pink lighten-2'" :icon="'mdi-school'" fill-dot>
@@ -301,6 +300,7 @@
                 </p>
               </v-card-text>
             </v-card>
+            <div v-else style="margin: 500px;"></div>
           </v-timeline-item>
 
           <v-timeline-item :color="'green lighten-1'" :icon="'mdi-lightbulb-on'" fill-dot>
@@ -323,6 +323,7 @@
                 </p>
               </v-card-text>
             </v-card>
+            <div v-else style="margin: 500px;"></div>
           </v-timeline-item>
 
           <v-timeline-item :color="'indigo darken-1'" :icon="'mdi-school'" fill-dot>
@@ -338,12 +339,13 @@
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">大阪大学に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
-                  情報科学を学んだ後、教育工学分野における研究を行いました。
+                  情報科学を学んだ後、教育工学分野における研究を行っていました。
                   機械学習を用いて学習者の状態推定を行い、<b>コンピュータの学習によって人間の学習を支援する</b>手法を研究していました。<br><br>
-                  また、夜間に履修していた教職課程を通して、同年代とは考えられないようなビジョンを持つ多くの人たちと出会うことができました。
+                  また、情報科学と並行して履修していた教職課程を通して、同年代とは思えないようなビジョンを持った素敵な人たちと出会うことができました。
                 </p>
               </v-card-text>
             </v-card>
+            <div v-else style="margin: 500px;"></div>
           </v-timeline-item>
 
           <v-timeline-item :color="'purple darken-1'" :icon="'mdi-city'" fill-dot>
@@ -362,10 +364,11 @@
                 <p style="padding-top: 3%;">
                   心から尊敬できる教師の方々に囲まれながら働くことができました。
                   しかし、そんな素敵な人たちが様々なものを犠牲にしている現実を知り、<b>「この人たちは絶対にこんなに苦しむべき人ではない」</b>と強く感じました。<br><br>
-                  既存の仕組みを改善することや、新たな仕組みを作ることによって課題を解決したいと考えるようになりました。
+                  既存の仕組みを改善することや、新たな仕組みを作ることによって根本的な課題を解決したいと考えるようになりました。
                 </p>
               </v-card-text>
             </v-card>
+            <div v-else style="margin: 500px;"></div>
           </v-timeline-item>
 
           <v-timeline-item :color="'deep-orange lighten-1'" :icon="'mdi-code-tags'" fill-dot>
@@ -381,11 +384,12 @@
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">Web開発の学習を始める</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
-                  サービスを開発して多くの人に届けることによって、<b>自分が直接出会うことができないような規模の人たちにも価値を提供できる点</b>に魅力を感じ、
+                  サービスを開発して多くの人に届けることによって、<b>自分が直接出会うことができないような規模の人たちに価値を提供できる点</b>に魅力を感じ、
                   これまで学んだ経験がなかった分野であるWeb開発を学習し始めました。
                 </p>
               </v-card-text>
             </v-card>
+            <div v-else style="margin: 500px;"></div>
           </v-timeline-item>
 
           <v-timeline-item :color="'cyan darken-1'" :icon="'mdi-lightbulb-on'" fill-dot>
@@ -402,26 +406,52 @@
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">席替えメーカーを個人開発</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
-                  <b>業務を改善することで教師の方の力になりたい</b>と考え、席替えサービスを個人開発しました。
-                  ユーザー数は8,000人を超え、実際に現場で働いておられる数多くの教員の方にも使っていただいています。
+                  <b>業務を改善することで教師の方の力になりたい</b>と考え、学校現場に特化した席替えアプリを個人開発しました。
+                  ユーザー数は8,000人を超え、実際に多くの教員の方に学校で使っていただいています。
                 </p>
               </v-card-text>
             </v-card>
+            <div v-else style="margin: 500px;"></div>
           </v-timeline-item>
 
         </v-timeline>
       </div>
       <v-footer color="#fffaf0" height="50vh">
-        <div class="footer-item">© 2021 Terai Shogo</div>
+        <div class="leftmost-footer-item footer-item">
+          <!-- プライバシーポリシー -->
+          <v-dialog v-model="privacyPolicy" width="850" scrollable>
+            <template v-slot:activator="{ on, attrs }">
+              <a v-bind="attrs" v-on="on" style="color: #099e9e;">プライバシーポリシー</a>
+            </template>
+            <v-card>
+              <v-card-title class="headline cyan darken-1 font-weight-black white--text" style="display: block;">プライバシーポリシー
+                <v-icon style="float: right;" @click="privacyPolicy = false">mdi-close</v-icon>
+              </v-card-title>
+              <v-card-text style="margin-top: 20px;">
+                当ホームページでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。<br>
+                Googleアナリティクスはデータの収集のためにCookieを使用しています。<br>
+                この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。<br>
+                この規約に関しての詳細は<a href="https://marketingplatform.google.com/about/analytics/terms/jp/" target="_blank" rel="noopener noreferrer">Googleアナリティクスサービス利用規約</a>や
+                <a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener noreferrer">Googleポリシーと規約</a>をご覧ください。
+              </v-card-text>
+            </v-card>
+          </v-dialog>
+        </div>
+        <div class="footer-item">
+          <a href="https://twitter.com/krpk1900_dev" target="_blank" style="color: #099e9e;">
+            ©2021 TeraiShogo
+          </a>
+        </div>
       </v-footer>
     <!--/v-col-->
   <!--/v-row-->
-
-
   </v-container>
 </template>
 
 <style>
+  [v-cloak]{
+    display:none;
+  }
   @media screen and (max-width: 960px) {
     /* xs, sm */
     .div-title {
@@ -447,7 +477,7 @@
     }
     .title .typing {
       position: absolute;
-      font-size: 10em !important;
+      font-size: 9em !important;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -466,14 +496,14 @@
       width: 35px;
     }
     .profile {
-      height: 68vh;
+      height: 85vh;
       background-color: #eaeaf3fb;
     }
     .profile-img {
       border-radius: 50%;
       border: 9px solid #1d7777;
       display: block;
-      margin: 2% auto 0.5% auto;
+      margin: 0.5% auto 0.5% auto;
       width: 200px;
       height: 200px;
     }
@@ -482,8 +512,12 @@
       font-weight: 600;
       color: #696464;
     }
+    .profile-card {
+      display: block;
+      margin: -5px auto 0 auto;
+    }
     .works {
-      height: 56vh;
+      height: 67vh;
       background-color: #f8f8ff;
     }
     .sekigaemaker-img {
@@ -498,7 +532,7 @@
       margin-top: 1%;
     }
     .skills {
-      height: 55vh;
+      height: 65vh;
       background-color: #eaeaf3fb;
     }
     .skills-card-title {
@@ -507,7 +541,7 @@
       color: #696464;
     }
     .history {
-      height: 280vh;
+      height: 410vh;
       background-color: #f8f8ff;
     }
     .history-card-title {
@@ -580,6 +614,10 @@
       font-size: 3em;
       font-weight: 600;
       color: #696464;
+    }
+    .profile-card {
+      display: block;
+      margin: 0 auto;
     }
     .works {
       height: 87vh;
@@ -680,6 +718,10 @@
       font-weight: 600;
       color: #696464;
     }
+    .profile-card {
+      display: block;
+      margin: 0 auto;
+    }
     .works {
       height: 74vh;
       background-color: #f8f8ff;
@@ -758,10 +800,6 @@
     transform: scale(1.1,1.1);
     transition-duration: 0.2s;
   }
-  .profile-card {
-    display: block;
-    margin: 0 auto;
-  }
   .works-item {
     /*display: inline-block;*/
     /*margin:0 auto;*/
@@ -838,9 +876,18 @@
   .historyCardLeftXl {
     margin-left: 10vw;
   }
+  .leftmost-footer-item {
+    margin: -0.5% 0 0 auto !important;
+  }
   .footer-item {
-    margin: 0 5% 0 auto;
+    text-decoration: none;
     color: #099e9e;
+    padding: 1.5vh;/*0.75%;*/
+    transition: all  0.3s ease;
+    margin: -0.5% 3% 0 0;
+  }
+  .footer-item:hover {
+    background-color: #e2d8d8;
   }
   .else-padding {
     padding: 4.1em;
@@ -883,10 +930,10 @@ export default {
       isFadeInLeftHistory4: false,
       isFadeInLeftHistory6: false,
       isFadeInLeftHistory8: false,
-
       scrollY: 0,
       innnerHeight: 0,
       typingWords: "Terai Shogo's \nPortfolio",
+      privacyPolicy: false,
     }),
     created() {
       if (process.browser) {
@@ -906,7 +953,6 @@ export default {
       handleScroll() {
         this.innnerHeight = window.innerHeight;
         this.scrollY = window.scrollY;
-
         let fadeInUpProfile1Height
         let fadeInUpProfile2Height
         let fadeInUpWorks1Height
@@ -922,37 +968,36 @@ export default {
         let fadeInUpHistory7Height
         let fadeInUpHistory8Height
 
-
         if(this.$vuetify.breakpoint.xsOnly) {
           fadeInUpProfile1Height = 0;
           fadeInUpProfile2Height = 0;
-          fadeInUpWorks1Height = 320;
-          fadeInUpSkills1Height = 820;
-          fadeInUpSkills2Height = 930;
-          fadeInUpSkills3Height = 1030;
-          fadeInUpHistory1Height = 1340;
-          fadeInUpHistory2Height = 1490;
-          fadeInUpHistory3Height = 1700;
-          fadeInUpHistory4Height = 1990;
-          fadeInUpHistory5Height = 2440;
-          fadeInUpHistory6Height = 2780;
-          fadeInUpHistory7Height = 3130;
-          fadeInUpHistory8Height = 3390;
+          fadeInUpWorks1Height = 240;
+          fadeInUpSkills1Height = 720;
+          fadeInUpSkills2Height = 830;
+          fadeInUpSkills3Height = 930;
+          fadeInUpHistory1Height = 1210;
+          fadeInUpHistory2Height = 1370;
+          fadeInUpHistory3Height = 1580;
+          fadeInUpHistory4Height = 1870;
+          fadeInUpHistory5Height = 2310;
+          fadeInUpHistory6Height = 2680;
+          fadeInUpHistory7Height = 3050;
+          fadeInUpHistory8Height = 3310;
         } else if(this.$vuetify.breakpoint.smOnly) {
           fadeInUpProfile1Height = 0;
           fadeInUpProfile2Height = 0;
-          fadeInUpWorks1Height = 320;
-          fadeInUpSkills1Height = 820;
-          fadeInUpSkills2Height = 930;
-          fadeInUpSkills3Height = 1030;
-          fadeInUpHistory1Height = 1340;
-          fadeInUpHistory2Height = 1490;
-          fadeInUpHistory3Height = 1700;
-          fadeInUpHistory4Height = 1990;
-          fadeInUpHistory5Height = 2440;
-          fadeInUpHistory6Height = 2780;
-          fadeInUpHistory7Height = 3130;
-          fadeInUpHistory8Height = 3390;
+          fadeInUpWorks1Height = 240;
+          fadeInUpSkills1Height = 720;
+          fadeInUpSkills2Height = 830;
+          fadeInUpSkills3Height = 930;
+          fadeInUpHistory1Height = 1210;
+          fadeInUpHistory2Height = 1370;
+          fadeInUpHistory3Height = 1580;
+          fadeInUpHistory4Height = 1870;
+          fadeInUpHistory5Height = 2310;
+          fadeInUpHistory6Height = 2680;
+          fadeInUpHistory7Height = 3050;
+          fadeInUpHistory8Height = 3310;
         } else if(this.$vuetify.breakpoint.mdOnly) {
           fadeInUpProfile1Height = 50;
           fadeInUpProfile2Height = 430;
