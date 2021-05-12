@@ -452,7 +452,7 @@
     }
     .title .typing {
       position: absolute;
-      font-size: 10em !important;
+      font-size: 9em !important;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -471,7 +471,7 @@
       width: 35px;
     }
     .profile {
-      height: 68vh;
+      height: 85vh;
       background-color: #eaeaf3fb;
     }
     .profile-img {
@@ -492,7 +492,7 @@
       margin: -5px auto 0 auto;
     }
     .works {
-      height: 56vh;
+      height: 67vh;
       background-color: #f8f8ff;
     }
     .sekigaemaker-img {
@@ -507,7 +507,7 @@
       margin-top: 1%;
     }
     .skills {
-      height: 55vh;
+      height: 65vh;
       background-color: #eaeaf3fb;
     }
     .skills-card-title {
@@ -516,7 +516,7 @@
       color: #696464;
     }
     .history {
-      height: 300vh;
+      height: 410vh;
       background-color: #f8f8ff;
     }
     .history-card-title {
