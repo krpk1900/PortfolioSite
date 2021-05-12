@@ -82,7 +82,7 @@
               <img class="sekigaemaker-img" src="/sekigae2.png">
             </a>
           </div>
-          <div v-else style="margin: 30%;"></div>
+          <div v-else style="margin: 300px;"></div>
           <a href="https://sekigae.jp/" target="_blank">
             <div class="text-center sekigaemaker-title">席替えメーカー</div>
           </a>
@@ -338,9 +338,9 @@
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">大阪大学に入学</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
-                  情報科学を学んだ後、教育工学分野における研究を行いました。
+                  情報科学を学んだ後、教育工学分野における研究を行っていました。
                   機械学習を用いて学習者の状態推定を行い、<b>コンピュータの学習によって人間の学習を支援する</b>手法を研究していました。<br><br>
-                  また、夜間に履修していた教職課程を通して、同年代とは考えられないようなビジョンを持つ多くの人たちと出会うことができました。
+                  また、情報科学と並行して履修していた教職課程を通して、同年代とは思えないようなビジョンを持った素敵な人たちと出会うことができました。
                 </p>
               </v-card-text>
             </v-card>
@@ -362,7 +362,7 @@
                 <p style="padding-top: 3%;">
                   心から尊敬できる教師の方々に囲まれながら働くことができました。
                   しかし、そんな素敵な人たちが様々なものを犠牲にしている現実を知り、<b>「この人たちは絶対にこんなに苦しむべき人ではない」</b>と強く感じました。<br><br>
-                  既存の仕組みを改善することや、新たな仕組みを作ることによって課題を解決したいと考えるようになりました。
+                  既存の仕組みを改善することや、新たな仕組みを作ることによって根本的な課題を解決したいと考えるようになりました。
                 </p>
               </v-card-text>
             </v-card>
@@ -381,7 +381,7 @@
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">Web開発の学習を始める</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
-                  サービスを開発して多くの人に届けることによって、<b>自分が直接出会うことができないような規模の人たちにも価値を提供できる点</b>に魅力を感じ、
+                  サービスを開発して多くの人に届けることによって、<b>自分が直接出会うことができないような規模の人たちに価値を提供できる点</b>に魅力を感じ、
                   これまで学んだ経験がなかった分野であるWeb開発を学習し始めました。
                 </p>
               </v-card-text>
@@ -402,8 +402,8 @@
               <v-card-title class="history-card-title" style="font-size: 1.5em; font-weight: 550;">席替えメーカーを個人開発</v-card-title>
               <v-card-text class="white text--primary history-card-text" style="font-size: 1em; font-weight: 500;">
                 <p style="padding-top: 3%;">
-                  <b>業務を改善することで教師の方の力になりたい</b>と考え、席替えサービスを個人開発しました。
-                  ユーザー数は8,000人を超え、実際に現場で働いておられる数多くの教員の方にも使っていただいています。
+                  <b>業務を改善することで教師の方の力になりたい</b>と考え、学校現場に特化した席替えアプリを個人開発しました。
+                  ユーザー数は8,000人を超え、実際に多くの教員の方に学校で使っていただいています。
                 </p>
               </v-card-text>
             </v-card>
@@ -413,6 +413,7 @@
       </div>
       <v-footer color="#fffaf0" height="50vh">
         <div class="footer-item">© 2021 Terai Shogo</div>
+
       </v-footer>
     <!--/v-col-->
   <!--/v-row-->
@@ -422,6 +423,9 @@
 </template>
 
 <style>
+  [v-cloak]{
+    display:none;
+  }
   @media screen and (max-width: 960px) {
     /* xs, sm */
     .div-title {
