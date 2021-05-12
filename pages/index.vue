@@ -40,9 +40,7 @@
           <a href="https://connpass.com/user/krpk1900/" target="_blank">
             <img class="sns-img" src="/connpass.png" width="55px">
           </a>
-
         </div>
-
       </div>
 
       <!-- Profile -->
@@ -101,7 +99,6 @@
       <!-- Skills -->
       <div class="skills" id="skills">
         <h2 class="div-title">Skills</h2>
-
         <v-row justify="center" align="center">
           <v-col cols="12" xs="3" sm="12" md="8" lg="6" xl="6" style="padding: 0;">
             <v-card v-if="isFadeInUpSkills1" class="animate__animated skills-card" :class="{animate__fadeInUp: isFadeInUpSkills1}" elevation="4" width="85%" rounded>
@@ -448,8 +445,6 @@
       </v-footer>
     <!--/v-col-->
   <!--/v-row-->
-
-
   </v-container>
 </template>
 
@@ -887,7 +882,6 @@
   .footer-item {
     text-decoration: none;
     color: #099e9e;
-    /*background-color: red; デバッグ用*/
     padding: 1.5vh;/*0.75%;*/
     transition: all  0.3s ease;
     margin: -0.5% 3% 0 0;
@@ -936,7 +930,6 @@ export default {
       isFadeInLeftHistory4: false,
       isFadeInLeftHistory6: false,
       isFadeInLeftHistory8: false,
-
       scrollY: 0,
       innnerHeight: 0,
       typingWords: "Terai Shogo's \nPortfolio",
@@ -960,7 +953,6 @@ export default {
       handleScroll() {
         this.innnerHeight = window.innerHeight;
         this.scrollY = window.scrollY;
-
         let fadeInUpProfile1Height
         let fadeInUpProfile2Height
         let fadeInUpWorks1Height
@@ -975,7 +967,6 @@ export default {
         let fadeInUpHistory6Height
         let fadeInUpHistory7Height
         let fadeInUpHistory8Height
-
 
         if(this.$vuetify.breakpoint.xsOnly) {
           fadeInUpProfile1Height = 0;
