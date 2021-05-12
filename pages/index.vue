@@ -420,7 +420,31 @@
         </v-timeline>
       </div>
       <v-footer color="#fffaf0" height="50vh">
-        <div class="footer-item">© 2021 Terai Shogo</div>
+        <div class="mostleft-footer-item">
+          <!-- プライバシーポリシー -->
+          <v-dialog v-model="privacyPolicy" width="850" scrollable>
+            <template v-slot:activator="{ on, attrs }">
+              <a v-bind="attrs" v-on="on">プライバシーポリシー</a>
+            </template>
+            <v-card>
+              <v-card-title class="headline cyan lighten-3 font-weight-black" style="display: block;">プライバシーポリシー
+                <v-icon style="float: right;" @click="privacyPolicy = false">mdi-close</v-icon>
+              </v-card-title>
+              <v-card-text style="margin-top: 20px;">
+                当ホームページでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。<br>
+                Googleアナリティクスはデータの収集のためにCookieを使用しています。<br>
+                この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。<br>
+                この規約に関しての詳細は<a href="https://marketingplatform.google.com/about/analytics/terms/jp/" target="_blank" rel="noopener noreferrer">Googleアナリティクスサービス利用規約</a>や
+                <a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener noreferrer">Googleポリシーと規約</a>をご覧ください。
+              </v-card-text>
+            </v-card>
+          </v-dialog>
+        </div>
+        <div class="footer-item">
+          <a href="https://twitter.com/krpk1900_dev" target="_blank">
+            ©2021 TeraiShogo
+          </a>
+        </div>
 
       </v-footer>
     <!--/v-col-->
@@ -858,8 +882,12 @@
   .historyCardLeftXl {
     margin-left: 10vw;
   }
+  .mostleft-footer-item {
+    margin: 0 10px 0 auto;
+    color: #099e9e;
+  }
   .footer-item {
-    margin: 0 5% 0 auto;
+    margin: 0 5% 0 10px;
     color: #099e9e;
   }
   .else-padding {
@@ -907,6 +935,7 @@ export default {
       scrollY: 0,
       innnerHeight: 0,
       typingWords: "Terai Shogo's \nPortfolio",
+      privacyPolicy: false,
     }),
     created() {
       if (process.browser) {
