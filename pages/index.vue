@@ -420,14 +420,14 @@
         </v-timeline>
       </div>
       <v-footer color="#fffaf0" height="50vh">
-        <div class="mostleft-footer-item">
+        <div class="leftmost-footer-item footer-item">
           <!-- プライバシーポリシー -->
           <v-dialog v-model="privacyPolicy" width="850" scrollable>
             <template v-slot:activator="{ on, attrs }">
-              <a v-bind="attrs" v-on="on">プライバシーポリシー</a>
+              <a v-bind="attrs" v-on="on" style="color: #099e9e;">プライバシーポリシー</a>
             </template>
             <v-card>
-              <v-card-title class="headline cyan lighten-3 font-weight-black" style="display: block;">プライバシーポリシー
+              <v-card-title class="headline cyan darken-1 font-weight-black white--text" style="display: block;">プライバシーポリシー
                 <v-icon style="float: right;" @click="privacyPolicy = false">mdi-close</v-icon>
               </v-card-title>
               <v-card-text style="margin-top: 20px;">
@@ -441,11 +441,10 @@
           </v-dialog>
         </div>
         <div class="footer-item">
-          <a href="https://twitter.com/krpk1900_dev" target="_blank">
+          <a href="https://twitter.com/krpk1900_dev" target="_blank" style="color: #099e9e;">
             ©2021 TeraiShogo
           </a>
         </div>
-
       </v-footer>
     <!--/v-col-->
   <!--/v-row-->
@@ -882,13 +881,19 @@
   .historyCardLeftXl {
     margin-left: 10vw;
   }
-  .mostleft-footer-item {
-    margin: 0 10px 0 auto;
-    color: #099e9e;
+  .leftmost-footer-item {
+    margin: -0.5% 0 0 auto !important;
   }
   .footer-item {
-    margin: 0 5% 0 10px;
+    text-decoration: none;
     color: #099e9e;
+    /*background-color: red; デバッグ用*/
+    padding: 1.5vh;/*0.75%;*/
+    transition: all  0.3s ease;
+    margin: -0.5% 3% 0 0;
+  }
+  .footer-item:hover {
+    background-color: #e2d8d8;
   }
   .else-padding {
     padding: 4.1em;
