@@ -264,6 +264,7 @@
                 <p style="padding-top: 3%;">自然豊かな場所で生まれました。</p>
               </v-card-text>
             </v-card>
+            <div v-else style="margin : 500px;"></div>
           </v-timeline-item>
 
           <v-timeline-item :color="'blue lighten-2'" :icon="'mdi-school'" fill-dot>
@@ -282,6 +283,7 @@
                 <p style="padding-top: 3%;">自分の生きる姿勢を通して、心に一生残り続けるような<b>良い影響を人に与えたい</b>と考えて、教師を目指すようになりました。</p>
               </v-card-text>
             </v-card>
+            <div v-else style="margin : 500px;"></div>
           </v-timeline-item>
 
           <v-timeline-item :color="'pink lighten-2'" :icon="'mdi-school'" fill-dot>
