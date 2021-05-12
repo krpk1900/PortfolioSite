@@ -4,6 +4,7 @@
     <!--v-col cols="12"-->
     <v-row justify="center" align="center">
       <v-system-bar color="#fffaf0" app height="50vh" style="opacity: 0.95;">
+        {{ scrollY }}
         <nuxt-link class="link leftmost-link" v-scroll-to="'#title'" to style="color: #099e9e;">Top</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#profile'" to style="color: #099e9e;">Profile</nuxt-link>
         <nuxt-link class="link" v-scroll-to="'#works'" to style="color: #099e9e;">Works</nuxt-link>
@@ -477,7 +478,7 @@
       border-radius: 50%;
       border: 9px solid #1d7777;
       display: block;
-      margin: 2% auto 0.5% auto;
+      margin: 0.5% auto 0.5% auto;
       width: 200px;
       height: 200px;
     }
@@ -485,6 +486,10 @@
       font-size: 2em;
       font-weight: 600;
       color: #696464;
+    }
+    .profile-card {
+      display: block;
+      margin: -5px auto 0 auto;
     }
     .works {
       height: 56vh;
@@ -511,7 +516,7 @@
       color: #696464;
     }
     .history {
-      height: 280vh;
+      height: 300vh;
       background-color: #f8f8ff;
     }
     .history-card-title {
@@ -584,6 +589,10 @@
       font-size: 3em;
       font-weight: 600;
       color: #696464;
+    }
+    .profile-card {
+      display: block;
+      margin: 0 auto;
     }
     .works {
       height: 87vh;
@@ -684,6 +693,10 @@
       font-weight: 600;
       color: #696464;
     }
+    .profile-card {
+      display: block;
+      margin: 0 auto;
+    }
     .works {
       height: 74vh;
       background-color: #f8f8ff;
@@ -761,10 +774,6 @@
   .sns-img:hover {
     transform: scale(1.1,1.1);
     transition-duration: 0.2s;
-  }
-  .profile-card {
-    display: block;
-    margin: 0 auto;
   }
   .works-item {
     /*display: inline-block;*/
@@ -930,33 +939,33 @@ export default {
         if(this.$vuetify.breakpoint.xsOnly) {
           fadeInUpProfile1Height = 0;
           fadeInUpProfile2Height = 0;
-          fadeInUpWorks1Height = 320;
-          fadeInUpSkills1Height = 820;
-          fadeInUpSkills2Height = 930;
-          fadeInUpSkills3Height = 1030;
-          fadeInUpHistory1Height = 1340;
-          fadeInUpHistory2Height = 1490;
-          fadeInUpHistory3Height = 1700;
-          fadeInUpHistory4Height = 1990;
-          fadeInUpHistory5Height = 2440;
-          fadeInUpHistory6Height = 2780;
-          fadeInUpHistory7Height = 3130;
-          fadeInUpHistory8Height = 3390;
+          fadeInUpWorks1Height = 240;
+          fadeInUpSkills1Height = 720;
+          fadeInUpSkills2Height = 830;
+          fadeInUpSkills3Height = 930;
+          fadeInUpHistory1Height = 1210;
+          fadeInUpHistory2Height = 1370;
+          fadeInUpHistory3Height = 1580;
+          fadeInUpHistory4Height = 1870;
+          fadeInUpHistory5Height = 2310;
+          fadeInUpHistory6Height = 2680;
+          fadeInUpHistory7Height = 3050;
+          fadeInUpHistory8Height = 3310;
         } else if(this.$vuetify.breakpoint.smOnly) {
           fadeInUpProfile1Height = 0;
           fadeInUpProfile2Height = 0;
-          fadeInUpWorks1Height = 320;
-          fadeInUpSkills1Height = 820;
-          fadeInUpSkills2Height = 930;
-          fadeInUpSkills3Height = 1030;
-          fadeInUpHistory1Height = 1340;
-          fadeInUpHistory2Height = 1490;
-          fadeInUpHistory3Height = 1700;
-          fadeInUpHistory4Height = 1990;
-          fadeInUpHistory5Height = 2440;
-          fadeInUpHistory6Height = 2780;
-          fadeInUpHistory7Height = 3130;
-          fadeInUpHistory8Height = 3390;
+          fadeInUpWorks1Height = 240;
+          fadeInUpSkills1Height = 720;
+          fadeInUpSkills2Height = 830;
+          fadeInUpSkills3Height = 930;
+          fadeInUpHistory1Height = 1210;
+          fadeInUpHistory2Height = 1370;
+          fadeInUpHistory3Height = 1580;
+          fadeInUpHistory4Height = 1870;
+          fadeInUpHistory5Height = 2310;
+          fadeInUpHistory6Height = 2680;
+          fadeInUpHistory7Height = 3050;
+          fadeInUpHistory8Height = 3310;
         } else if(this.$vuetify.breakpoint.mdOnly) {
           fadeInUpProfile1Height = 50;
           fadeInUpProfile2Height = 430;
