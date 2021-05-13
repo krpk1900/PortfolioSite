@@ -11,3 +11,11 @@
 </a>
 
 私がこれまで開発したサービスや経歴をまとめたWebサイトです。
+
+# 使用技術
+- Nuxt.js 2.15.3
+- Vuetify 1.11.3
+- VueScrollTo 2.20.0
+- VueTyper 1.2.0
+- Animate.css 4.1.1
+- Netlify
