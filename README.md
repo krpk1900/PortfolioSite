@@ -19,3 +19,6 @@
 - VueTyper 1.2.0
 - Animate.css 4.1.1
 - Netlify
+
+# その他
+トップページの画像は[@mryhryki](https://github.com/mryhryki)様が作成された画像を使用しています。
